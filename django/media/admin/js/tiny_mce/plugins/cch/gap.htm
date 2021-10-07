@@ -1,0 +1,46 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Gap</title>
+	<script type="text/javascript" src="../../../jquery.js"></script>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/gap.js"></script>
+	<script type="text/javascript" src="../../../jquery.json.min.js"></script>
+	<style type="text/css">
+		.field-error { color:red; display: none; font-weight: bold; }
+		#reason-pid { display: none; }
+		.legend {color: darkgrey; font-size: smaller; }
+	</style>
+</head>
+<body>
+
+<form onsubmit="CritAppDialog.insert();return false;" action="#">
+	<p>
+		Extent:
+		<input type="text" name="extent" id="extentid" />
+		<br/>
+		<span class="legend">The number of characters, words or phrases. Leave empty if unknown.</span>
+	</p>
+	<p>
+		Unit:
+		<select name="unit" id="unitid">
+			<option value="character">character</option>
+			<option value="word">word</option>
+			<option value="phrase">phrase</option>
+		</select>
+	</p>
+	<p id="reason-pid">
+		Reason:
+		<select name="reason" id="reasonid">
+			<option value="illegible">damaged</option>
+			<option value="other">other</option>
+		</select>
+	</p>
+	<div class="mceActionPanel">
+		<input type="button" id="insert" name="insert" value="{#insert}" onclick="GapDialog.insert();" />
+		<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+	</div>
+</form>
+
+</body>
+</html>

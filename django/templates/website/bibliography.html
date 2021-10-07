@@ -1,0 +1,107 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %} 
+{% load tags_filters %}
+{% load tags_editions %}
+
+{% block head_title_block %}Bibliography{% endblock %}
+{% block body_title_block %}Bibliography{% endblock %} 
+
+{% block extra_script %}
+    <script src="{{custom_web_media_prefix}}_a/j/expand.js" type="text/javascript"> </script>
+{% endblock %}
+
+{% block page_content %}
+
+<script type="text/javascript">
+    $(document).ready(function(){
+        $("#{{ categories.varname }}id").change(function () {$("#cat_formid").submit();});
+    });
+</script>
+    
+<form id="cat_formid" action="" method="get">
+    <div class="options">
+        <div class="t03">
+            <ul>
+                <li>{% if False %} <label>Bibliography:</label>{% endif %}
+                    <ul>
+                        {% filter_interface biblio_types 'a' 's1' 1 %}
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    
+    {% ifequal biblio_types.get_value 'c' %}
+        <div class="jumpNav">
+            <div class="t01">
+                <fieldset>
+                    <label>Category</label>
+                    {% filter_interface categories %} 
+                </fieldset>
+            </div>
+        </div>
+        
+        <div class="biblioList">
+            <div class="t01">
+                <ul>
+                    {% for record in records %}
+                        <li class="s01">{% bib_entry record %}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+    {% endifequal %} 
+    
+    {% ifequal biblio_types.get_value 'a' %}
+        <div class="alphaNav">
+            <div class="t01">
+                <ul>
+                    {% filter_interface authors 'a' 's02' 0 'span' 1 %}
+                </ul>
+            </div>
+        </div>
+        
+        <div class="biblioList">
+            <div class="t01">
+                <ul>
+                    {% for record in records %}
+                        <li class="s01">{% bib_entry record %}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+        
+    {% endifequal %}    
+
+    {% ifequal biblio_types.get_value 'y' %}
+        <div class="alphaNav">
+            <div class="t01">
+                <ul>
+                    {% filter_interface date_ranges 'li' 's02' %}
+                </ul>
+            </div>
+        </div>
+    
+        <div class="resourceList">
+            <div class="t03">
+                <h4><a class="g3 a01" href="#" title="">Show all data</a></h4>
+                <ul class="t01">
+                    {% for year in years %}
+                        <li class="z02 s01"><a class="x01" href="#" title="Click to show metadata">Metadata</a>
+                            <h3>{{ year.year }}</h3>
+                            <ul class="s01">
+                                {% for record in year.records %}
+                                    <li class="r02 c03 z02">{% bib_entry record %}</li>
+                                {% endfor %}
+                            </ul>
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        </div>
+    {% endifequal %} 
+
+</form>
+    
+{% endblock %}

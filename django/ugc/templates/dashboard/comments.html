@@ -1,0 +1,34 @@
+{% extends "dashboard/dashboard_template.html" %}
+{% load i18n %}
+{% load tags %}
+
+{% block page_main_title %}Dashboard - My comments{% endblock %}
+{% block page_title %}Dashboard - My comments{% endblock %}
+
+{% block tab_contents %}
+
+<div class="tsb">
+	<div id="bookmarks">
+		{% if records.count %}
+			<ul class="m0">
+				{% for record in records %}
+					<li>
+						{% ifequal record.getCommentTypeName 'Work' %}
+							<a href="{{ DJANGO_WEBPATH_PREFIX }}play/{{ record.content_object.slug }}{{ record.play_tab_path }}#comment{{ record.id }}">{{ record.content_object.title }}</a> ({{ record.content_object.getTitleDate|fuzzy_date_short }}){% for author in record.content_object.getAuthors %}, by <a href="{{ DJANGO_WEBPATH_PREFIX }}author/{{ author.slug }}" title="More about {{ author.first_name }} {{ author.last_name }}.">{{ author.first_name }} {{ author.last_name }}</a>{% endfor %}
+						{% endifequal %}
+						{% ifequal record.getCommentTypeName 'Author' %}
+							<a href="{{ DJANGO_WEBPATH_PREFIX }}author/{{ record.content_object.slug }}#comment{{ record.id }}">{{ record.content_object.first_name }} {{ record.content_object.last_name }}</a>
+						{% endifequal %}
+						<span class="bookmark-control">
+							{{ record.submit_date|date:"j F Y" }}
+						</span>
+					</li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<p>You have not yet left any comment.</p>
+		{% endif %}
+	</div>
+</div>
+
+{% endblock %}

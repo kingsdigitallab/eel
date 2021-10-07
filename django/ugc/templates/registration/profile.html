@@ -1,0 +1,83 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %}
+
+{% block page_main_title %}My profile{% endblock %}
+{% block page_title %}My profile{% endblock %}
+
+{% block head_extra %}
+{{ block.super }}
+<style type="text/css">
+	form label {
+		display: 	block;
+	}
+	form input {
+		display: 	block;
+	}
+</style>
+{% endblock %}
+
+{% block page_content %}
+	<form method="post" action="" id="profile-form" class="fms m2 django-form user-form" autocomplete="off">
+		{% if form.non_field_errors %}
+			<ul class="errorlist">
+				{% for error in form.non_field_errors %}
+					<li>{{ error }}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		{% if form.success %}
+		<p class="success-message">Your changes have been saved.</p>
+		{% endif %}
+		<fieldset class="i1 m2">
+            <legend>Account Details</legend>
+            <ol>
+	            <li>
+					<label>E-mail address</label>
+					<span class="form-field read-only-field">{{ user.email }}</span>
+	            </li>
+	            <li>
+					{{ form.display_name.errors }}
+					<label for="id_display_name" >Display name</label>
+					{{ form.display_name }}
+				</li>
+	            <li>
+					{{ form.password1.errors }}
+					<label for="id_password1" >Password</label>
+					{{ form.password1 }}
+	            </li>
+	            <li>
+					{{ form.password2.errors }}
+					<label for="id_password2" >Retype password</label>
+					{{ form.password2 }}
+	            </li>
+	    	</ol>
+		</fieldset>
+		<fieldset class="i2 m2">
+            <legend>Personal Details</legend>
+            <p class="form-section-legend">The fields below are optional. If you complete them they will be visible to other members of the site.</p>
+            <ol>
+            	<li>
+					{{ form.first_name.errors }}
+					<label for="id_first_name" >First name</label>
+					{{ form.first_name }}
+				</li>
+            	<li>
+					{{ form.last_name.errors }}
+					<label for="id_last_name" >Last name</label>
+					{{ form.last_name }}
+				</li>
+            	<li>
+					{{ form.affiliation.errors }}
+					<label for="id_affiliation" >Affiliation</label>
+					{{ form.affiliation }}
+            	</li>
+			</ol>
+		</fieldset>
+		<fieldset class="ix">
+			<input type="submit" value="Save changes" name="save" />
+			<input type="submit" value="Log out" name="logout" />
+			<!--  input type="submit" value="Delete my account" name="delete" / -->
+		</fieldset>
+	</form>
+
+{% endblock %}

@@ -1,0 +1,53 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %}
+{% load tags %}
+
+{% block page_main_title %}User directory{% endblock %}
+{% block page_title %}User directory{% endblock %}
+
+{% block submenu %}
+<ul class="nvz">
+	{% filter_interface pages %}
+</ul>
+{% endblock %}        
+
+{% block page_content %}
+
+<div class="g n2 m1">
+	<div class="u u1">
+		<div class="utl">
+			<h3>Options</h3>
+			<dl>
+            	{% for filter in filters %}
+					<dt>{{ filter.label }}</dt>
+					{% for option in filter.options %}
+						<dd {% if option.selected %}class="s1"{% endif %}>
+							<a title="{{ option.label }}" class="t1" href="{{ option.href }}">{{ option.label }}</a>
+						</dd>
+					{% endfor %}
+				{% endfor %}
+           	</dl>
+		</div>
+	</div>
+	<div class="u u2">
+		{% if records %}
+			<ul class="itl">
+				{% for record in records %}
+					<li>
+						<h4>{{ record.user.last_name }}, {{ record.user.first_name }}
+							<b>
+								{% for dir in record.getDirectories %}
+									<i class="t9 {{ dir.css_class }}" title="{{ dir.name }}" >{{ dir.name }}</i>
+								{% endfor %}
+							</b>
+						</h4>
+						{% if record.affiliations %}<p>{{ record.affiliations }}</p>{% endif %}
+						{% if record.biography %}<p>{{ record.biography|linebreaksbr }}</p>{% endif %}
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif%}
+	</div>
+</div>
+
+{% endblock %}

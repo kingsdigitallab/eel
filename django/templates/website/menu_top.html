@@ -1,0 +1,6 @@
+{% load cms_tags cache %}
+{% for child in children %}
+<li class="{% if child.selected or child.ancestor %}s04{% else %}s03{% endif %}" >
+    <a href="{{ child.get_absolute_url }}" {% if child.selected or child.ancestor %}class="s1"{% endif %} >{{ child.get_menu_title }}</a>
+</li>
+{% endfor %}

@@ -1,0 +1,143 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Reference to a text</title>
+	<script type="text/javascript" src="../../../jquery.js"></script>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/link.js"></script>
+	<script type="text/javascript" src="../../../jquery.json.min.js"></script>
+	<style type="text/css">
+		.field-error { color:red; display: none; font-weight: bold; }
+		#reason-pid { display: none; }
+		.legend {color: darkgrey; font-size: smaller; }
+		#location-tableid {margin-left: 5em; margin-top: 1em;}
+		#location-tableid tr td {padding-left: 1em;}
+		#range-startid td {padding-bottom: 1em;}
+	</style>
+</head>
+<body>
+
+<form onsubmit="LinkDialog.insert();return false;" action="#">
+	<h2>Information about the referenced text</h2>
+	<br/>
+	<table>
+		<tr>
+			<td>Type of text</td>
+			<td>
+				<select name="text-typeid" id="text_typeidid">
+					<option value="wc">Witness transcription</option>
+					<option value="wl">Witness translation</option>
+					<option value="et">Edition translation</option>
+					<option value="e">Edition</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Text</td>
+			<td>
+				<select name="textid" id="textidid">
+					<option value="character">character</option>
+					<option value="word">word</option>
+					<option value="phrase">phrase</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>Nature of the reference</td> 
+			<td>
+				<select name="relationship" id="relationshipid">
+					<option value="quotation">quotation</option>
+					<option value="other">other</option>
+				</select>
+			</td>
+		</tr>
+		<tr>
+			<td>What portion of that text are you referencing?</td>
+			<td>
+				<select name="location-type" id="location-typeid">
+					<option value="0">no particular portion of text</option>
+					<option value="1">a particular unit (e.g. 'book 1' or 'chapter 4.1')</option>
+					<option value="2">a particular range (e.g. 'from chapter 3 to chapter 5')</option>
+				</select>
+			</td>
+		</tr>
+	</table>
+
+	<div id="locationid">
+		<div id="rangeid">
+			Where is that portion of text located?
+			<table id="location-tableid">
+				<tr>
+					<td>&nbsp;</td>
+					<td>Code</td>
+					<td>Book</td>
+					<td>Chapter/Prologue</td>
+					<td>Subdivision</td>
+				</tr>
+				<tr id="range-startid">
+					<td id="cell-from">From</td>
+					<td>
+						<select class="sel-num" name="scode" id="scodeid">
+							<option value="0">--</option>
+						</select>
+					</td>
+					<td>
+						<select class="sel-num" name="sbook" id="sbookid">
+							<option value="0">--</option>
+						</select>
+					</td>
+					<td>
+						<select name="schpr" id="schprid">
+							<option value="0">--</option>
+							<option value="2">prologue</option>
+							<option value="1">chapter</option>
+						</select>
+						<select class="sel-num" name="schapter" id="schapterid">
+							<option value="0">--</option>
+						</select>
+					</td>
+					<td>
+						<select class="sel-num" name="sdivision" id="sdivisionid">
+							<option value="0">--</option>
+						</select>
+					</td>
+				</tr>
+				<tr id="range-endid">
+					<td id="cell-to">to</td>
+					<td>
+						<select class="sel-num" name="ecode" id="ecodeid">
+							<option value="0">--</option>
+						</select>
+					</td>
+					<td>
+						<select class="sel-num" name="ebook" id="ebookid">
+							<option value="0">--</option>
+						</select>
+					</td>
+					<td>
+						<select name="echpr" id="echprid">
+							<option value="0">--</option>
+							<option value="2">prologue</option>
+							<option value="1">chapter</option>
+						</select>
+						<select class="sel-num" name="echapter" id="echapterid">
+							<option value="0">--</option>
+						</select>
+					</td>
+					<td>
+						<select class="sel-num" name="edivision" id="edivisionid">
+							<option value="0">--</option>
+						</select>
+					</td>
+				</tr>
+			</table>
+		</div>
+	</div>
+	<div class="mceActionPanel">
+		<input type="button" id="insert" name="insert" value="{#insert}" onclick="LinkDialog.insert();" />
+		<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+	</div>
+</form>
+
+</body>
+</html>

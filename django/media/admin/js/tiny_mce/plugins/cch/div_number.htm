@@ -1,0 +1,30 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Section number</title>
+	<script type="text/javascript" src="../../../jquery.js"></script>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/div_number.js"></script>
+	<style type="text/css">
+		.field-error { color:red; display: none; font-weight: bold; }
+		.legend {color: #707070; font-size: smaller; }
+	</style>
+</head>
+<body>
+
+<form onsubmit="DivNumberDialog.insert();return false;" action="#">
+	<p>Please enter the new number for this section.</p>
+	<p class="field-error" id="number-error">Only numbers between 0 and 1000 are accepted.</p>
+	<p>Number: <input id="number" name="number" type="text" class="text" /></p>
+	<p>
+		<span class="legend">Type '0' if the division has no number.</span>
+	</p>
+
+	<div class="mceActionPanel">
+		<input type="button" id="change" name="change" value="change" onclick="DivNumberDialog.insert();" />
+		<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+	</div>
+</form>
+
+</body>
+</html>

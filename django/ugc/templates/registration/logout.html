@@ -1,0 +1,21 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %}
+
+{% block page_main_title %}Sign out{% endblock %}
+{% block page_title %}Your are signed out{% endblock %}
+
+{% block head_extra %}
+{{ block.super }}
+<style type="text/css">
+	form label {
+		display: 	block;
+	}
+	form input {
+		display: 	block;
+	}
+</style>
+{% endblock %}
+
+{% block page_content %}
+	<p class="success-message">You are now signed out.</p>
+{% endblock %}

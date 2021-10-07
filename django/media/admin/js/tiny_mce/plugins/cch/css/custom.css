@@ -1,0 +1,45 @@
+body {
+	font-family: "Junicode","Cardo","TITUS Cyberbit Basic","Doulos SIL","Gentium","Arial Unicode MS",serif;
+    font-size: 1.2em;
+    line-height: 2.2em;
+}
+
+.tei-div {
+    border: 1px solid #800000;
+    margin: 0.2em 0.5em 0.5em 0.5em;
+}
+
+.cch-book {
+    border: 1px solid #800000;
+}
+
+.cch-div {
+    border-top: 0px;
+    border-bottom-style: dashed;
+}
+
+.cch-ref {
+}
+
+.tei-app {
+	color: green;
+	font-weight: bold;
+}
+
+.tei-gap {
+	color: green;
+	font-weight: bold;
+}
+
+.tei-readings {
+	display: none;
+}
+
+.cch-pb {
+	color: #A0A0A0;
+	font-weight: bold;
+}
+
+.cch-add, .cch-del, .cch-sup {
+	border-bottom-width: 2px;
+}

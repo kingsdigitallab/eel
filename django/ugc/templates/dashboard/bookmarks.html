@@ -1,0 +1,36 @@
+{% extends "dashboard/dashboard_template.html" %}
+{% load i18n %}
+{% load tags %}
+
+{% block page_main_title %}Dashboard - My bookmarks{% endblock %}
+{% block page_title %}Dashboard - My bookmarks{% endblock %}
+
+{% block tab_contents %}
+
+<div class="tsb">
+	<div id="bookmarks">
+		{% if records.count %}
+			<ul class="m0">
+				{% for record in records %}
+					<li>
+						{% ifequal record.getBookmarkTypeName 'Work' %}
+							<a href="{{ DJANGO_WEBPATH_PREFIX }}play/{{ record.bookmarked_object.slug }}">{{ record.bookmarked_object.title|clean_id }}</a> ({{ record.bookmarked_object.getTitleDate|fuzzy_date_short }}){% for author in record.bookmarked_object.getAuthors %}, by <a href="{{ DJANGO_WEBPATH_PREFIX }}author/{{ author.slug }}" title="More about {{ author.first_name }} {{ author.last_name|clean_id }}.">{{ author.first_name }} {{ author.last_name|clean_id }}</a>{% endfor %}
+						{% endifequal %}
+						{% ifequal record.getBookmarkTypeName 'Author' %}
+							<a href="{{ DJANGO_WEBPATH_PREFIX }}author/{{ record.bookmarked_object.slug }}">{{ record.bookmarked_object.first_name }} {{ record.bookmarked_object.last_name|clean_id }}</a>
+						{% endifequal %}
+						<span class="bookmark-control">
+							{{ record.create_timestamp|date:"j F Y" }}
+							<a class="t9 m0" href="?rbm={{ record.id }}" title="Remove this bookmark">Remove</a>
+						</span>
+					</li>
+				{% endfor %}
+			</ul>
+		{% else %}
+			<p>You have not yet bookmarked any play or author.</p>
+			<p>To bookmark a play or an author, just click on the <img src="{{custom_web_media_prefix}}_a/i/paper_clip.jpg" title="bookmark icon" alt="bookmark icon" /> in the page heading.</p>
+		{% endif %}
+	</div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,16 @@
+{% if is_paginated %}
+	{% load i18n %}
+	<div class="itp m0">
+		<ul class="inl">
+		   	{% if page_obj.has_previous %}
+				<li class="s5"><a class="pageNav" href="?page=1{{ getvars }}{{ hashtag }}" rel="1">&#8249;&#8249; First</a></li>
+				<li class="s5"><a class="pageNav" href="?page={{ page_obj.previous_page_number }}{{ getvars }}{{ hashtag }}">&#8249; Previous</a></li>
+			{% endif %}
+				<li class="s1">Page {{ page_obj.number }} of {{ pages|length }}</li> 
+		   	{% if page_obj.has_next %}
+				<li class="s5"><a class="pageNav" href="?page={{ page_obj.next_page_number }}{{ getvars }}{{ hashtag }}">Next &#8250;</a></li>
+				<li class="s5"><a class="pageNav" href="?page={{ pages|length }}{{ getvars }}{{ hashtag }}">Last &#8250;&#8250;</a></li>
+			{% endif %}
+		</ul>
+	</div>
+{% endif %}

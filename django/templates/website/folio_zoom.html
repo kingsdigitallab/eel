@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+{% load tags_filters %}
+{% load cch_tags %}
+{% load tags_editions %}
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" >
+<head>
+  <title>Close up view</title>
+  <link rel="stylesheet" type="text/css" media="all" href="{{ custom_web_media_prefix }}_a/c/gn.css" />
+  <link rel="stylesheet" type="text/css" media="all" href="{{ custom_web_media_prefix }}zoomer/iip.compressed.css" />
+
+  <script type="text/javascript" src="{{ custom_web_media_prefix }}openseadragon/openseadragon.min.js"></script>
+
+  <script type="text/javascript">
+
+    function set_cookie(c_name, value, exdays) {
+      var exdate = new Date();
+      exdate.setDate(exdate.getDate() + exdays);
+      var c_value = escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+      document.cookie = c_name + "=" + c_value;
+    }
+
+    function get_cookie(c_name, default_value) {
+      if (default_value == null) default_value = '';
+      ret = default_value;
+       var i, x, y, ARRcookies = document.cookie.split(";");
+       for (i = 0; i < ARRcookies.length;i++) {
+        x = ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+        y = ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+           x = x.replace(/^\s+|\s+$/g,"");
+           if (x==c_name) {
+             ret = unescape(y);
+             break;
+           }
+      }
+       return ret;
+    }
+  </script>
+
+</head>
+
+<body style="background-color: black;">
+  <div id="targetframe"></div>
+  <script type="text/javascript">
+    // The iipsrv server path (/fcgi-bin/iipsrv.fcgi by default)
+    var server = '{{ image_server_url }}';
+
+    // The *full* image path on the server. This path does *not* need to be in the web
+    // server root directory. On Windows, use Unix style forward slash paths without
+    // the "c:" prefix
+    var images = '{{ image_url|djatoka_encode }}';
+
+    if (images) {
+      var tile_source = images;
+      if (!tile_source.includes('//')) {
+        tile_source = server+tile_source;
+      }
+
+      // Copyright or information message
+      var credit = '';
+
+      OpenSeadragon({
+        id: 'targetframe',
+        prefixUrl: '{{ custom_web_media_prefix }}openseadragon/images/',
+        sequenceMode: true,
+        showNavigator: true,
+        controlsFadeDelay: 250,
+        tileSources: [
+          tile_source+'/info.json',
+        ]
+      });
+    }
+
+  </script>
+</body>
+</html>

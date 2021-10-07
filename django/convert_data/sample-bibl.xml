@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<TEI>
+	<teiHeader>
+		<fileDesc>
+			<titleStmt>
+				<title>Bib sample</title>
+				<author>Geoffroy Noel</author>
+			</titleStmt>
+			<publicationStmt>
+				<p>freely available</p>
+			</publicationStmt>
+			<sourceDesc>
+				<p>Written from scratch.</p>
+			</sourceDesc>
+		</fileDesc>
+	</teiHeader>
+	<text>
+		<body>
+			<!--
+			Brand, P., ‘The making of English thirteenth-century legislation:
+			some
+			new evidence’, in Lewis, A. D., Brand, P., et al. (eds.), Law in the
+			City: Proceedings of the Seventeenth British Legal History
+			Conference,
+			London, 2005 (Dublin, 2007), pp. 42–53.
+			
+			
+			Q: how much needs to be marked up?
+			Q: do they want us to publish the bib on the current static web site?
+			Q: 
+			-->
+
+			<listBibl>
+				<head>Bibliography</head>
+
+				<bibl>
+					<author>Saarikoski, Pirkko-Liisa, and Paavo Suomalainen,</author>
+					<title level="a" type="main">Studies on the physiology of
+					   the hibernating hedgehog, 15</title>
+					 <title level="a" type="subordinate">Effects of seasonal
+					   and temperature changes on the in vitro glycerol release from
+					   brown adipose tissue</title>
+					 <editor>xxx</editor>
+					 <title level="j">Ann. Acad. Sci. Fenn., Ser. A4</title>
+					 <date>1972</date>
+				</bibl>
+				<bibl>
+				
+					<author>Brand, P.</author>
+					<title>‘The making of English thirteenth-century legislation:
+							some new evidence’</title>
+					<!-- edition>first edition</edition -->
+					<imprint>
+						<publisher>Yale University Press</publisher>
+						<pubPlace>New Haven and London</pubPlace>
+						<date>1990</date>
+					</imprint>
+				</bibl>
+
+			</listBibl>
+		</body>
+	</text>
+</TEI>
+
+
+

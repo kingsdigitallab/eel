@@ -1,0 +1,230 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block breadcrumbs %}
+<div class="breadcrumbs">
+     <a href="../../../">{% trans "Home" %}</a> &rsaquo;
+     <a href="../../">Editions</a> &rsaquo;
+     <a href="../">Folio Image</a> &rsaquo;
+     Bulk Edit
+</div>
+{% endblock %}
+
+
+{% block extrahead %}
+
+{{ block.super }}
+
+<style type="text/css">
+table.bulk_options {width: 100%;}
+table.bulk_options tr {width: 100%;}
+tr.section_last td {border-bottom: 3px solid #DDDDDD}
+.txt-folio-number {width:3em;}
+#tbl-selected-folios {border: 1px solid lightgrey}
+.txta-folio-note {width: 8em; height: 6em;}
+#container input.sbm-change {float: left;}
+</style>
+
+{% endblock %}
+
+
+{% block content %}
+{% if perms_lacking %}
+    <p>{% blocktrans %}Deleting the {{ object_name }} would result in deleting related objects, but your account doesn't have permission to delete the following types of objects:{% endblocktrans %}</p>
+    <ul>
+    {% for obj in perms_lacking %}
+        <li>{{ obj }}</li>
+    {% endfor %}
+    </ul>
+{% else %}
+	<h1>Bulk edit</h1>
+	
+    <form action="" method="post">
+		<fieldset class="module aligned ">
+		    <h2>Edit the selected folio images</h2>
+	    	<table class="bulk_options">
+	    		<thead>
+		    		<tr>
+		    			<th>Operation</th>
+		    			<th>Options</th>
+		    		</tr>
+	    		</thead>
+	    		<tbody>
+		    		<tr class="section_last">
+		    			<td>
+		    				<input type="checkbox" name="manuscript_set" id="manuscript_set_id" value="1" />
+		    				<label for="manuscript_set_id">Set manuscript</label>
+		    			</td>
+		    			<td>
+		    				<select name="manuscript">
+					    		{% for manuscript in manuscripts %}
+						    		<option value="{{ manuscript.id }}">{{ manuscript.shelf_mark }} ({{ manuscript.archive }})</option>
+					    		{% endfor %}
+					    	</select>
+		    			</td>
+		    		</tr>
+		    		<tr>
+		    			<td>
+		    				<input type="checkbox" name="folio_set" id="folio_set_id" value="1" />
+		    				<label for="folio_set_id">Set folio side and number in sequence</label>
+		    			</td>
+		    			<td>
+		    				Starting from folio number <input type="text" name="folio_number" value=""  class="txt-folio-number" />
+		    				&nbsp;
+		    				and side
+		    				<select name="folio_side">
+					    		{% for folio_side in folio_sides %}
+						    		<option value="{{ folio_side.id }}">{{ folio_side.name }}</option>
+					    		{% endfor %}
+		    				</select>
+		    			</td>
+		    		</tr>
+		    		<tr>
+		    			<td>
+		    				<input type="checkbox" name="folio_number_set" id="folio_number_set_id" value="1" />
+		    				<label for="folio_number_set_id">Set folio number from file name</label>
+		    			</td>
+		    			<td>
+		    				The folio number will be set from the number found in the file name. e.g. ff.49v => folio 49
+		    			</td>
+		    		</tr>
+		    		<tr class="section_last">
+		    			<td>
+		    				<input type="checkbox" name="folio_side_set" id="folio_side_set_id" value="1" />
+		    				<label for="folio_side_set_id">Set folio side from file name</label>
+		    			</td>
+		    			<td>
+		    				The folio side will be set from the side found in the file name. e.g. ff.49v => Verso
+		    			</td>
+		    		</tr>
+		    		<tr>
+		    			<td>
+		    				<input type="checkbox" name="page_set" id="page_set_id" value="1" />
+		    				<label for="page_set_id">Set page number in sequence</label>
+		    			</td>
+		    			<td>
+		    				Starting from page number
+		    				<input type="text" name="page_number" value=""  class="txt-folio-number" />
+		    			</td>
+		    		</tr>
+		    		<tr class="section_last">
+		    			<td>
+		    				<input type="checkbox" name="page_number_set" id="page_number_set_id" value="1" />
+		    				<label for="page_number_set_id">Set page number from file name</label>
+		    			</td>
+		    			<td>
+		    				The page number will be set from the number found in the file name. e.g. page_58 => page 58
+		    			</td>
+		    		</tr>
+		    		<tr>
+		    			<td>
+		    				<input type="checkbox" name="archived_set" id="archived_id" value="1" />
+		    				<label for="archived_id">Archive the images</label>
+		    			</td>
+		    			<td>
+		    				Archived images won't be displayed on the website.
+		    			</td>
+		    		</tr>
+		    		<tr class="section_last">
+		    			<td>
+		    				<input type="checkbox" name="unarchived_set" id="unarchived_id" value="1" />
+		    				<label for="unarchived_id">Unarchive the images</label>
+		    			</td>
+		    			<td>
+		    				&nbsp;
+		    			</td>
+		    		</tr>
+		    		<tr  class="section_last">
+		    			<td>
+		    				<input type="checkbox" name="thumbnails_set" id="thumbnails_id" value="1" {% if show_thumbnails %}checked="checked"{% endif %} />
+		    				<label for="thumbnails_id">Show thumbnails</label>
+		    			</td>
+		    			<td>
+		    				Thick this box and click 'Change' to display all the image thumbnails.
+		    			</td>
+		    		</tr>
+					<tr>
+						<td>
+							<input type="hidden" name="action" value="operations" />
+							<input type="submit" name="_save" class="default sbm-change" value="Change">
+						</td>
+						<td>
+							&nbsp;
+						</td>
+					</tr>
+				</tbody>
+	    	</table>
+	    </fieldset>
+    </form>
+    
+    
+    <form action="" method="post">
+    <h2>Selected folio images ({{ folios.count }})</h2>
+	<table id="tbl-selected-folios" cellspacing="0">
+		<thead>
+			<tr>
+		    	<th>ID</th>
+		    	<th>Path</th>
+		    	<th>File</th>
+		    	<th>Manuscript</th>
+		    	<th>Folio<br/>number</th>
+		    	<th>Folio side</th>
+		    	<th>Page</th>
+		    	<th>Archived?</th>
+		    	<th>Internal notes</th>
+		    	<th>View</th>
+		    </tr>
+		</thead>
+		<tbody>
+		    {% for folio in folios %}
+			    <tr class="{% cycle 'row1' 'row2' %}">
+			    	<td><a href="../{{folio.id}}/">{{folio.id}}</a></td>
+			    	<td>{{folio.path}}</td>
+			    	<td>{{folio.filename}}</td>
+			    	<td>{{folio.manuscript}}</td>
+			    	<td>
+			    		<input class="txt-folio-number" type="text" name="fn-{{folio.id}}" value="{{folio.folio_number}}" />
+			    	</td>
+			    	<td>
+			    		{% for side in folio_sides %}
+				    		<input type="radio" id="fs-{{folio.id}}-{{side.id}}-id" name="fs-{{folio.id}}" value="{{side.id}}" {% ifequal folio.folio_side.id side.id %}checked="checked"{% endifequal %} >
+				    		<label for="fs-{{folio.id}}-{{side.id}}-id" >{{side.name}}</label>
+				    		<br/>
+			    		{% endfor %}
+			    	</td>
+			    	<td>
+			    		<input class="txt-folio-number" type="text" name="pn-{{folio.id}}" value="{{folio.page}}" />
+			    	</td>
+			    	<td>
+			    		<input type="checkbox" name="arch-{{folio.id}}" {% if folio.archived %}checked="checked"{% endif %} />
+			    	</td>
+			    	<td>
+			    		<textarea class="txta-folio-note" name="inotes-{{folio.id}}">{{ folio.internal_notes }}</textarea>
+			    	</td>
+			    	<td>
+			    		<a class="img-prv" href="{{ folio.get_image_url_full|safe }}">
+			    			{% if show_thumbnails %}
+			    				<img alt="view" src="{{ folio.get_image_url_full|safe }}&amp;svc.scale=0,50"/>
+			    			{% else %}
+			    				view
+			    			{% endif %}
+			    		</a>
+			    	</td>
+			    </tr>
+			{% endfor %}
+			<tr>
+				<td>
+					<input type="hidden" name="action" value="change_values" />
+					<input type="submit" name="_save" class="default" value="Change">
+				</td>
+				<td colspan="7">
+					&nbsp;
+				</td>
+			</tr>
+		</tbody>
+    </table>
+    </form>
+
+
+{% endif %}
+{% endblock %} 

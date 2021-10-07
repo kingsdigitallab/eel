@@ -1,0 +1,9 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %}
+
+{% block page_main_title %}Account validation failed{% endblock %}
+{% block page_title %}Problem with validation of email address{% endblock %}
+
+{% block page_content %}
+	<p>There has been a problem validating your email address. Please contact {{ gsettings.ugc.help_email_address }} if you need further assistance.</p>
+{% endblock %}

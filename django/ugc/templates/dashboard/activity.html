@@ -1,0 +1,38 @@
+{% extends "dashboard/dashboard_template.html" %}
+{% load i18n %}
+{% load tags %}
+
+{% block page_main_title %}Dashboard - Recently viewed{% endblock %}
+{% block page_title %}Dashboard - Recently viewed{% endblock %}
+
+{% block tab_contents %}
+
+<div class="tsb">
+	<div id="bookmarks">
+		{% if activity.getItems %}
+			<ul class="m0">
+				{% for item in activity.getRecentItemsReversed %}
+					<li>
+						{% ifequal item.getRecordType 's' %}
+							Searched for <a href="{{ DJANGO_WEBPATH_PREFIX }}search?s_txt={{ item.getSearchPhrase }}">
+								{% if item.getSearchPhrase %}
+									'{{ item.getSearchPhrase }}'
+								{% else %}
+									All records
+								{% endif %}
+							</a>
+						{% endifequal %}
+						{% ifequal item.getRecordType 'a' %}
+							Viewed <a href="{{ DJANGO_WEBPATH_PREFIX }}author/{{ item.getRecord.slug }}">{{ item.getRecord.first_name }} {{ item.getRecord.last_name|clean_id }}</a>
+						{% endifequal %}
+						{% ifequal item.getRecordType 'p' %}
+							<a href="{{ DJANGO_WEBPATH_PREFIX }}play/{{ item.getRecord.slug }}">{{ item.getRecord.title|clean_id }}</a> ({{ item.getRecord.getTitleDate|fuzzy_date_short }}){% for author in item.getRecord.getAuthors %}, by <a href="{{ DJANGO_WEBPATH_PREFIX }}author/{{ author.slug }}" title="More about {{ author.first_name }} {{ author.last_name|clean_id }}.">{{ author.first_name }} {{ author.last_name|clean_id }}</a>{% endfor %}
+						{% endifequal %}
+					</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+	</div>
+</div>
+
+{% endblock %}

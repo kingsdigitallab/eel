@@ -1,0 +1,33 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %} 
+{% load tags_filters %}
+{% load tags_editions %}
+
+{% block head_title_block %}Glossary{% endblock %}
+{% block body_title_block %}Glossary{% endblock %} 
+
+{% block extra_script %}
+{% endblock %}
+
+{% block page_content %}
+
+<div>
+	<div class="alphaNav">
+		<div class="t01">
+			<ul>
+				{% filter_interface letters 'a' 's02' 0 'span' 1 %}
+			</ul>
+		</div>
+	</div>
+	
+	<div class="glossaryTermsList">
+		<dl>
+			{% for entry in records %}
+				<dt>{{ entry.term }}</dt>
+				<dd>{{ entry.description|safe }}</dd>
+			{% endfor %}
+		</dl>
+	</div>
+</div>
+	
+{% endblock %}

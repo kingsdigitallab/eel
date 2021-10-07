@@ -1,0 +1,3587 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<office:document-content
+	xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0"
+	xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0"
+	xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0"
+	xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0"
+	xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0"
+	xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0"
+	xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/"
+	xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0"
+	xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0"
+	xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0"
+	xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0"
+	xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML"
+	xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0"
+	xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0"
+	xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer"
+	xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events"
+	xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report"
+	xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:rdfa="http://docs.oasis-open.org/opendocument/meta/rdfa#"
+	office:version="1.2">
+	<office:scripts />
+	<office:font-face-decls>
+		<style:font-face style:name="Tahoma2" svg:font-family="Tahoma" />
+		<style:font-face style:name="TimesNewRomanPSMT"
+			svg:font-family="TimesNewRomanPSMT, Times" style:font-family-generic="roman" />
+		<style:font-face style:name="Times New Roman"
+			svg:font-family="&apos;Times New Roman&apos;"
+			style:font-family-generic="roman" style:font-pitch="variable" />
+		<style:font-face style:name="Arial" svg:font-family="Arial"
+			style:font-family-generic="swiss" style:font-pitch="variable" />
+		<style:font-face style:name="Calibri" svg:font-family="Calibri"
+			style:font-family-generic="swiss" style:font-pitch="variable" />
+		<style:font-face style:name="Tahoma" svg:font-family="Tahoma"
+			style:font-family-generic="swiss" style:font-pitch="variable" />
+		<style:font-face style:name="Verdana" svg:font-family="Verdana"
+			style:font-family-generic="swiss" style:font-pitch="variable" />
+		<style:font-face style:name="Arial Unicode MS"
+			svg:font-family="&apos;Arial Unicode MS&apos;"
+			style:font-family-generic="system" style:font-pitch="variable" />
+		<style:font-face style:name="MS Mincho"
+			svg:font-family="&apos;MS Mincho&apos;" style:font-family-generic="system"
+			style:font-pitch="variable" />
+		<style:font-face style:name="Tahoma1" svg:font-family="Tahoma"
+			style:font-family-generic="system" style:font-pitch="variable" />
+	</office:font-face-decls>
+	<office:automatic-styles>
+		<style:style style:name="P1" style:family="paragraph"
+			style:parent-style-name="Standard">
+			<style:paragraph-properties fo:text-align="center"
+				style:justify-single-word="false" />
+		</style:style>
+		<style:style style:name="P2" style:family="paragraph"
+			style:parent-style-name="Standard">
+			<style:paragraph-properties fo:text-align="center"
+				style:justify-single-word="false" />
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="16pt" style:text-underline-style="solid"
+				style:text-underline-width="auto" style:text-underline-color="font-color"
+				fo:font-weight="bold" style:font-size-asian="16pt"
+				style:font-weight-asian="bold" style:font-size-complex="16pt" />
+		</style:style>
+		<style:style style:name="P3" style:family="paragraph"
+			style:parent-style-name="Standard">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="16pt" style:font-size-asian="16pt"
+				style:font-size-complex="16pt" />
+		</style:style>
+		<style:style style:name="P4" style:family="paragraph"
+			style:parent-style-name="Standard">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" style:font-size-asian="12pt"
+				style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="P5" style:family="paragraph"
+			style:parent-style-name="Standard">
+			<style:paragraph-properties
+				fo:line-height="100%" />
+		</style:style>
+		<style:style style:name="P6" style:family="paragraph"
+			style:parent-style-name="Standard">
+			<style:paragraph-properties fo:margin-top="0cm"
+				fo:margin-bottom="0cm" fo:line-height="150%" style:text-autospace="none" />
+		</style:style>
+		<style:style style:name="P7" style:family="paragraph"
+			style:parent-style-name="Standard" style:master-page-name="Standard">
+			<style:paragraph-properties fo:text-align="center"
+				style:justify-single-word="false" style:page-number="auto" />
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="16pt" fo:font-weight="bold" style:font-size-asian="16pt"
+				style:font-weight-asian="bold" style:font-size-complex="16pt" />
+		</style:style>
+		<style:style style:name="P8" style:family="paragraph"
+			style:parent-style-name="No_20_Spacing">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" style:font-size-asian="12pt"
+				style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T1" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" style:font-size-asian="12pt"
+				style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T2" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" style:font-size-asian="12pt"
+				style:font-size-complex="12pt" style:font-weight-complex="bold" />
+		</style:style>
+		<style:style style:name="T3" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" style:font-size-asian="12pt"
+				style:language-asian="en" style:country-asian="GB"
+				style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T4" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" style:font-size-asian="12pt"
+				style:language-asian="en" style:country-asian="GB"
+				style:font-size-complex="12pt" style:font-style-complex="italic" />
+		</style:style>
+		<style:style style:name="T5" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:font-style="italic" style:font-size-asian="12pt"
+				style:font-style-asian="italic" style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T6" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:font-style="italic" style:font-size-asian="12pt"
+				style:font-style-asian="italic" style:font-size-complex="12pt"
+				style:font-weight-complex="bold" />
+		</style:style>
+		<style:style style:name="T7" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:font-style="italic" style:font-size-asian="12pt"
+				style:font-style-asian="italic" style:font-size-complex="12pt"
+				style:font-style-complex="italic" />
+		</style:style>
+		<style:style style:name="T8" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:font-style="italic" style:font-size-asian="12pt"
+				style:language-asian="en" style:country-asian="GB"
+				style:font-style-asian="italic" style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T9" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:font-style="italic" style:font-size-asian="12pt"
+				style:language-asian="en" style:country-asian="GB"
+				style:font-style-asian="italic" style:font-size-complex="12pt"
+				style:font-style-complex="italic" />
+		</style:style>
+		<style:style style:name="T10" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:language="de" fo:country="DE"
+				style:font-size-asian="12pt" style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T11" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:language="de" fo:country="DE"
+				style:font-size-asian="12pt" style:language-asian="en"
+				style:country-asian="GB" style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T12" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:language="de" fo:country="DE" fo:font-style="italic"
+				style:font-size-asian="12pt" style:font-style-asian="italic"
+				style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T13" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:language="de" fo:country="DE" fo:font-style="italic"
+				style:font-size-asian="12pt" style:language-asian="en"
+				style:country-asian="GB" style:font-style-asian="italic"
+				style:font-size-complex="12pt" style:font-style-complex="italic" />
+		</style:style>
+		<style:style style:name="T14" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:font-style="normal" style:font-size-asian="12pt"
+				style:font-style-asian="normal" style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T15" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:font-weight="bold" style:font-size-asian="12pt"
+				style:font-weight-asian="bold" style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T16" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="12pt" fo:font-weight="bold" style:font-size-asian="12pt"
+				style:font-weight-asian="bold" style:font-size-complex="12pt"
+				style:font-weight-complex="bold" />
+		</style:style>
+		<style:style style:name="T17" style:family="text">
+			<style:text-properties style:font-name="Times New Roman"
+				fo:font-size="16pt" style:text-underline-style="solid"
+				style:text-underline-width="auto" style:text-underline-color="font-color"
+				fo:font-weight="bold" style:font-size-asian="16pt"
+				style:font-weight-asian="bold" style:font-size-complex="16pt" />
+		</style:style>
+		<style:style style:name="T18" style:family="text">
+			<style:text-properties fo:color="#000000"
+				style:font-name="Times New Roman" fo:font-size="12pt"
+				style:font-size-asian="12pt" style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T19" style:family="text">
+			<style:text-properties fo:color="#000000"
+				style:font-name="Times New Roman" fo:font-size="12pt"
+				style:font-size-asian="12pt" style:font-size-complex="12pt"
+				style:font-weight-complex="bold" />
+		</style:style>
+		<style:style style:name="T20" style:family="text">
+			<style:text-properties fo:color="#000000"
+				style:font-name="Times New Roman" fo:font-size="12pt" fo:font-style="italic"
+				style:font-size-asian="12pt" style:font-style-asian="italic"
+				style:font-size-complex="12pt" />
+		</style:style>
+		<style:style style:name="T21" style:family="text">
+			<style:text-properties fo:color="#000000"
+				style:font-name="Times New Roman" fo:language="de" fo:country="DE" />
+		</style:style>
+		<style:style style:name="T22" style:family="text">
+			<style:text-properties fo:color="#000000"
+				style:font-name="Arial" style:font-name-complex="Arial" />
+		</style:style>
+		<style:style style:name="T23" style:family="text">
+			<style:text-properties fo:language="de"
+				fo:country="DE" />
+		</style:style>
+		<style:style style:name="T24" style:family="text">
+			<style:text-properties style:font-name="Tahoma"
+				fo:font-size="12pt" style:font-size-asian="12pt"
+				style:font-name-complex="Tahoma" style:font-size-complex="12pt" />
+		</style:style>
+	</office:automatic-styles>
+	<office:body>
+		<office:text text:use-soft-page-breaks="true">
+			<office:forms form:automatic-focus="false"
+				form:apply-design-mode="false" />
+			<text:sequence-decls>
+				<text:sequence-decl text:display-outline-level="0"
+					text:name="Illustration" />
+				<text:sequence-decl text:display-outline-level="0"
+					text:name="Table" />
+				<text:sequence-decl text:display-outline-level="0"
+					text:name="Text" />
+				<text:sequence-decl text:display-outline-level="0"
+					text:name="Drawing" />
+			</text:sequence-decls>
+			<text:p text:style-name="P7">General</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Amt, E., ‘Richard de Lucy,
+					Henry II’s justiciar’, </text:span>
+				<text:span text:style-name="T5">Medieval Prosopography
+				</text:span>
+				<text:span text:style-name="T1">, 9 (1988), 61–87.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Attenborough, F.L. (ed.),
+				</text:span>
+				<text:span text:style-name="T5">The Laws of the Earliest
+					English Kings</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1922).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Barlow, F., ‘The Constitutions
+					of Clarendon’, </text:span>
+				<text:span text:style-name="T5">Medieval History</text:span>
+				<text:span text:style-name="T1">, 1 (1991), 39–52.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Bately, J., ‘John Joscelyn and
+					the laws of the Anglo-Saxon kings’, in Korhammer, M. (ed.),
+				</text:span>
+				<text:span text:style-name="T6">Words, Texts and Manuscripts:
+					Studies in Anglo-Saxon Culture Presented to Helmut Gneuss on the
+					Occasion of his Sixty-Fifth Birthday</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1992), pp. 435–66.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Batt, M., ‘The burghal hidage:
+					Axbridge’, </text:span>
+				<text:span text:style-name="T5">Somerset Archaeology and
+					Natural History</text:span>
+				<text:span text:style-name="T1">, 119 (1975), 22–5.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Baxter, S., ‘Lordship and
+					justice in late Anglo-Saxon England; the judicial functions of soke
+					and commendation revisited’, in Baxter, S., Karkov, C., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.),</text:span>
+				<text:span text:style-name="T5"> Early Medieval Studies in
+					Memory of Patrick Wormald</text:span>
+				<text:span text:style-name="T1"> (Farnham, 2009), pp. 383–419.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Boorman, J., ‘</text:span>
+				<text:span text:style-name="T5">Nisi feceris</text:span>
+				<text:span text:style-name="T1"> under Henry II’, </text:span>
+				<text:span text:style-name="T5">Anglo-Norman Studies
+				</text:span>
+				<text:span text:style-name="T1">, 24 (2001), 85–96.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Boureau, A., ‘Conflicting
+					norms: liturgical procedure and the separation of divine law from
+					human law (England, eleventh century)’, </text:span>
+				<text:span text:style-name="T5">Medieval History Journal
+				</text:span>
+				<text:span text:style-name="T1">, 3 (2000), 17–40.</text:span>
+			</text:p>
+			<text:p text:style-name="P5">
+				<text:span text:style-name="T1">Brand, P., ‘Henry II and the
+					creation of the English common law’, in Harper-Bill, C., and
+					Vincent, N. (eds.), </text:span>
+				<text:span text:style-name="T5">Henry II: New Interpretations
+				</text:span>
+				<text:span text:style-name="T1"> (Woodbridge, 2007), pp.
+					215–41.</text:span>
+			</text:p>
+			<text:p text:style-name="P5">
+				<text:span text:style-name="T1">Brand, P., ‘Legal history’, in
+					Deyermond, A. (ed.), </text:span>
+				<text:span text:style-name="T5">A Century of British Medieval
+					Studies</text:span>
+				<text:span text:style-name="T1"> (Oxford, 2007), pp. 181–200.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Brand, P., ‘The making of
+					English thirteenth-century legislation: some new evidence’, in
+					Lewis, A. D., Brand, P., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.),</text:span>
+				<text:span text:style-name="T5"> Law in the City: Proceedings
+					of the Seventeenth British Legal History Conference, London, 2005
+				</text:span>
+				<text:span text:style-name="T1"> (Dublin, 2007), pp. 42–53.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Brand, P., ‘The English
+					difference: the application of bureaucratic norms within a legal
+					system’, </text:span>
+				<text:span text:style-name="T5">Law and History Review
+				</text:span>
+				<text:span text:style-name="T1">, 21 (2003), 383–7.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Brand, P., ‘Local custom in the
+					early common law’, in Stafford, P., Nelson, J. L., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.)</text:span>
+				<text:span text:style-name="T5"> Law, Laity and Solidarities:
+					Essays in Honour of Susan Reynolds</text:span>
+				<text:span text:style-name="T1"> (Manchester, 2001), pp. 150–9.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Brand, P., ‘The formation of
+					the English legal system, 1150–1400’, in Schioppa, A. P. (ed.),
+				</text:span>
+				<text:span text:style-name="T6">Legislation and Justice
+				</text:span>
+				<text:span text:style-name="T1"> (Oxford, 1997), pp. 103–22.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Brand, P., </text:span>
+				<text:span text:style-name="T5">Origins of the English Legal
+					Profession</text:span>
+				<text:span text:style-name="T1"> (Oxford, 1992).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Brand, P., </text:span>
+				<text:span text:style-name="T5">The Making of the Common Law
+				</text:span>
+				<text:span text:style-name="T1"> (London, 1992).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Brand, P., ‘Lordship and
+					distraint in thirteenth-century England’, in Coss, P. R., and
+					Lloyd, S. D. (eds.), </text:span>
+				<text:span text:style-name="T6">Thirteenth-Century England
+				</text:span>
+				<text:span text:style-name="T2">, 3:</text:span>
+				<text:span text:style-name="T6"> Proceedings of the Newcastle
+					upon Tyne Conference, 1989</text:span>
+				<text:span text:style-name="T1"> (Woodbridge, 1991), pp. 1–24.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Brand, P., ‘“Multis vigiliis
+					excogitatam et inventam”: Henry II and the creation of the English
+					common law’, </text:span>
+				<text:span text:style-name="T5">Haskins Society Journal
+				</text:span>
+				<text:span text:style-name="T1">, 2 (1990), 197–222.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T3">Bridbury, A. R.,
+					‘Seventh-century England in Bede and the early laws’, in Bridbury,
+					A. R. (ed.), </text:span>
+				<text:span text:style-name="T8">The English Economy from Bede
+					to the Reformation</text:span>
+				<text:span text:style-name="T3"> (Woodbridge, 1992), pp. 56–85.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T3">Brooks, N. P., ‘The Fonthill
+					Letter, Ealdorman Ordlaf and Anglo-Saxon law in practice’,
+				</text:span>
+				<text:span text:style-name="T1">in Baxter, S., Karkov, C.,
+				</text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.),</text:span>
+				<text:span text:style-name="T5"> Early Medieval Studies in
+					Memory of Patrick Wormald</text:span>
+				<text:span text:style-name="T1"> (Farnham, 2009), pp. 301–17.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T3">Carella, B., ‘The source of the
+					Prologue to the Laws of Alfred’, </text:span>
+				<text:span text:style-name="T8">Peritia: Journal of the
+					Medieval Academy of Ireland</text:span>
+				<text:span text:style-name="T3">, 19, (2005), 91–118.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Chibnall, M., ‘“Clio’s legal
+					cosmetics”: law and custom in the work of medieval historians’,
+				</text:span>
+				<text:span text:style-name="T5">Anglo-Norman Studies
+				</text:span>
+				<text:span text:style-name="T1">, 20 (1998), 31–43.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Clanchy, M. T., ‘Remembering
+					the past and the good old law’, </text:span>
+				<text:span text:style-name="T5">History</text:span>
+				<text:span text:style-name="T1">, 55 (1970), 165–76.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Cooper, A., </text:span>
+				<text:span text:style-name="T5">Bridges, Law and Power in
+					Medieval England, 700–1400</text:span>
+				<text:span text:style-name="T1"> (Woodbridge, 2006).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Cooper, A., ‘The rise and fall
+					of the Anglo-Saxon law of the highway’, </text:span>
+				<text:span text:style-name="T5">Haskins Society Journal
+				</text:span>
+				<text:span text:style-name="T1">, 12 (2002), 39–69.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Cooper, A., ‘The king’s four
+					highways: legal fiction meets fictional law’, </text:span>
+				<text:span text:style-name="T5">Journal of Medieval History
+				</text:span>
+				<text:span text:style-name="T1">, 26 (2000), 351–70.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Corner, D., ‘The texts of Henry
+					II’s Assizes’, in Harding, A. (ed.), </text:span>
+				<text:span text:style-name="T6">Law-Making and Law-Makers in
+					British History: Papers Presented to the Edinburgh Legal History
+					Conference, 1977</text:span>
+				<text:span text:style-name="T2"> (</text:span>
+				<text:span text:style-name="T1">Royal Historical Society
+					Studies in History, 22, </text:span>
+				<text:span text:style-name="T18">London,</text:span>
+				<text:span text:style-name="T1"> 1980), pp. 7–20.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Dammery, R., ‘Editing the
+					Anglo-Saxon laws: Felix Liebermann and beyond’, in Scragg, D. G.,
+					and Szarmach, P. E. (ed.), </text:span>
+				<text:span text:style-name="T5">The Editing of Old English:
+					Papers from the 1990 Manchester Conference</text:span>
+				<text:span text:style-name="T1"> (Woodbridge, 1994), pp.
+					251–61.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Davies, R. R., ‘The peoples of
+					Britain and Ireland, 1100–1400, 3: laws and customs’, </text:span>
+				<text:span text:style-name="T5">Transactions of the Royal
+					Historical Society</text:span>
+				<text:span text:style-name="T1">, 6th ser., 6 (1996), 1–23.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Doe, N., and Young, J.,
+					‘Administration and law in England from the middle ages to the
+					seventeenth century’, </text:span>
+				<text:span text:style-name="T5">Jahrbuch für europäische
+					Verwaltungsgeschichte</text:span>
+				<text:span text:style-name="T1">, 8 (1996), 1–18.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T10">Dohmen, S., </text:span>
+				<text:span text:style-name="T10">‘Exemplarische Untersuchungen
+					zur Rechtskraft des Privilegs: die gerichtliche Handhabung von
+					Privilegienurkunden in England von König Stephan bis König Johann’,
+				</text:span>
+				<text:span text:style-name="T12">Archiv für Diplomatik
+				</text:span>
+				<text:span text:style-name="T10">, 41 (1996), 33–224.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Downer, L. J. (ed.),
+				</text:span>
+				<text:span text:style-name="T5">Leges Henrici Primi</text:span>
+				<text:span text:style-name="T1"> (Oxford, 1972).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Eska, C. M., ‘Rewarding
+					informers in Cain Domnaig and the Laws of Wihtred’, </text:span>
+				<text:span text:style-name="T5">Cambrian Medieval Celtic
+					Studies</text:span>
+				<text:span text:style-name="T1">, 52 (2006), 1–11.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Everard, J., ‘The “Assize of
+					Count Geoffrey” (1185): law and politics in Angevin Brittany’, in
+					Musson, A. (ed.), </text:span>
+				<text:span text:style-name="T5">Expectations of the Law in the
+					Middle Ages</text:span>
+				<text:span text:style-name="T1"> (Woodbridge, 2001), pp. 53–65.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Fleming, R., </text:span>
+				<text:span text:style-name="T5">Domesday Book and the Law:
+					Society and Legal Custom in Early Medieval History</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1998).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Flower, R., and Smith, H.
+					(eds.), </text:span>
+				<text:span text:style-name="T5">The Parker Chronicle and Laws
+				</text:span>
+				<text:span text:style-name="T1"> (Early English Text Society,
+					orig. ser., 208, Oxford, 1941).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Green, J. A., ‘“A lasting
+					memorial”: the Charter of Liberties of Henry I’, in Flanagan, M.
+					T., and Green, J. A (eds.), </text:span>
+				<text:span text:style-name="T5">Charters and Charter
+					Scholarship in Britain and Ireland</text:span>
+				<text:span text:style-name="T1"> (Basingstoke, 2005), pp.
+					53–69.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Green, J. A., </text:span>
+				<text:span text:style-name="T5">English Sheriffs to 1154
+				</text:span>
+				<text:span text:style-name="T1"> (Public Record Office
+					Handbook, 24, </text:span>
+				<text:span text:style-name="T18">London, 1990</text:span>
+				<text:span text:style-name="T1">).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Groot, R. D., ‘The jury of
+					presentment before 1215’, </text:span>
+				<text:span text:style-name="T5">American Journal of Legal
+					History</text:span>
+				<text:span text:style-name="T1">, 26 (1982), 1–24.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Harris, M., ‘Compensation for
+					injury: a point of contact between early Welsh and Germanic law?’,
+					in Watkin, T. G. (ed.), </text:span>
+				<text:span text:style-name="T5">The Trial of Dic Penderyn and
+					other Essays</text:span>
+				<text:span text:style-name="T1"> (Welsh Legal History Society,
+					2, Cardiff, 2002), pp. 39–76.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Harvey, P. D. A., ‘</text:span>
+				<text:span text:style-name="T5">Rectitudines singularum
+					personarum</text:span>
+				<text:span text:style-name="T1"> and </text:span>
+				<text:span text:style-name="T5">Gerefa</text:span>
+				<text:span text:style-name="T1">’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 108 (1993), 1–22.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Haslam, J., ‘Market and
+					fortress in England in the reign of Offa’, </text:span>
+				<text:span text:style-name="T5">World Archaeology</text:span>
+				<text:span text:style-name="T1">, 19 (1987), 76–93.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hazard, G. C., jr., ‘The early
+					evolution of the common law writs: a sketch’, </text:span>
+				<text:span text:style-name="T5">American Journal of Legal
+					History</text:span>
+				<text:span text:style-name="T1">, 6 (1962), 114–22.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Helmholz, R. H., ‘The learned
+					laws in “Pollock and Maitland”’, </text:span>
+				<text:span text:style-name="T5">Proceedings of the British
+					Academy</text:span>
+				<text:span text:style-name="T1">, 89 (1996); repr. in Hudson,
+					J. (ed.), </text:span>
+				<text:span text:style-name="T6">The History of English Law:
+					Centenary Essays on ‘Pollock and Maitland’</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(Oxford, 1996).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Holt, J. C., ‘The writs of
+					Henry II’, </text:span>
+				<text:span text:style-name="T5">Proceedings of the British
+					Academy</text:span>
+				<text:span text:style-name="T1">, 89 (1996); repr. in Hudson,
+					J. (ed.), </text:span>
+				<text:span text:style-name="T6">The History of English Law:
+					Centenary Essays on ‘Pollock and Maitland’</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(Oxford, 1996).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Holt, J. C., ‘The Assizes of
+					Henry II: the texts’, in Bullough, A., and Storey, R. L. (eds.),
+				</text:span>
+				<text:span text:style-name="T5">The Study of Medieval Records.
+					Essays in Honour of Kathleen Major</text:span>
+				<text:span text:style-name="T1"> (Oxford, 1971).</text:span>
+			</text:p>
+			<text:p text:style-name="P5">
+				<text:span text:style-name="T1">Hough, C., ‘Numbers in
+					manuscripts of Anglo-Saxon law’, in Rumble, A. R. (ed.),
+				</text:span>
+				<text:span text:style-name="T5">Writing and Texts in
+					Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1"> (Woodbridge, 2006), pp.
+					114­­–36.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Hough, C., ‘Legal and
+					documentary writings’, in Pulsiano, P., and Treharne, E. (eds.),
+				</text:span>
+				<text:span text:style-name="T5">A Companion to Anglo-Saxon
+					Literature</text:span>
+				<text:span text:style-name="T1"> (Oxford, 2001), pp. 170–87.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P5">
+				<text:span text:style-name="T1">Hough, C., ‘Palaeographical
+					evidence for the compilation of </text:span>
+				<text:span text:style-name="Emphasis">
+					<text:span text:style-name="T1">Textus Roffensis</text:span>
+				</text:span>
+				<text:span text:style-name="T1">’, </text:span>
+				<text:span text:style-name="T5">Scriptorium</text:span>
+				<text:span text:style-name="T1">, 55 (2001), 57–79.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hudson, J., ‘</text:span>
+				<text:span text:style-name="T5">The Making of English Law
+				</text:span>
+				<text:span text:style-name="T1"> and the varieties of legal
+					history’, in Baxter, S., Karkov, C., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.),</text:span>
+				<text:span text:style-name="T5"> Early Medieval Studies in
+					Memory of Patrick Wormald</text:span>
+				<text:span text:style-name="T1"> (Farnham, 2009), pp. 421–32.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hudson, J., ‘L’écrit, les
+					archives et le droit en Angleterre (IXe–XIIe siècle)’, </text:span>
+				<text:span text:style-name="T5">Revue historique</text:span>
+				<text:span text:style-name="T1">, 637 (2006), 1–35.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hudson, J., ‘Maitland and
+					Anglo-Norman law’, in Hudson, J. (ed.), </text:span>
+				<text:span text:style-name="T6">The History of English Law:
+					Centenary Essays on ‘Pollock and Maitland’ </text:span>
+				<text:span text:style-name="T1">(Oxford, 1996), pp. 21-46.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hudson, J., </text:span>
+				<text:span text:style-name="T5">The Formation of English Common
+					Law: Law and Society in England from the Norman Conquest to Magna
+					Carta</text:span>
+				<text:span text:style-name="T1"> (London, 1996).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hunt, J., </text:span>
+				<text:span text:style-name="T5">Medieval Justice: Cases and
+					Laws in France, England and Germany, 500–1500</text:span>
+				<text:span text:style-name="T1"> (Jefferson, NC, 2004).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., ‘Norms and legal
+					argument before 1150’, in Lewis, A. D., and Lobban, M. (eds.),
+				</text:span>
+				<text:span text:style-name="T5">Law and History</text:span>
+				<text:span text:style-name="T1"> (Current Legal Issues, 6,
+					Oxford, 2004), pp. 41–61.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., </text:span>
+				<text:span text:style-name="T5">Rancor and Reconciliation in
+					Medieval England</text:span>
+				<text:span text:style-name="T1"> (Ithaca, NY, 2003).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., ‘Homage and
+					feudalism: a judicious separation’, in Fryde, N., and Monnet, P.
+					(eds.), </text:span>
+				<text:span text:style-name="T5">Die Gegenwart des Feudalismus
+				</text:span>
+				<text:span text:style-name="T1"> (Göttingen, 2002), pp. 13–49.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., ‘Henri II comme
+					juriste: eut-il une politique de reforme?’, </text:span>
+				<text:span text:style-name="T5">Cahiers de civilisation
+					médiévale</text:span>
+				<text:span text:style-name="T1">, 37 (1994), 85–89.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., ‘The charter as a
+					source for the early common law’, </text:span>
+				<text:span text:style-name="T5">Journal of Legal History
+				</text:span>
+				<text:span text:style-name="T1">, 12 (1991), 173–89.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., ‘Warranty and
+					good lordship in twelfth century England’, </text:span>
+				<text:span text:style-name="T5">Law and History Review
+				</text:span>
+				<text:span text:style-name="T1">, 5 (1987), 437–503.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., ‘“No register of
+					title”: the Domesday inquest and land adjudication’, </text:span>
+				<text:span text:style-name="T5">Anglo-Norman Studies
+				</text:span>
+				<text:span text:style-name="T1">, 9 (1986), 128–41.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., ‘The action of
+					naifty in the early common law’, </text:span>
+				<text:span text:style-name="T5">Law Quarterly Review
+				</text:span>
+				<text:span text:style-name="T1">, 90 (1974), 326–50.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., ‘The proof of
+					villein status in the common law’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 89 (1974), 721–49.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T10">Jenks, S., </text:span>
+				<text:span text:style-name="T10">‘Die Assisen von Clarendon
+					(1166) und Northampton (1176): eine Neubetrachtung ihres
+					Verhältnisses’, </text:span>
+				<text:span text:style-name="T12">Ius Commune</text:span>
+				<text:span text:style-name="T10">, 21 (1994), 149–68.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Joüon des Longrais, F.,
+				</text:span>
+				<text:span text:style-name="T5">Henry II and his Justiciars:
+					had they a Political Plan in their Reforms about Seisin?
+				</text:span>
+				<text:span text:style-name="T1"> (Limoges, 1962).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Joüon des Longrais, F., ‘Le
+					statut de la femme en Angleterre dans le droit commun médiéval’,
+				</text:span>
+				<text:span text:style-name="T5">Receuils Société Jean Bodin
+				</text:span>
+				<text:span text:style-name="T1">, 12 (1962), 135–241.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Joüon des Longrais, F., ‘La
+					portée politique des réformes d&apos;Henri II en matière de
+					saisine’, </text:span>
+				<text:span text:style-name="T5">Revue historique de droit
+					français et étranger</text:span>
+				<text:span text:style-name="T1">, 4th ser., 3 (1936), 540–71.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Keeton, G. W., </text:span>
+				<text:span text:style-name="T5">The Norman Conquest and the
+					Common Law</text:span>
+				<text:span text:style-name="T1"> (London, 1966).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Kemp, B. R., ‘Exchequer and
+					Bench in the later twelfth century – separate or identical
+					tribunals?’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 88 (1973), 559–73.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Keynes, S., ‘Royal government
+					and the written word in late Anglo-Saxon England’, in McKitterick,
+					R. (ed.), </text:span>
+				<text:span text:style-name="T6">The Uses of Literacy in Early
+					Mediaeval Europe</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1990), pp. 226–57.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Knowles, D., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), ‘Henry II’s supplement
+					to the Constitutions of Clarendon’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 87 (1972), 757–71.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T10">Liebermann, F.</text:span>
+				<text:span text:style-name="T10">, ‘Ist Lambardes Text der
+					Gesetze Athelstans neuzeitliche Fälschung?’, </text:span>
+				<text:span text:style-name="T12">Beiblatt zur Anglia</text:span>
+				<text:span text:style-name="T10">, 35 (1924), 214–18; 36 (1925),
+					345–7.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T10">Liebermann, F.,</text:span>
+				<text:span text:style-name="T10">
+				</text:span>
+				<text:span text:style-name="T12">Die Gesetze der Angelsachsen
+				</text:span>
+				<text:span text:style-name="T10"> (3 vols., Halle, 1903–16).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P6">
+				<text:span text:style-name="T10">Liebermann, F.,</text:span>
+				<text:span text:style-name="T11"> ‘Gerefa’, </text:span>
+				<text:span text:style-name="T13">Anglia: Zeitschrift für
+					Englische Philologie</text:span>
+				<text:span text:style-name="T11">, 9 (1886), 251–66.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Loengard, J. S., ‘Lords’ rights
+					and neighbors’ nuisances: mills and medieval English law’, in
+					Walton, S. A. (ed.), </text:span>
+				<text:span text:style-name="T5">Wind and Water in the Middle
+					Ages: Fluid Technologies from Antiquity to the Renaissance
+				</text:span>
+				<text:span text:style-name="T1"> (Medieval and Renaissance
+					Texts and Studies, 322, Tempe, AZ, 2006).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Loomis, D. B., ‘</text:span>
+				<text:span text:style-name="T5">Regnum</text:span>
+				<text:span text:style-name="T1"> and </text:span>
+				<text:span text:style-name="T5">sacerdotium</text:span>
+				<text:span text:style-name="T1"> in the early eleventh
+					century’, in Clemoes, P., and Hughes, K. (eds.), </text:span>
+				<text:span text:style-name="T5">England before the Conquest:
+					Studies in Primary Sources Presented to Dorothy Whitelock
+				</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1971), pp. 129–45.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Loyn, H. R., ‘De iure domini
+					regis: a comment on royal authority in eleventh-century England’,
+					in Hicks, C. (ed.), </text:span>
+				<text:span text:style-name="T6">England in the Eleventh
+					Century: Proceedings of the 1990 Harlaxton Symposium</text:span>
+				<text:span text:style-name="T1"> (Harlaxton Medieval Studies,
+					2, Stamford, 1992), pp. 17–24.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">McLeod, N. D. B., ‘Parallel and
+					paradox: compensation in the legal systems of Celtic Ireland and
+					Anglo-Saxon England’, </text:span>
+				<text:span text:style-name="T5">Studia Celtica</text:span>
+				<text:span text:style-name="T1">, 16 (1983 for 1981).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Macnair, M., ‘Vicinage and the
+					antecedents of the jury’, </text:span>
+				<text:span text:style-name="T5">Law and History Review
+				</text:span>
+				<text:span text:style-name="T1">, 17 (1999), 537–90.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Milsom, S. F. C., ‘The origin
+					of prerogative wardship’, in Garnett, G., and Hudson, J. (eds.),
+				</text:span>
+				<text:span text:style-name="T6">Law and Government in Medieval
+					England and Normandy: Essays in Honour of Sir James Holt
+				</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1994), pp. 223–44.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Mooers, S. L., ‘A re-evaluation
+					of royal justice under Henry I of England (pipe roll 1130)’,
+				</text:span>
+				<text:span text:style-name="T5">American Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 93 (1988), 340–58.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Nelson, J. L., ‘England and the
+					continent in the ninth century III: rights and rituals’,
+				</text:span>
+				<text:span text:style-name="T5">Transactions of the Royal
+					Historical Society</text:span>
+				<text:span text:style-name="T1">, 6th ser., 14 (2004), 1–24.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">O’Brien, B., </text:span>
+				<text:span text:style-name="T5">God’s Peace and King’s Peace:
+					the Laws of Edward the Confessor</text:span>
+				<text:span text:style-name="T1"> (Philadelphia, PA, 1999).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">O’Brien, B., ‘The Becket
+					conflict and the invention of the myth of </text:span>
+				<text:span text:style-name="T5">lex non scripta</text:span>
+				<text:span text:style-name="T1">’, in Bush, J. A., and
+					Wijffels, A. A. (eds.), </text:span>
+				<text:span text:style-name="T6">Learning the Law: Teaching and
+					the Transmission of Law in England, 1150–1900</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(London, 1999), pp. 1–16.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">O’Brien, B., ‘Forgery and the
+					literacy of the early common law’, </text:span>
+				<text:span text:style-name="T5">Albion</text:span>
+				<text:span text:style-name="T1">, 27 (1995), 1–18.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">O’Keeffe, K., ‘Body and law in
+					late Anglo-Saxon England’, </text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 27 (1998), 209–32.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Oleson, T. J., </text:span>
+				<text:span text:style-name="T5">The</text:span>
+				<text:span text:style-name="T1">
+				</text:span>
+				<text:span text:style-name="T5">Witenagemot in the Reign of
+					Edward the Confessor</text:span>
+				<text:span text:style-name="T1"> (London, 1955).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Oliver, E., ‘Royal and
+					ecclesiastical law in seventh-century Kent’, in Baxter, S., Karkov,
+					C., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T5">Early Medieval Studies in
+					Memory of Patrick Wormald</text:span>
+				<text:span text:style-name="T1"> (Farnham, 2009), pp. 97–112.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Oliver, L., </text:span>
+				<text:span text:style-name="T5">The Beginnings of English Law
+				</text:span>
+				<text:span text:style-name="T1"> (Toronto Medieval Texts and
+					Translations, 14, Toronto, CO, 2002).</text:span>
+			</text:p>
+			<text:p text:style-name="P6">
+				<text:span text:style-name="T1">Page, R. I., </text:span>
+				<text:span text:style-name="T3">‘</text:span>
+				<text:span text:style-name="T9">Gerefa</text:span>
+				<text:span text:style-name="T3">: some problems of meaning’, in
+					Bammesberger, A. (ed.), </text:span>
+				<text:span text:style-name="T9">Problems of Old English
+					Lexicography: Studies in Memory of Angus Cameron</text:span>
+				<text:span text:style-name="T3"> (Regensberg, 1985), 211–28.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Palmer, R. C., ‘England: law,
+					society and the state’, in Rigby, S. H. (ed.), </text:span>
+				<text:span text:style-name="T5">A Companion to Britain in the
+					Later Middle Ages</text:span>
+				<text:span text:style-name="T1"> (Oxford, 2003), pp. 242–60.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Pantos, A., ‘“On the edge of
+					things”: the boundary location of Anglo-Saxon assembly sites’,
+				</text:span>
+				<text:span text:style-name="Emphasis">
+					<text:span text:style-name="T1">Anglo-Saxon Studies in
+						Archaeology and History</text:span>
+				</text:span>
+				<text:span text:style-name="Emphasis">
+					<text:span text:style-name="T14">, 12 (2003), 38–49.
+					</text:span>
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Pollock, F., and Maitland, F.
+					W., </text:span>
+				<text:span text:style-name="T5">History of English Law before
+					the Time of Edward I</text:span>
+				<text:span text:style-name="T1"> (2nd edn., Cambridge, 1968).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P6">
+				<text:span text:style-name="T3">Poole, R. G., ‘The textile
+					inventory in the Old English </text:span>
+				<text:span text:style-name="T8">Gerefa</text:span>
+				<text:span text:style-name="T3">’, </text:span>
+				<text:span text:style-name="T9">Review of English Studies
+				</text:span>
+				<text:span text:style-name="T4">,</text:span>
+				<text:span text:style-name="T9">
+				</text:span>
+				<text:span text:style-name="T3">new ser., 40 (1989), 469–78.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Pugh, R. B., ‘The king’s
+					prisons before 1250’, </text:span>
+				<text:span text:style-name="T5">Transactions of the Royal
+					Historical Society</text:span>
+				<text:span text:style-name="T1">, 5th ser., 5 (1955), 1–22.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Rabin, A., ‘Old English
+				</text:span>
+				<text:span text:style-name="T5">forespeca</text:span>
+				<text:span text:style-name="T1"> and the role of the advocate
+					in Anglo-Saxon law’, </text:span>
+				<text:span text:style-name="T5">Mediaeval Studies</text:span>
+				<text:span text:style-name="T1">, 69 (2007), 223–54.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Reedy, W. T., ‘The origins of
+					the general eyre in the reign of Henry I’, </text:span>
+				<text:span text:style-name="T5">Speculum</text:span>
+				<text:span text:style-name="T1">, 41 (1966), 688–724.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Richards, M. P., ‘The body as
+					text in early Anglo-Saxon Law’, in Withers, B. C., and Wilcox, J.
+					(eds.), </text:span>
+				<text:span text:style-name="T5">Naked before God: Uncovering
+					the Body in Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1"> (Medieval European Studies, 3,
+					Morgantown, WV, 2003), pp. 97–115.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Richards, M. P.,
+					‘Anglo-Saxonism in the Old English laws’, in Frantzen, A. J., and
+					Niles, J. D. (eds.), </text:span>
+				<text:span text:style-name="T5">Anglo-Saxonism and the
+					Construction of Social Identity</text:span>
+				<text:span text:style-name="T1"> (Gainesville, FL, 1997), pp.
+					40–59.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Richards, M. P., ‘Elements of a
+					written standard in the Old English Laws’, in Trahern, J. B. (ed.),
+				</text:span>
+				<text:span text:style-name="T5">Standardizing English: Essays
+					in the History of Language Change in Honor of John Hurt Fisher
+				</text:span>
+				<text:span text:style-name="T1"> (</text:span>
+				<text:span text:style-name="T18">Knoxville</text:span>
+				<text:span text:style-name="T1">, TN, 1989), pp. 1–22.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Richards, M. P., ‘The
+					manuscript contexts of the Old English laws: tradition and
+					innovation’, in Szarmach, P. E. (ed.), </text:span>
+				<text:span text:style-name="T5">Studies in Earlier Old English
+					Prose</text:span>
+				<text:span text:style-name="T1"> (</text:span>
+				<text:span text:style-name="T18">Albany,</text:span>
+				<text:span text:style-name="T1"> NY, 1986), pp. 171–92.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Richardson, H. G. and Sayles,
+					G. O., </text:span>
+				<text:span text:style-name="T5">Law and Legislation from
+					Æthelberht to Magna Carta</text:span>
+				<text:span text:style-name="T1"> (Edinburgh, 1966).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Robertson, A. J. (ed.),
+				</text:span>
+				<text:span text:style-name="T5"> The Laws of the Kings of
+					England from Edmund to Henry I</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1925).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Rubin, S., ‘Medical attention
+					in Anglo-Saxon law: a statute sequence reconsidered’, </text:span>
+				<text:span text:style-name="T5">Medieval Life</text:span>
+				<text:span text:style-name="T1">, 6 (1997), 3–6.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Rubin, S., ‘The Bot, or
+					composition in Anglo-Saxon law: a reassessment’, </text:span>
+				<text:span text:style-name="T5">Journal of Legal History
+				</text:span>
+				<text:span text:style-name="T1">, 17 (1996), 144–54.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Seebohm, F., </text:span>
+				<text:span text:style-name="T5">Tribal Custom in Anglo-Saxon
+					Law</text:span>
+				<text:span text:style-name="T1"> (London, 1902). </text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Sellar, W. D. H., ‘The common
+					law of Scotland and the common law of England’, in Davies, R. R.
+					(ed.), </text:span>
+				<text:span text:style-name="T6">The British Isles, 1100-1500:
+					Comparisons, Contrasts and Connections</text:span>
+				<text:span text:style-name="T1"> (Edinburgh, 1988), pp. 82–99.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Sharpe, R., ‘The prefaces of
+				</text:span>
+				<text:span text:style-name="T5">Quadripartitus</text:span>
+				<text:span text:style-name="T1">’, in Garnett, G., and Hudson,
+					J. (eds.), </text:span>
+				<text:span text:style-name="T6">Law and Government in Medieval
+					England and Normandy: Essays in Honour of Sir James Holt
+				</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1994), pp. 148–72.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Stacey, R. C., ‘Law and order
+					in the very old west: England and Ireland in the early middle
+					ages’, in Hudson, B. T., and Ziegler, V. (eds.), </text:span>
+				<text:span text:style-name="T6">Crossed Paths: Methodological
+					Approaches to the Celtic Aspect of the European Middle Ages
+				</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(Lanham, MD, 1991), pp. 39–60.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Stack, G., ‘A lost law of Henry
+					II: the Assize of Oxford and monetary reform’, </text:span>
+				<text:span text:style-name="T5">Haskins Society Journal
+				</text:span>
+				<text:span text:style-name="T1">, 16 (2006 for 2005), 95–103.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Stafford,</text:span>
+				<text:span text:style-name="T16">
+				</text:span>
+				<text:span text:style-name="T2">P., </text:span>
+				<text:span text:style-name="T6">et al.</text:span>
+				<text:span text:style-name="T2"> (eds.), </text:span>
+				<text:span text:style-name="T6">Law, Laity, and Solidarities
+				</text:span>
+				<text:span text:style-name="T5">: Essays in Honour of Susan
+					Reynolds</text:span>
+				<text:span text:style-name="T1"> (Manchester, 2001).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Stanley, E. G., ‘On the Laws of
+					King Alfred: the end of the preface and the beginning of the Laws’,
+					in Roberts, J., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T6">Alfred the Wise: Studies in
+					Honour of Janet Bately on the Occasion of her Sixty-Fifth Birthday
+				</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1997), pp. 211–22.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Stenton, D. M., </text:span>
+				<text:span text:style-name="T5">English Justice between the
+					Norman Conquest and the Great Charter, 1066–1215</text:span>
+				<text:span text:style-name="T1">, The Jayne Lectures 1963
+					(London, 1965).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Stenton, D. M., ‘King John and
+					the courts of justice’, </text:span>
+				<text:span text:style-name="T5">Proceedings of the British
+					Academy</text:span>
+				<text:span text:style-name="T1">, 44 (1959), 103–28.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Stoljar, S. J., ‘Of socage and
+					socmen’, </text:span>
+				<text:span text:style-name="T5">Journal of Legal History
+				</text:span>
+				<text:span text:style-name="T1">, 6 (1985), 33–48.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, R. V., ‘Twelfth and
+					thirteenth-century English law and government: suggestions for
+					prosopographical approaches’, </text:span>
+				<text:span text:style-name="T5">Medieval Prosopography
+				</text:span>
+				<text:span text:style-name="T1">, 3 (1982), 21–34.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, R. V., ‘The origins of
+					Common Pleas and King’s Bench’, </text:span>
+				<text:span text:style-name="T5">American Journal of Legal
+					History</text:span>
+				<text:span text:style-name="T1">, 21 (1977), 238–54.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, R. V., ‘The judges of
+					King John: their background and training’, </text:span>
+				<text:span text:style-name="T5">Speculum</text:span>
+				<text:span text:style-name="T1">, 51 (1976), 447–61.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, R. V., ‘The origins of
+					the medieval English jury: Frankish, English, or Scandinavian?’,
+				</text:span>
+				<text:span text:style-name="T5">Journal of British Studies
+				</text:span>
+				<text:span text:style-name="T1">, 7 (1968), 1–10.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Ullmann, W., ‘Law and the
+					medieval historian’, in</text:span>
+				<text:span text:style-name="T5"> XIe Congrès International des
+					Sciences Historiques, Stockholm, 21–28 Août</text:span>
+				<text:span text:style-name="T1"> (Stockholm, 1960), pp. 34–74.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Van Caenegem, R. C.,
+				</text:span>
+				<text:span text:style-name="T5">Legal History: a European
+					Perspective</text:span>
+				<text:span text:style-name="T1"> (London, 1991).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Vogt, H., and Mu</text:span>
+				<text:span text:style-name="T24">̈</text:span>
+				<text:span text:style-name="T1">nster-Swendsen</text:span>
+				<text:span text:style-name="T2">, </text:span>
+				<text:span text:style-name="T1">M. (eds.), </text:span>
+				<text:span text:style-name="T6">Law and Learning in the Middle
+					Ages</text:span>
+				<text:span text:style-name="T5">: Proceedings of the Second
+					Carlsberg Academy Conference on Medieval Legal History 2005
+				</text:span>
+				<text:span text:style-name="T1">(Copenhagen, 2006).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Walker, S. S., ‘The Action of
+					Waste in the early common law’, in Baker, J. H. (ed.) </text:span>
+				<text:span text:style-name="T6">Legal Records and the
+					Historian: Papers Presented to the Cambridge Legal History
+					Conference, 7–10 July 1975, and in Lincoln’s Inn Old Hall on 3 June
+					1974</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(</text:span>
+				<text:span text:style-name="T18">London,</text:span>
+				<text:span text:style-name="T1"> 1978), pp. 185–206.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Warren, W. L., </text:span>
+				<text:span text:style-name="T5">The Governance of Norman and
+					Angevin England, 1086–1272</text:span>
+				<text:span text:style-name="T1"> (</text:span>
+				<text:span text:style-name="T18">Stanford, CA,</text:span>
+				<text:span text:style-name="T1"> 1987).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">West, F., </text:span>
+				<text:span text:style-name="T5">The Justiciarship in England,
+					1066–1232</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1966).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">White, S. D., ‘The ambiguity of
+					treason in Anglo-Norman-French law, </text:span>
+				<text:span text:style-name="T5">c</text:span>
+				<text:span text:style-name="T1">.1150–</text:span>
+				<text:span text:style-name="T5">c</text:span>
+				<text:span text:style-name="T1">.1250’, in Karras, R. M., Kaye,
+					J., and Matter, E. A. (eds.), </text:span>
+				<text:span text:style-name="T5">Law and the Illicit in Medieval
+					Europe</text:span>
+				<text:span text:style-name="T1"> (Philadelphia, PA, 2008), pp.
+					89–102.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">White, S. D., ‘Kinship and
+					lordship in early medieval England: the story of Sigeberht,
+					Cynewulf and Cyneheard’, </text:span>
+				<text:span text:style-name="T5">Viator</text:span>
+				<text:span text:style-name="T1">, 20 (1989), 1–18.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Whitelock, D., </text:span>
+				<text:span text:style-name="T5">History, Law and Literature in
+					10th–11th Century England</text:span>
+				<text:span text:style-name="T1"> (</text:span>
+				<text:span text:style-name="T18">London</text:span>
+				<text:span text:style-name="T1">, 1981).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., </text:span>
+				<text:span text:style-name="T5">The First Code of English Law
+				</text:span>
+				<text:span text:style-name="T1"> (Canterbury, 2005).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., </text:span>
+				<text:span text:style-name="T5">The Making of English Law: King
+					Alfred to the Twelfth Century</text:span>
+				<text:span text:style-name="T1">, 1:</text:span>
+				<text:span text:style-name="T5"> Legislation and its Limits
+				</text:span>
+				<text:span text:style-name="T1"> (Oxford, 1999).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., ‘Maitland and
+					Anglo-Saxon law: beyond Domesday Book’, </text:span>
+				<text:span text:style-name="T5">Proceedings of the British
+					Academy</text:span>
+				<text:span text:style-name="T1">, 89 (1996), 1–20.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., ‘Lordship and
+					justice in the Early English Kingdom: Oswaldslow revisited’, in
+					Davies, W., and Fouracre, P. (eds.), </text:span>
+				<text:span text:style-name="T6">Property and Power in the Early
+					Middle Ages</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1995), 114–36.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., ‘</text:span>
+				<text:span text:style-name="T5">Quadripartitus</text:span>
+				<text:span text:style-name="T1">’, in Garnett, G., and Hudson,
+					J. (eds.), </text:span>
+				<text:span text:style-name="T6">Law and Government in Medieval
+					England and Normandy: Essays in Honour of Sir James Holt
+				</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1994), pp. 111–47.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., ‘</text:span>
+				<text:span text:style-name="T5">Laga Eadwardi</text:span>
+				<text:span text:style-name="T1">: the </text:span>
+				<text:span text:style-name="T5">Textus Roffensis</text:span>
+				<text:span text:style-name="T1"> and its context’, </text:span>
+				<text:span text:style-name="T5">Anglo-Norman Studies
+				</text:span>
+				<text:span text:style-name="T1">, 17 (1994), 243–66.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., ‘In search of King
+					Offa’s Law-Code’, in Wood, I. N., and Lund, N. (eds.), </text:span>
+				<text:span text:style-name="T6">People and Places in Northern
+					Europe, 500–1600: Essays in Honour of Peter Hayes Sawyer
+				</text:span>
+				<text:span text:style-name="T1"> (Woodbridge, 1991), pp. 25–45.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., ‘</text:span>
+				<text:span text:style-name="T5">Lex scripta</text:span>
+				<text:span text:style-name="T1"> and </text:span>
+				<text:span text:style-name="T5">verbum regis</text:span>
+				<text:span text:style-name="T1">: legislation and Germanic
+					kingship from Euric to Cnut’, in Sawyer, P. H., and Wood, I. N.
+					(eds.), </text:span>
+				<text:span text:style-name="T6">Early Medieval Kingship
+				</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(</text:span>
+				<text:span text:style-name="T18">Leeds</text:span>
+				<text:span text:style-name="T1">, 1977), pp. 105–38.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">Aethelberht</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Chaney, W. A., ‘Aethelberht’s
+					Code and the King’s Number’, </text:span>
+				<text:span text:style-name="T5">American Journal of Legal
+					History</text:span>
+				<text:span text:style-name="T1">, 6 (1962), 151–77.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Fell, C. E., ‘An appendix to
+					Carol Hough’s article “A reappraisal of Æthelberht 84”’,
+				</text:span>
+				<text:span text:style-name="T5">Nottingham Mediaeval Studies
+				</text:span>
+				<text:span text:style-name="T1">, 37 (1993), 7–8.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Gendre, R., ‘Le leggi di
+					Aethelberht: “iuxta exempla Romanoru” e “iuxta consuetudines
+					Germanorum”’, in Lazzari, L. (ed.), </text:span>
+				<text:span text:style-name="T5">Testi giuridici germanici
+				</text:span>
+				<text:span text:style-name="T1"> (Potenza, 1992), pp. 7–21.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P5">
+				<text:span text:style-name="T1">Hough, C., ‘Two Kentish laws
+					concerning women: a new reading of Æthelberht 73 and 74’,
+				</text:span>
+				<text:span text:style-name="T5">Anglia: Zeitschrift für
+					englische Philologie</text:span>
+				<text:span text:style-name="T1">, 119 (2001), 554–78.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Hough, C., ‘The early Kentish
+					“divorce laws”: a reconsideration of Æthelberht, chs. 79 and 80’,
+				</text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 23 (1994), 19–34.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hough, C., ‘A reappraisal of
+					Æthelberht 84’, </text:span>
+				<text:span text:style-name="T5">Nottingham Mediaeval Studies
+				</text:span>
+				<text:span text:style-name="T1">, 37 (1993), 1–6.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Jurasinski, S., ‘Germanism,
+					slapping and the cultural contexts of Æthelberht’s Code: a
+					reconsideration of chapters 56–58’, </text:span>
+				<text:span text:style-name="T5">Haskins Society Journal
+				</text:span>
+				<text:span text:style-name="T1">, 18 (2007 for 2006), 51–71.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Jurasinski, S., ‘The
+					continental origins of Æthelberht’s Code’, </text:span>
+				<text:span text:style-name="T5">Philological Quarterly
+				</text:span>
+				<text:span text:style-name="T1">, 80 (2001), 1–15.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Rubin, S., ‘Æthelberht 36. A
+					medico-linguistical discussion on the word </text:span>
+				<text:span text:style-name="T5">Hion</text:span>
+				<text:span text:style-name="T1">’, </text:span>
+				<text:span text:style-name="T5">Nottingham Mediaeval Studies
+				</text:span>
+				<text:span text:style-name="T1">, 39 (1995), 19–25.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Simpson, A. W. B., ‘The Laws of
+					Ethelbert’, in Green, M. S., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (ed.), </text:span>
+				<text:span text:style-name="T6">On the Laws and Customs of
+					England: Essays in Honor of Samuel E. Thorne</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(Chapel Hill, NC, 1981), pp.
+					3–17.</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">Aethelred II</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Gillingham, J., ‘“The most
+					precious jewel in the English crown”: levels of Danegeld and
+					Heregeld in the early eleventh century’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 104 (1989), 373–84.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T10">Karaus, A.</text:span>
+				<text:span text:style-name="T10">, </text:span>
+				<text:span text:style-name="T12">Die Sprache der Gesetze des
+					Königs Aethelred</text:span>
+				<text:span text:style-name="T10"> (Berlin</text:span>
+				<text:span text:style-name="T21">,</text:span>
+				<text:span text:style-name="T10"> 1901).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Keynes, S., ‘Crime and
+					punishment in the reign of King Æthelred the Unready’, in Wood, I.
+					N., and Lund, N. (eds.), </text:span>
+				<text:span text:style-name="T6">People and Places in Northern
+					Europe, 500–1600: Essays in Honour of Peter Hayes Sawyer
+				</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(Woodbridge, 1991), pp. 67–81.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lawson, M. K., ‘Archbishop
+					Wulfstan and the homiletic element in the Laws of Æthelred II and
+					Cnut’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 107 (1992), 565–86.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lawson, M. K., ‘Danegeld and
+					Heregeld once more’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 105 (1990), 951–61.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lawson, M. K., ‘“Those stories
+					look true”: levels of taxation in the reigns of Aethelred II and
+					Cnut’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 104 (1989), 385–406.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lawson, M. K., ‘The collection
+					of Danegeld and Heregeld in the reigns of Aethelred II and Cnut’,
+				</text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 99 (1984), 721–38.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Neff, C., ‘Scandinavian
+					elements in the Wantage Code of Æthelred II’, </text:span>
+				<text:span text:style-name="T5">Journal of Legal History
+				</text:span>
+				<text:span text:style-name="T1">, 10 (1989), 285–316.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P.,</text:span>
+				<text:span text:style-name="T15">
+				</text:span>
+				<text:span text:style-name="T1">‘Æthelred the Lawmaker’, in
+					Hill, D. (ed.),</text:span>
+				<text:span text:style-name="T6"> Ethelred the Unready: Papers
+					from the Millenary Conference</text:span>
+				<text:span text:style-name="T1"> (BAR British ser., 59, Oxford,
+					1978), pp. 47–80.</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">
+				<text:soft-page-break />
+				Canon and Roman law
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T3">Brasington, B. C., ‘Canon law
+					in the Leges Henrici Primi’, </text:span>
+				<text:span text:style-name="T8">Zeitschrift der
+					Savigny-Stiftung für Rechtsgeschichte. Kanonistische Abteilung
+				</text:span>
+				<text:span text:style-name="T3">, 123 (2006), 288–305.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Brundage, J. A., ‘The monk as
+					lawyer’, </text:span>
+				<text:span text:style-name="T5">The Jurist</text:span>
+				<text:span text:style-name="T1">, 39 (1979), 423–36.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Brundage, J. A., </text:span>
+				<text:span text:style-name="T6">The Profession and Practice of
+					Medieval Canon Law</text:span>
+				<text:span text:style-name="T1"> (Aldershot, 2004).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Cross, J. E., and Hamer, A.
+					(eds.), </text:span>
+				<text:span text:style-name="T5">Wulfstan’s Canon Law Collection
+				</text:span>
+				<text:span text:style-name="T1"> (Anglo-Saxon Texts, 1,
+					Woodbridge, 1999).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">De Zulueta, F., and Stein, P.
+					G. (eds.), </text:span>
+				<text:span text:style-name="T5">The Teaching of Roman Law in
+					England around 1200</text:span>
+				<text:span text:style-name="T1"> (Selden Society supplementary
+					ser., 8, London, 1990).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Jones, M. E., ‘The legacy of
+					Roman law in post-Roman Britain’, in Mathisen, R. W. (ed.),
+				</text:span>
+				<text:span text:style-name="T5">Law, Society, and Authority in
+					Late Antiquity</text:span>
+				<text:span text:style-name="T1"> (Oxford, 2001), pp. 52–67.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Kuttner, S., and Rathbone E.,
+					‘Anglo-Norman canonists of the twelfth century’, </text:span>
+				<text:span text:style-name="T5">Traditio</text:span>
+				<text:span text:style-name="T1">, 7 (1949–51), 279–358.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Rathbone, E., ‘Roman law in the
+					Anglo-Norman realm’, in Forchielli, J., and Stickler, A. M. (eds.),
+				</text:span>
+				<text:span text:style-name="T5">Studia Gratiana post octava
+					decreti saecularia auctore consilio commemorationi Gratianae
+					Instruendae edita</text:span>
+				<text:span text:style-name="T1"> (Collectanea historiae juris
+					canonici, 11, Rome, 1967), pp. 253–71.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Richardson, H. G., ‘The
+					marriage of Isabelle of Angoulême: a problem of canon law’, in
+					Forchielli, J., and Stickler, A. M. (eds.), </text:span>
+				<text:span text:style-name="T5">Studia Gratiana post octava
+					decreti saecularia auctore consilio commemorationi Gratianae
+					Instruendae edita</text:span>
+				<text:span text:style-name="T1">, Collectanea historiae juris
+					canonici, 11 (Rome, 1967), 397–423.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Stein, P. G., ‘Custom in Roman
+					and medieval civil law’, </text:span>
+				<text:span text:style-name="T5">Continuity and Change
+				</text:span>
+				<text:span text:style-name="T1">, 10 (1995), 337–44.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, R. V., ‘Roman law in
+					England before the time of Bracton’, </text:span>
+				<text:span text:style-name="T7">Journal of British Studies
+				</text:span>
+				<text:span text:style-name="T1">, 15 (1975), 1–25.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Winkler, J. F., ‘Roman law in
+					Anglo-Saxon England’, </text:span>
+				<text:span text:style-name="T5">Journal of Legal History
+				</text:span>
+				<text:span text:style-name="T1">, 13 (1992), 101–27.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Worby, S., ‘Kinship: the canon
+					law and the common law in thirteenth-century England’, </text:span>
+				<text:span text:style-name="T5">Historical Research</text:span>
+				<text:span text:style-name="T1">, 80 (2007), 443–68.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">Church and learning</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Boureau, A., ‘Conflicting
+					norms: liturgical procedure and the separation of divine law from
+					human law (England, eleventh century)’, </text:span>
+				<text:span text:style-name="T5">Medieval History Journal
+				</text:span>
+				<text:span text:style-name="T1">, 3 (2000), 17–40.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Cheney, M.,
+					‘“Possessio/proprietas” in ecclesiastical courts in mid
+					twelfth-century England’, in Garnett, G., and Hudson, J. (eds.),
+				</text:span>
+				<text:span text:style-name="T6">Law and Government in Medieval
+					England and Normandy: Essays in Honour of Sir James Holt
+				</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1994), pp. 245–54.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Davies, D. S., </text:span>
+				<text:span text:style-name="T5">The Bible in English Law
+				</text:span>
+				<text:span text:style-name="T1">, Lucien Wolf Memorial Lecture,
+					16 (</text:span>
+				<text:span text:style-name="T18">London,</text:span>
+				<text:span text:style-name="T1"> 1954).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Douglas, A. W., ‘Tenure in
+				</text:span>
+				<text:span text:style-name="T5">elemosina</text:span>
+				<text:span text:style-name="T1">: origins and establishment in
+					twelfth-century England’, </text:span>
+				<text:span text:style-name="T5">American Journal of Legal
+					History</text:span>
+				<text:span text:style-name="T1">, 24 (1980), 95–132.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Douglas, A. W., ‘Frankalmoin
+					and the jurisdictional immunity: Maitland revisited’, </text:span>
+				<text:span text:style-name="T5">Speculum</text:span>
+				<text:span text:style-name="T1">, 53 (1978), 26–48.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T2">Evans, G. R., </text:span>
+				<text:span text:style-name="T6">Law and Theology in the Middle
+					Ages</text:span>
+				<text:span text:style-name="T1"> (London, 2002).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Frantzen, A. J., ‘The tradition
+					of penitentials in Anglo-Saxon England’, </text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 11 (1983), 23–56.</text:span>
+			</text:p>
+			<text:p text:style-name="P5">
+				<text:span text:style-name="T1">Hough, C., ‘Penitential
+					literature and secular law in Anglo-Saxon England’, </text:span>
+				<text:span text:style-name="T5">Anglo-Saxon Studies in
+					Archaeology &amp; History</text:span>
+				<text:span text:style-name="T1">, 11 (2000), 133–42.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Keynes, S., ‘Royal government
+					and the written word in late Anglo-Saxon England’, in McKitterick,
+					R. (ed.), </text:span>
+				<text:span text:style-name="T6">The Uses of Literacy in Early
+					Mediaeval Europe</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1990), pp. 226–57.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Mayr-Harting, H., ‘The role of
+					Benedictine abbeys in the development of Oxford as a centre of
+					legal learning’, in Wansbrough, H., and Marett-Todd, A. (eds.),
+				</text:span>
+				<text:span text:style-name="T6">Benedictines in Oxford
+				</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(London, 1997), pp. 11–19,
+					279–80.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Meaney, A. L., ‘Old English
+					legal and penitential penalties for “heathenism”’, in Keynes, S.,
+					and Smyth, A. P. (eds.), </text:span>
+				<text:span text:style-name="T5">Anglo-Saxons: Studies Presented
+					to Cyril Roy Hart</text:span>
+				<text:span text:style-name="T1"> (Dublin, 2006), pp. 127–58.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Nelson, J. L., ‘Liturgy or law:
+					misconceived alternatives?’, in Baxter, S., Karkov, C., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T5">Early Medieval Studies in
+					Memory of Patrick Wormald</text:span>
+				<text:span text:style-name="T1"> (Farnham, 2009), pp. 433–47.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">O’Brien, B., ‘The Becket
+					conflict and the invention of the myth of </text:span>
+				<text:span text:style-name="T5">lex non scripta</text:span>
+				<text:span text:style-name="T1">’, in Bush, J. A., and
+					Wijffels, A. A. (eds.), </text:span>
+				<text:span text:style-name="T6">Learning the Law: Teaching and
+					the Transmission of Law in England, 1150–1900</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(London, 1999), pp. 1–16.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">O’Brien, B., ‘Forgery and the
+					literacy of the early common law’, </text:span>
+				<text:span text:style-name="T5">Albion</text:span>
+				<text:span text:style-name="T1">, 27 (1995), 1–18.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Stanley, E. G., ‘Wulfstan and
+					Ælfric: “the true difference between the law and the gospel”’, in
+					Townend, M. (ed.), </text:span>
+				<text:span text:style-name="T5">Wulfstan, Archbishop of York:
+					the Proceedings of the Second Alcuin Conference</text:span>
+				<text:span text:style-name="T1"> (Studies in the Early Middle
+					Ages, 10, Turnhout, 2004), pp. 429–41.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Taliadoros, J., ‘Law and
+					theology in Gilbert of Foliot’s correspondence’, </text:span>
+				<text:span text:style-name="T5">Haskins Society Journal
+				</text:span>
+				<text:span text:style-name="T1">, 16 (2006), 77–94.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Taliadoros, J., </text:span>
+				<text:span text:style-name="T5">Law and Theology in
+					Twelfth-Century England: the Works of Master Vacarius
+					(c.1115/1120–c.1200)</text:span>
+				<text:span text:style-name="T1"> (Disputatio, 10, Turnhout,
+					2006).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, R. V., ‘Clerical judges
+					in English secular courts: the ideal vs. the reality’, </text:span>
+				<text:span text:style-name="T5">Medievalia et Humanistica
+				</text:span>
+				<text:span text:style-name="T1">, new ser., 3 (1972).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Watt, J. A., ‘The Jews, the
+					law, and the Church: the concept of Jewish serfdom in
+					thirteenth-century England’, in Wood, D. (ed.), </text:span>
+				<text:span text:style-name="T6">The Church and Sovereignty,
+					c.590–1918: Essays in Honour of Michael Wilks</text:span>
+				<text:span text:style-name="T1"> (Studies in Church History,
+					Subsidia, 9, Oxford, 1991), pp. 153–72.</text:span>
+			</text:p>
+			<text:p text:style-name="P3" />
+			<text:p text:style-name="P2">Cnut</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Kennedy, A. G., ‘Cnut’s Law
+					Code of 1018’, </text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 11 (1983), 57–81.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lawson, M. K., ‘Archbishop
+					Wulfstan and the homiletic element in the Laws of Æthelred II and
+					Cnut’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 107 (1992), 565–86.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lawson, M. K., ‘“Those stories
+					look true”: levels of taxation in the reigns of Aethelred II and
+					Cnut’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 104 (1989), 385–406.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lawson, M. K., ‘The collection
+					of Danegeld and Heregeld in the reigns of Aethelred II and Cnut’,
+				</text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 99 (1984), 721–38.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">O’Brien, B., ‘The </text:span>
+				<text:span text:style-name="T5">Instituta Cnuti</text:span>
+				<text:span text:style-name="T1"> and the translation of English
+					law’, </text:span>
+				<text:span text:style-name="T5">Anglo-Norman Studies
+				</text:span>
+				<text:span text:style-name="T1">, 25 (2003), 177–97.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Stafford, P., ‘The laws of Cnut
+					and the history of Anglo-Saxon royal promises’, </text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 10 (1982), 173–90.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Whitelock, D., ‘Wulfstan’s
+					authorship of Cnut’s Laws’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 70 (1955), 72–85.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Whitelock, D., ‘Wulfstan and
+					the Laws of Cnut’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 63 (1948), 433–52.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P.,</text:span>
+				<text:span text:style-name="T15">
+				</text:span>
+				<text:span text:style-name="T1">‘</text:span>
+				<text:span text:style-name="T5">Lex scripta</text:span>
+				<text:span text:style-name="T1"> and </text:span>
+				<text:span text:style-name="T5">verbum regis</text:span>
+				<text:span text:style-name="T1">: legislation and Germanic
+					kingship from Euric to Cnut’, in Sawyer,</text:span>
+				<text:span text:style-name="T2"> P. H.,</text:span>
+				<text:span text:style-name="T1"> and Wood, I. N. (eds.),
+				</text:span>
+				<text:span text:style-name="T6">Early Medieval Kingship
+				</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(</text:span>
+				<text:span text:style-name="T18">Leeds</text:span>
+				<text:span text:style-name="T1">, 1977), pp. 105–38.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">Courts</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Coss, P. R., ‘Knighthood and
+					the early thirteenth-century county court’, in Coss, P. R., and
+					Lloyd , S. D. (eds.), </text:span>
+				<text:span text:style-name="T6">Thirteenth century England
+				</text:span>
+				<text:span text:style-name="T2">, 2:</text:span>
+				<text:span text:style-name="T6"> Proceedings of the Newcastle
+					upon Tyne Conference 1987</text:span>
+				<text:span text:style-name="T1"> (Woodbridge, 1988), pp. 45–57.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Oleson, T. J., </text:span>
+				<text:span text:style-name="T5">The</text:span>
+				<text:span text:style-name="T1">
+				</text:span>
+				<text:span text:style-name="T5">Witenagemot in the Reign of
+					Edward the Confessor</text:span>
+				<text:span text:style-name="T1"> (London, 1955).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Pantos, A., ‘“On the edge of
+					things”: the boundary location of Anglo-Saxon assembly sites’,
+				</text:span>
+				<text:span text:style-name="Emphasis">
+					<text:span text:style-name="T1">Anglo-Saxon Studies in
+						Archaeology and History</text:span>
+				</text:span>
+				<text:span text:style-name="Emphasis">
+					<text:span text:style-name="T14">,</text:span>
+				</text:span>
+				<text:span text:style-name="Emphasis">
+					<text:span text:style-name="T1">
+					</text:span>
+				</text:span>
+				<text:span text:style-name="Emphasis">
+					<text:span text:style-name="T14">12 (2003), 38–49.</text:span>
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, R. V., ‘The royal
+					courts treat disseizin by the king: John and Henry III, 1199–1240’,
+				</text:span>
+				<text:span text:style-name="T5">American Journal of Legal
+					History</text:span>
+				<text:span text:style-name="T1">, 12 (1968), 1–18.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, R. V., ‘The medieval
+					English royal courts, problem of their origins’, </text:span>
+				<text:span text:style-name="T5">The Historian</text:span>
+				<text:span text:style-name="T1">, 27 (1965), 471–97.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">Crime</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Beckerman, J. S., ‘Adding
+					insult to iniuria: affronts to honour and the origins of trespass’,
+					in Green, M. S. A., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T6">On the Laws and Customs of
+					England: Essays in Honor of Samuel E. Thorne</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(Chapel Hill, NC, 1981), pp.
+					159–81.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Bonser, W., ‘Anglo-Saxon laws
+					and charms relating to theft’, </text:span>
+				<text:span text:style-name="T5">Folk-Lore</text:span>
+				<text:span text:style-name="T1">, 57 (1946), 7–11.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Carson, H. L., ‘A sketch of the
+					early development of English criminal law as displayed in
+					Anglo-Saxon law’, </text:span>
+				<text:span text:style-name="T5">American Bar Association
+					Journal</text:span>
+				<text:span text:style-name="T1">, 2 (1916), 135–51.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Colman, R. V., ‘</text:span>
+				<text:span text:style-name="T5">Hamsocn</text:span>
+				<text:span text:style-name="T1">: its meaning and significance
+					in early English law’, </text:span>
+				<text:span text:style-name="T5">American Journal of Legal
+					History</text:span>
+				<text:span text:style-name="T1">, 25 (1981), 95–110.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Groot, R. D., ‘The crime of
+					rape temp. Richard I and John’, </text:span>
+				<text:span text:style-name="T5">Journal of Legal History
+				</text:span>
+				<text:span text:style-name="T1">, 9 (1988), 324–34.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hollis, S., </text:span>
+				<text:span text:style-name="T3">‘Old English “cattle-theft
+					charms”: manuscript contexts and social uses’, </text:span>
+				<text:span text:style-name="T9">Anglia: Zeitschrift für
+					Englische Philologie</text:span>
+				<text:span text:style-name="T3">, 115 (1997), 139–64.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Horner, S., ‘The language of
+					rape in Old English literature and law: views from the
+					Anglo-Saxon(ist)s’, in Pasternack, C., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T5">Sex and Sexuality in
+					Anglo-Saxon England: Essays in Memory of Daniel Gillmore
+				</text:span>
+				<text:span text:style-name="T1"> (Medieval and Renaissance
+					Texts and Studies, 277, Tempe, AZ, 2004), pp. 149–81.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hudson, J., ‘Kings and crimes:
+					ideology and practice in the tenth and twelfth centuries’, in
+					Chassaigne, P., and Genêt, J.-P. (eds.), </text:span>
+				<text:span text:style-name="T5">Droit et société en France et
+					en Grande-Bretagne (XIIe–XXe siècles)</text:span>
+				<text:span text:style-name="T1"> (Collection internationale,
+					71, Paris, 2003).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Kerr, M. H, ‘Angevin reform of
+					the appeal of felony’, </text:span>
+				<text:span text:style-name="T5">Law and History Review
+				</text:span>
+				<text:span text:style-name="T1">, 13 (1995), 351–91.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Keynes, S., ‘Crime and
+					punishment in the reign of King Æthelred the Unready’, in Wood, I.
+					N., and Lund, N. (eds.), </text:span>
+				<text:span text:style-name="T6">People and Places in Northern
+					Europe, 500–1600: Essays in Honour of Peter Hayes Sawyer
+				</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(Woodbridge, 1991), pp. 67–81.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">O’Brien, B., ‘From </text:span>
+				<text:span text:style-name="T5">morðor</text:span>
+				<text:span text:style-name="T1"> to </text:span>
+				<text:span text:style-name="T5">murdrum</text:span>
+				<text:span text:style-name="T1">: the pre-Conquest origin and
+					Norman revival of the murder fine’, </text:span>
+				<text:span text:style-name="T5">Speculum</text:span>
+				<text:span text:style-name="T1">, 71 (1996), 321–57.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Riggs, C. H., </text:span>
+				<text:span text:style-name="T5">Criminal Asylum in Anglo-Saxon
+					Law</text:span>
+				<text:span text:style-name="T1"> (University of Florida
+					Monographs, Social Sciences, 18, Gainesville, FL, 1963).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Van Caenegem, R. C., ‘Public
+					prosecution of crime in twelfth-century England’, in Brooke,
+					C.N.L., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T6">Church</text:span>
+				<text:span text:style-name="T16">
+				</text:span>
+				<text:span text:style-name="T6">and Government in the Middle
+					Ages: Essays Presented to C. R. Cheney</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1976), pp. 41–76.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">The Danelaw</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Arngart, O. S., ‘Some aspects
+					of the relation between the English and the Danish element in the
+					Danelaw’, </text:span>
+				<text:span text:style-name="T5">Studia Neophilologica
+				</text:span>
+				<text:span text:style-name="T1">, 20 (1948), 73–87.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Fellows Jensen, G., ‘Of Danes –
+					and thanes – and Domesday Book’, in Wood, I. N., and Lund, N.
+					(eds.), </text:span>
+				<text:span text:style-name="T6">People and Places in Northern
+					Europe, 500–1600: Essays in Honour of Peter Hayes Sawyer
+				</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(Woodbridge, 1991), pp. 107–21.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Fenger, O., ‘The Danelaw and
+					the Danish law: Anglo-Scandinavian legal relations during the
+					Viking period’, </text:span>
+				<text:span text:style-name="T5">Scandinavian Studies in Law
+				</text:span>
+				<text:span text:style-name="T1">, 16 (1972), 83–96.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hart, C. J. R., ‘The hide, the
+					carucate and the ploughland’, in Hart, C. J. R. (ed.), </text:span>
+				<text:span text:style-name="T6">The Danelaw</text:span>
+				<text:span text:style-name="T1"> (London, 1992), pp. 289–335.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Kristensen, A. K. G., ‘Danelaw
+					institutions and Danish society in the Viking age: sochemanni,
+					liberi homines and Königsfreie’, </text:span>
+				<text:span text:style-name="T5">Medieval Scandinavia
+				</text:span>
+				<text:span text:style-name="T1">, 8 (1975), 27–85.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T10">Lauring, P.</text:span>
+				<text:span text:style-name="T10">, </text:span>
+				<text:span text:style-name="T12">Danelagen: Danmark i England
+				</text:span>
+				<text:span text:style-name="T10"> (Copenhagen, 1957).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lund, N., ‘King Edgar and the
+					Danelaw’, </text:span>
+				<text:span text:style-name="T5">Medieval Scandinavia
+				</text:span>
+				<text:span text:style-name="T1">, 9 (1976), 181–95.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Pelteret, D., ‘Slavery in the
+					Danelaw’, in Samson, R. (ed.), </text:span>
+				<text:span text:style-name="T5">Social Approaches to Viking
+					Studies</text:span>
+				<text:span text:style-name="T1"> (</text:span>
+				<text:span text:style-name="T18">Glasgow, </text:span>
+				<text:span text:style-name="T1">1991), pp. 179–88.</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">Disputes and dispute settlement
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Baines, A. H. J., ‘Wynflaed v.
+					Leofwine: a Datchet lawsuit of 990’, </text:span>
+				<text:span text:style-name="T5">Records of Buckinghamshire
+				</text:span>
+				<text:span text:style-name="T1">, 32 (1991 for 1990), 63–75.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Bates, D., ‘The land pleas of
+					William I’s reign: Penenden Heath revisited’, </text:span>
+				<text:span text:style-name="T5">Bulletin of the Institute of
+					Historical Research</text:span>
+				<text:span text:style-name="T1">, 51 (1978), 1–19.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Birrell, J., ‘Common rights in
+					the medieval forest: disputes and conflicts in the thirteenth
+					century’, </text:span>
+				<text:span text:style-name="T5">Past &amp; Present</text:span>
+				<text:span text:style-name="T1">, 117 (1987), 22–49.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Clanchy, M. T., ‘Law and love
+					in the middle ages’, in Bossy, J.A. (ed.), </text:span>
+				<text:span text:style-name="T5">Disputes and Settlements: Law
+					and Human Relations in the West</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1983), pp. 47–67.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Corral, F. L., ‘Alfonso VIII of
+					Castile’s judicial process at the court of Henry II of England: an
+					effective and valid arbitration?’, </text:span>
+				<text:span text:style-name="T5">Nottingham Mediaeval Studies
+				</text:span>
+				<text:span text:style-name="T1">, 50 (2006), 22–42.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Engdahl, D. E., ‘English
+					marriage conflicts law before the time of Bracton’, </text:span>
+				<text:span text:style-name="T5">American Journal of Comparative
+					Law</text:span>
+				<text:span text:style-name="T1">, 15 (1966–7), 109–35.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hudson, J., ‘La interpretación
+					de disputas y resoluciones: el caso inglés, 1066–1135’, </text:span>
+				<text:span text:style-name="T5">Hispania; revista española de
+					historia</text:span>
+				<text:span text:style-name="T1">, 57 (1997), 885–916.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., </text:span>
+				<text:span text:style-name="T5">Rancor and Reconciliation in
+					Medieval England</text:span>
+				<text:span text:style-name="T1"> (Ithaca, NY, 2003).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., ‘Feud and the
+					state in late Anglo-Saxon England’, </text:span>
+				<text:span text:style-name="T5">Journal of British Studies
+				</text:span>
+				<text:span text:style-name="T1">, 40 (2001), 1–43.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Kennedy, A. G., ‘Law and
+					litigation in the </text:span>
+				<text:span text:style-name="T5">Libellus Æthelwoldi episcopi
+				</text:span>
+				<text:span text:style-name="T1">’, </text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 24 (1995), 131–83.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Kennedy, A. G., ‘Disputes about
+				</text:span>
+				<text:span text:style-name="T5">bocland</text:span>
+				<text:span text:style-name="T1">: the forum for their
+					adjudication’, </text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 14 (1985), 175–95.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="No_20_Spacing">
+				<text:span text:style-name="T1">King, E., ‘Dispute settlement
+					in Anglo-Norman England’, </text:span>
+				<text:span text:style-name="T5">Anglo-Norman Studies
+				</text:span>
+				<text:span text:style-name="T1">
+					, 14 (1991), 115–30.
+					<text:tab />
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P8">
+				<text:tab />
+			</text:p>
+			<text:p text:style-name="No_20_Spacing">
+				<text:span text:style-name="T1">Miller, W. I., ‘Choosing the
+					avenger: some aspects of the blood-feud in medieval Iceland and
+					England’, </text:span>
+				<text:span text:style-name="T5">Law and History Review
+				</text:span>
+				<text:span text:style-name="T1">, 1 (1983), 159–204.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P8" />
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Taylor, N. L., ‘Kin and the
+					courts: testimony of kinship in lawsuits of Angevin England’,
+				</text:span>
+				<text:span text:style-name="T5">Haskins Society Journal
+				</text:span>
+				<text:span text:style-name="T1">, 15 (2004), 55–72.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Van Caenegem, R. C.,
+				</text:span>
+				<text:span text:style-name="T5">English Lawsuits from William I
+					to Richard I</text:span>
+				<text:span text:style-name="T1"> (2 vols., Selden Society,
+					106–7, London, 1990–1).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., ‘Domesday
+					lawsuits: a provisional list and preliminary comment’, in Hicks, C.
+					(ed.),</text:span>
+				<text:span text:style-name="T6"> England in the Eleventh
+					Century: Proceedings of the 1990 Harlaxton Symposium</text:span>
+				<text:span text:style-name="T1"> (Harlaxton Medieval Studies,
+					2, Stamford, 1992), pp. 61–102).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., ‘A handlist of
+					Anglo-Saxon lawsuits’, </text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 17 (1988), 247–81.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., ‘Charters, law and
+					the settlement of disputes in Anglo-Saxon England’, in Davies, W.,
+					and Fouracre, P. (eds.), </text:span>
+				<text:span text:style-name="T5">The Settlement of Disputes in
+					Early Medieval Europe</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1986), pp. 149–68.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P2" />
+			<text:p text:style-name="P2">Ethnicity</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Alexander, L. M., ‘The legal
+					status of the native Britons in late seventh-century Wessex as
+					reflected by the Law Code of Ine’, </text:span>
+				<text:span text:style-name="T5">Haskins Society Journal
+				</text:span>
+				<text:span text:style-name="T1">, 7 (1995), 31–8.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Arngart, O. S., ‘Some aspects
+					of the relation between the English and the Danish element in the
+					Danelaw’, </text:span>
+				<text:span text:style-name="T5">Studia Neophilologica
+				</text:span>
+				<text:span text:style-name="T1">, 20 (1948), 73–87.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Barnwell, P. S., ‘“Hlafeata,
+					ceorl, hid and scir”: Celtic, Roman or Germanic?’, </text:span>
+				<text:span text:style-name="T5">Anglo-Saxon Studies in
+					Archaeology &amp; History</text:span>
+				<text:span text:style-name="T1">, 9 (1996), 53–62.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Fellows Jensen, G., ‘Of Danes –
+					and thanes – and Domesday Book’, in Wood, I. N., and Lund, N.
+					(eds.), </text:span>
+				<text:span text:style-name="T6">People and Places in Northern
+					Europe, 500–1600: Essays in Honour of Peter Hayes Sawyer
+				</text:span>
+				<text:span text:style-name="T1"> (Woodbridge, 1991), pp.
+					107–21.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Garnett, G., ‘“Franci et
+					Angli”: the legal distinctions between peoples after the Conquest’,
+				</text:span>
+				<text:span text:style-name="T5">Anglo-Norman Studies
+				</text:span>
+				<text:span text:style-name="T1">, 8 (1985), 109–37.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Grimmer, M., ‘Britons in Early
+					Wessex: the evidence of the Law Code of Ine’, in Higham, N. J.
+					(ed.), </text:span>
+				<text:span text:style-name="T5">Britons in Anglo-Saxon England
+				</text:span>
+				<text:span text:style-name="T1"> (Publications of the
+					Manchester Centre for Anglo-Saxon Studies, 7, Woodbridge, 2007),
+					pp. 102–14.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Grimmer, M., ‘Britons and
+					Saxons in pre-Viking Wessex: reflections on the Law 77 of King
+					Ine’, </text:span>
+				<text:span text:style-name="T5">Parergon</text:span>
+				<text:span text:style-name="T1">, 19 (2002), 1–17.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Routledge, R., ‘The legal
+					status of the Jews in England 1190–1790’, </text:span>
+				<text:span text:style-name="T5">Journal of Legal History
+				</text:span>
+				<text:span text:style-name="T1">, 3 (1982), 91–124.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Watt, J. A., ‘The Jews, the
+					law, and the church: the concept of Jewish serfdom in
+					thirteenth-century England’, in Wood, D. (ed.), </text:span>
+				<text:span text:style-name="T6">The Church and Sovereignty,
+					c.590–1918: Essays in Honour of Michael Wilks</text:span>
+				<text:span text:style-name="T1"> (Studies in Church History,
+					Subsidia, 9, Oxford, 1991), pp. 153–72.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., ‘The </text:span>
+				<text:span text:style-name="T5">Leges Barbarorum</text:span>
+				<text:span text:style-name="T1">: law and ethnicity in the
+					post-Roman west’, in Goetz, H.-W., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T5">Regna and Gentes: the
+					Relationship between Late Antique and Early Medieval Peoples and
+					Kingdoms in the Transformation of the Roman World</text:span>
+				<text:span text:style-name="T1"> (Transformation of the Roman
+					World, 13, Leiden, 2003), pp. 21–53.</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P1">
+				<text:span text:style-name="T17">Forest law</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Amt, E., ‘The forest regard of
+					1155’, </text:span>
+				<text:span text:style-name="T5">Haskins Society Journal
+				</text:span>
+				<text:span text:style-name="T1">, 2 (1990), 189–95.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Birrell, J., ‘Common rights in
+					the medieval forest: disputes and conflicts in the thirteenth
+					century’, </text:span>
+				<text:span text:style-name="T5">Past &amp; Present</text:span>
+				<text:span text:style-name="T1">, 117 (1987), 22–49.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Crook, D., ‘The exemption of
+					Nottingham from the forest laws in the twelfth and thirteenth
+					centuries’, </text:span>
+				<text:span text:style-name="T5">Transactions of the Thoroton
+					Society of Nottinghamshire</text:span>
+				<text:span text:style-name="T1">, 109 (2005), 69–73.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Crook, D., ‘The records of
+					forest eyres in the Public Record Office, 1179 to 1670’,
+				</text:span>
+				<text:span text:style-name="T5">Journal of the Society of
+					Archivists</text:span>
+				<text:span text:style-name="T1">, 17 (1996), 183–93.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Marvin, W. P., </text:span>
+				<text:span text:style-name="T5">Hunting Law and Ritual in
+					Medieval English Literature</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 2006).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Young, C. R., </text:span>
+				<text:span text:style-name="T5">The</text:span>
+				<text:span text:style-name="T1">
+				</text:span>
+				<text:span text:style-name="T5">Royal Forests of Medieval
+					England</text:span>
+				<text:span text:style-name="T1"> (Leicester, 1979).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Young, C. R., ‘Conservation
+					policies in the royal forests of medieval England’, </text:span>
+				<text:span text:style-name="T7">Albion</text:span>
+				<text:span text:style-name="T1">, 10 (1978), 95–103.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Young, C. R., ‘English royal
+					forests under the Angevin kings’, </text:span>
+				<text:span text:style-name="T5">Journal of British Studies
+				</text:span>
+				<text:span text:style-name="T1">, 12 (1972), 1–14.</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">Glanvill</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Butler, P. T. T., ‘Who wrote
+					Glanville?’, </text:span>
+				<text:span text:style-name="T5">Journal of the Butler Society
+				</text:span>
+				<text:span text:style-name="T1">, 3 (1994), 500–1.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Falls, J. S., ‘Ranulf de
+					Granville’s formative years </text:span>
+				<text:span text:style-name="T5">c</text:span>
+				<text:span text:style-name="T1">.1120–79: the family background
+					and his ascent to the justiciarship’, </text:span>
+				<text:span text:style-name="T5">Mediaeval Studies</text:span>
+				<text:span text:style-name="T1">, 40 (1978), 312–27.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Russell, J. C., ‘Ranulf de
+					Glanville’, in Russell, J. C. (ed.), </text:span>
+				<text:span text:style-name="T6">Twelfth Century Studies
+				</text:span>
+				<text:span text:style-name="T1"> (New York, 1978), pp. 126–41.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Tullis, S., ‘Glanvill
+					continued: a reassessment’, in Lewis, A. D. E., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T5">Law in the City: Proceedings of
+					the Seventeenth British Legal History Conference, London, 2005
+				</text:span>
+				<text:span text:style-name="T1"> (Dublin, 2007), pp. 15–23.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, R. V., ‘Who was the
+					author of Glanvill? Reflections on the education of Henry II’s
+					common lawyers’, </text:span>
+				<text:span text:style-name="T5">Law and History Review
+				</text:span>
+				<text:span text:style-name="T1">, 8 (1990), 97–127.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, R. V., </text:span>
+				<text:span text:style-name="T5">The English Judiciary in the
+					Age of Glanvill and Bracton, c.1176–1239</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1985).</text:span>
+			</text:p>
+			<text:p text:style-name="P3" />
+			<text:p text:style-name="P2">Land and tenure</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Bailey, S. J., ‘Warranties of
+					land in the reign of Richard I’, </text:span>
+				<text:span text:style-name="T5">Cambridge Law Journal
+				</text:span>
+				<text:span text:style-name="T1">, 9 (1946), 192–209.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Bates, D., ‘The land pleas of
+					William I’s reign: Penenden Heath revisited’, </text:span>
+				<text:span text:style-name="T5">Bulletin of the Institute of
+					Historical Research</text:span>
+				<text:span text:style-name="T1">, 51 (1978), 1–19.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Buckstaff, G., ‘Married women’s
+					property in Anglo-Saxon and Anglo-Norman law and the origin of the
+					common law dower’, </text:span>
+				<text:span text:style-name="T5">Annals of the American Academy
+					of Political and Social Sciences</text:span>
+				<text:span text:style-name="T1">, 4 (1893–4), 233–64.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Cheney, M.,
+					‘“Possessio/proprietas” in ecclesiastical courts in mid
+					twelfth-century England’, in Garnett, G., and Hudson, J. (eds.),
+				</text:span>
+				<text:span text:style-name="T6">Law and Government in Medieval
+					England and Normandy: Essays in Honour of Sir James Holt
+				</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(Cambridge, 1994), pp. 245–54.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Douglas, A. W., ‘Tenure in
+				</text:span>
+				<text:span text:style-name="T5">elemosina</text:span>
+				<text:span text:style-name="T1">: origins and establishment in
+					twelfth-century England’, </text:span>
+				<text:span text:style-name="T5">American Journal of Legal
+					History</text:span>
+				<text:span text:style-name="T1">, 24 (1980), 95–132.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Douglas, A. W., ‘Frankalmoin
+					and the jurisdictional immunity: Maitland revisited’, </text:span>
+				<text:span text:style-name="T5">Speculum</text:span>
+				<text:span text:style-name="T1">, 53 (1978), 26–48.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hart, C. J. R., ‘The hide, the
+					carucate and the ploughland’, in Hart, C. J. R. (ed.), </text:span>
+				<text:span text:style-name="T6">The Danelaw</text:span>
+				<text:span text:style-name="T1"> (London, 1992), pp. 289–335.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hudson, J., ‘Anglo-Norman land
+					law and the origins of property’, in Garnett, G., and Hudson, J.
+					(eds.), </text:span>
+				<text:span text:style-name="T6">Law and Government in Medieval
+					England and Normandy: Essays in Honour of Sir James Holt
+				</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(Cambridge, 1994), pp. 198–222.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hudson, J., </text:span>
+				<text:span text:style-name="T5">Land, Law and Lordship in
+					Anglo-Norman England</text:span>
+				<text:span text:style-name="T1"> (Oxford, 1994).</text:span>
+				<text:span text:style-name="T5">
+					<text:tab />
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hudson, J., ‘Life-grants and
+					the development of inheritance in Anglo-Norman England’,
+				</text:span>
+				<text:span text:style-name="T5">Anglo-Norman Studies
+				</text:span>
+				<text:span text:style-name="T1">, 12 (1989), 67–80.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., ‘“No register of
+					title”: the Domesday inquest and land adjudication’, </text:span>
+				<text:span text:style-name="T5">Anglo-Norman Studies
+				</text:span>
+				<text:span text:style-name="T1">, 9 (1986), 128–41.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Ibbetson, D. J., ‘From property
+					to contract: the transformation of sale in the middle ages’,
+				</text:span>
+				<text:span text:style-name="T5">Journal of Legal History
+				</text:span>
+				<text:span text:style-name="T1">, 13 (1992), 1–22.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Kennedy, A. G., ‘Disputes about
+				</text:span>
+				<text:span text:style-name="T5">bocland</text:span>
+				<text:span text:style-name="T1">: the forum for their
+					adjudication’, </text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 14 (1985), 175–95.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">King, E., ‘The tenurial crisis
+					of the early twelfth century’, </text:span>
+				<text:span text:style-name="T5">Past &amp; Present</text:span>
+				<text:span text:style-name="T1">, 65 (1974), 110–17.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Loyn, H. R., ‘The hundred in
+					England in the tenth and early eleventh centuries’, in Hearder, H.,
+					and Loyn, H. R. (eds.), </text:span>
+				<text:span text:style-name="T5">British Government and
+					Administration: Studies Presented to S. B. Chrimes</text:span>
+				<text:span text:style-name="T1"> (Cardiff, 1974), pp. 1–15.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">McGovern, J. F., ‘The hide and
+					related land-tenure concepts in Anglo-Saxon England, AD 700–1100’,
+				</text:span>
+				<text:span text:style-name="T5">Traditio</text:span>
+				<text:span text:style-name="T1">, 28 (1972), 101–18.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">McGovern, J. F., ‘The meaning
+					of ‘Gesette land’ in Anglo-Saxon land tenure’, </text:span>
+				<text:span text:style-name="T5">Speculum</text:span>
+				<text:span text:style-name="T1">, 46 (1971), 589–96.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Meyer, M. A., ‘Land charters
+					and the legal position of Anglo-Saxon women’, in Kanner, B. (ed.),
+				</text:span>
+				<text:span text:style-name="T6">The Women of England from
+					Anglo-Saxon Times to the Present: Interpretive Bibliographical
+					Essays</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(</text:span>
+				<text:span text:style-name="T18">London</text:span>
+				<text:span text:style-name="T1">, 1980), pp. 57–82.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Postles, D., ‘Tenure in
+					frankalmoign and knight service in twelfth-century England:
+					interpretation of the charters’, </text:span>
+				<text:span text:style-name="T5">Journal of the Society of
+					Archivists</text:span>
+				<text:span text:style-name="T1">, 13 (1992), 18–28.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Roffe, D. R., ‘From thegnage to
+					barony: sake and soke, title and tenants-in-chief’, </text:span>
+				<text:span text:style-name="T5">Anglo-Norman Studies
+				</text:span>
+				<text:span text:style-name="T1">, 12 (1989), 157–76.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Tabuteau, E. Z., </text:span>
+				<text:span text:style-name="T5">Transfers of Property in
+					Eleventh-Century Norman Law</text:span>
+				<text:span text:style-name="T1"> (Chapel Hill, NC</text:span>
+				<text:span text:style-name="T18">,</text:span>
+				<text:span text:style-name="T1"> 1988).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Tate, J. C., ‘Ownership and
+					possession in the early common law’, </text:span>
+				<text:span text:style-name="T5">American Journal of Legal
+					History</text:span>
+				<text:span text:style-name="T1">, 48 (2006), 280–313.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Thorn, F. R., ‘Hundreds and
+					wapentakes’, in Williams, A., and Erskine, R. W. H. (eds.),
+				</text:span>
+				<text:span text:style-name="T6">The Leicestershire Domesday
+				</text:span>
+				<text:span text:style-name="T1"> (Alecto County Edition of
+					Domesday Book, 16, </text:span>
+				<text:span text:style-name="T18">London, </text:span>
+				<text:span text:style-name="T1">1990), pp. 22–30.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, G. J., ‘Bookland and
+					folkland’, in Edwards, J. G., Galbraith, V. H., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.),</text:span>
+				<text:span text:style-name="T5"> Historical Essays in Honour of
+					James Tait</text:span>
+				<text:span text:style-name="T1"> (Manchester, 1933), pp.
+					357–86.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Williams, A., ‘How land was
+					held before and after the Norman Conquest’, in Williams, A. (ed.),
+				</text:span>
+				<text:span text:style-name="T6">Domesday Book Studies
+				</text:span>
+				<text:span text:style-name="T1"> (</text:span>
+				<text:span text:style-name="T19">Alecto county edition of
+					Domesday Book</text:span>
+				<text:span text:style-name="T1">, 3, </text:span>
+				<text:span text:style-name="T18">London,</text:span>
+				<text:span text:style-name="T1"> 1987), pp. 37–8.</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">Magna Carta</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Clanchy, M. T., ‘Magna Carta,
+					clause 34’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 79 (1964), 542–8.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Galbraith, V. H., ‘A draft of
+					Magna Carta (1215)’, </text:span>
+				<text:span text:style-name="T5">Proceedings of the British
+					Academy</text:span>
+				<text:span text:style-name="T1">, 53 (1967), 345–60.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Holt, J. C., </text:span>
+				<text:span text:style-name="T5">Magna Carta</text:span>
+				<text:span text:style-name="T1"> (2nd edn., Cambridge, 1992).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hurnard, N. D., ‘Magna Carta,
+					clause 34’, in Hunt, R. W., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T5">Studies in Medieval History
+					presented to Frederick Maurice Powicke</text:span>
+				<text:span text:style-name="T1"> (Oxford, 1948), pp. 157–79.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Jones, J. A. P., </text:span>
+				<text:span text:style-name="T5">King John and Magna Carta
+				</text:span>
+				<text:span text:style-name="T1"> (London, 1971).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">McIlwain, C. H., ‘Magna Carta
+					and common law’, in Malden, H. E. (ed.), </text:span>
+				<text:span text:style-name="T5">Magna Carta Commemoration
+					Essays</text:span>
+				<text:span text:style-name="T1"> (London, 1917), pp. 122-79.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Powicke, F. M., ‘Per iudicium
+					parium vel per legem terrae’, in Malden, H. E. (ed.), </text:span>
+				<text:span text:style-name="T5">Magna Carta Commemoration
+					Essays</text:span>
+				<text:span text:style-name="T1"> (London, 1917), pp. 96-121.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Smith, J. B., ‘Magna Carta and
+					the charters of the Welsh princes’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 99 (1984), 344–62.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Vinogradoff, P. G., ‘Magna
+					Carta, c. 39: nullus liber homo, etc.’, in Malden, H. E. (ed.),
+				</text:span>
+				<text:span text:style-name="T5">Magna Carta Commemoration
+					Essays</text:span>
+				<text:span text:style-name="T1"> (London, 1917).</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">
+				<text:soft-page-break />
+				Marriage
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Brooke, C. N. L., ‘Marriage and
+					society in the central middle ages’, in Outhwaite, R. B. (ed.),
+				</text:span>
+				<text:span text:style-name="T6">Marriage and Society: Studies
+					in the Social History of Marriage</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(London, 1981), pp. 17–34.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Buckstaff, G., ‘Married women’s
+					property in Anglo-Saxon and Anglo-Norman law and the origin of the
+					common law dower’, </text:span>
+				<text:span text:style-name="T5">Annals of the American Academy
+					of Political and Social Sciences</text:span>
+				<text:span text:style-name="T1">, 4 (1893–4), 233–64.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Clanchy, M. T., ‘Law and love
+					in the middle ages’, in Bossy, J. A. (ed.), </text:span>
+				<text:span text:style-name="T5">Disputes and Settlements: Law
+					and Human Relations in the West</text:span>
+				<text:span text:style-name="T1"> (Cambridge, 1983), pp. 47–67.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Engdahl, D. E., ‘English
+					marriage conflicts law before the time of Bracton’, </text:span>
+				<text:span text:style-name="T5">American Journal of Comparative
+					Law</text:span>
+				<text:span text:style-name="T1">, 15 (1966–7), 109–35.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hill, R. M. T., ‘Marriage in
+					seventh-century England’, in King, M. H., and Stevens, W. M. (ed.),
+				</text:span>
+				<text:span text:style-name="T6">Saints, Scholars and Heroes:
+					Studies in Medieval Culture in Honour of Charles W. Jones
+				</text:span>
+				<text:span text:style-name="T2"> (2 vols., </text:span>
+				<text:span text:style-name="T18">Collegeville, MI, 1979
+				</text:span>
+				<text:span text:style-name="T1">), vol. 1, 67–76.</text:span>
+			</text:p>
+			<text:p text:style-name="P5">
+				<text:span text:style-name="T1">Hough, C., ‘The early Kentish
+					“divorce laws”: a reconsideration of Æthelberht, chs. 79 and 80’,
+				</text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 23 (1994), 19–34.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Klinck, A. L., ‘“To have and to
+					hold”: the bridewealth of wives and the </text:span>
+				<text:span text:style-name="T5">mund</text:span>
+				<text:span text:style-name="T1"> of widows in Anglo-Saxon
+					England’, </text:span>
+				<text:span text:style-name="T5">Nottingham Mediaeval Studies
+				</text:span>
+				<text:span text:style-name="T1">, 51 (2007), 231–45.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Loengard, J. S., ‘“Of the gift
+					of her husband”: English dower and its consequences in the year
+					1200’, in Kirshner, J., and Wemple, S. (eds.), </text:span>
+				<text:span text:style-name="T6">Women of the Medieval World:
+				</text:span>
+				<text:span text:style-name="T22">
+				</text:span>
+				<text:span text:style-name="T20">Essays in Honor of John H.
+					Mundy</text:span>
+				<text:span text:style-name="T1"> (Oxford, 1985), pp. 215–55.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Richardson, H. G., ‘The
+					marriage of Isabelle of Angoulême: a problem of canon law’, in
+					Forchielli, J., and Stickler, A. M. (eds.), </text:span>
+				<text:span text:style-name="T5">Studia Gratiana post octava
+					decreti saecularia auctore consilio commemorationi Gratianae
+					Instruendae edita</text:span>
+				<text:span text:style-name="T1"> (Collectanea historiae juris
+					canonici, 11, Rome, 1967), pp. 397–423.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T3">Rolker, C., ‘Kings, bishops and
+					incest: extension and subversion of the ecclesiastical marriage
+					jurisdiction around 1100’, </text:span>
+				<text:span text:style-name="T8">Studies in Church History
+				</text:span>
+				<text:span text:style-name="T3">, 43 (2007), 159–68.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Sheehan, M. M., ‘Theory and
+					practice: marriage of the unfree and the poor in medieval society’,
+				</text:span>
+				<text:span text:style-name="T5">Mediaeval Studies</text:span>
+				<text:span text:style-name="T1">, 50 (1988), 458–87.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Walker, S. S., ‘Free consent
+					and marriage of feudal wards in medieval England’, </text:span>
+				<text:span text:style-name="T5">Journal of Medieval History
+				</text:span>
+				<text:span text:style-name="T1">, 8 (1982), 123–34.</text:span>
+			</text:p>
+			<text:p text:style-name="P4">
+				<text:tab />
+			</text:p>
+			<text:p text:style-name="P2">Money and mints</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Blackburn, M. A. S., ‘Mints,
+				</text:span>
+				<text:span text:style-name="T5">burhs</text:span>
+				<text:span text:style-name="T1">, and the Grately Code, cap.
+					14.2’, in Hill, D., and Rumble, A. R. (eds.), </text:span>
+				<text:span text:style-name="T6">The Defence of Wessex: the
+					Burghal Hidage and Anglo-Saxon Fortifications</text:span>
+				<text:span text:style-name="T1"> (Manchester, 1996), pp.
+					160–75.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Gillingham, J., ‘“The most
+					precious jewel in the English crown”: levels of Danegeld and
+					Heregeld in the early eleventh century’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 104 (1989), 373–84.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Kinsey, R. S., ‘Anglo-Saxon law
+					and practice relating to mints and moneyers, with particular
+					reference to the mints of Chichester, London, Dover, and
+					Northampton, and the moneyer(s) Cynsige or Kinsey’, </text:span>
+				<text:span text:style-name="T5">British Numismatic Journal
+				</text:span>
+				<text:span text:style-name="T1">, 3rd ser., 9 (1959 for 1958),
+					12–50.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lawson, M. K., ‘Danegeld and
+					Heregeld once more’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 105 (1990), 951–61.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lawson, M. K., ‘“Those stories
+					look true”: levels of taxation in the reigns of Aethelred II and
+					Cnut’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 104 (1989), 385–406.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lawson, M. K., ‘The collection
+					of Danegeld and Heregeld in the reigns of Aethelred II and Cnut’,
+				</text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 99 (1984), 721–38.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Screen, E., ‘Anglo-Saxon law
+					and numismatics: a reassessment in the light of Patrick Wormald’s
+				</text:span>
+				<text:span text:style-name="T5">The Making of English Law
+				</text:span>
+				<text:span text:style-name="T1">’, </text:span>
+				<text:span text:style-name="T5">British Numismatic Journal
+				</text:span>
+				<text:span text:style-name="T1">, 77 (2007), 150–72.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Stack, G., ‘A lost law of Henry
+					II: the Assize of Oxford and monetary reform’, </text:span>
+				<text:span text:style-name="T5">Haskins Society Journal
+				</text:span>
+				<text:span text:style-name="T1">, 16 (2006 for 2005), 95–103.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P2" />
+			<text:p text:style-name="P2">Ordeals and judicial duels</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Bartlett, R., </text:span>
+				<text:span text:style-name="T5">Trial by Fire and Water: the
+					Medieval Judicial Ordeal</text:span>
+				<text:span text:style-name="T1"> (Oxford, 1986).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hyams, P. R., ‘Trial by ordeal:
+					the key to proof in the early common law’, in Green, M. S. A.,
+				</text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T6">On the Laws and Customs of
+					England: Essays in Honor of Samuel E. Thorne</text:span>
+				<text:span text:style-name="T1"> (Chapel Hill, NC, 1981), pp.
+					90–126.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Larratt Keefer, S., ‘
+				</text:span>
+				<text:span text:style-name="T5">Donne se cirlisca man ordales
+					weddigeð</text:span>
+				<text:span text:style-name="T1">: the Anglo-Saxon lay ordeal’,
+					in Baxter, S., Karkov, C., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T5">Early Medieval Studies in
+					Memory of Patrick Wormald</text:span>
+				<text:span text:style-name="T1"> (Farnham, 2009), pp. 353–67.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Martindale, J., ‘Between law
+					and politics: the judicial duel under the Angevin Kings
+					(mid-twelfth century to 1204)’, in Stafford, P., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T5">Law, Laity and Solidarities:
+					Essays in Honour of Susan Reynolds</text:span>
+				<text:span text:style-name="T1"> (Manchester, 2001), pp.
+					116–49.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Niles, J. D., ‘Trial by ordeal
+					in Anglo-Saxon England: what’s the problem with barley?’, in
+					Baxter, S., Karkov, C., </text:span>
+				<text:span text:style-name="T5">et al.</text:span>
+				<text:span text:style-name="T1"> (eds.), </text:span>
+				<text:span text:style-name="T5">Early Medieval Studies in
+					Memory of Patrick Wormald</text:span>
+				<text:span text:style-name="T1"> (Farnham, 2009), pp. 369–82.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Russell, M. J., ‘Trial by
+					battle and the writ of right; trial by battle and the appeals of
+					felony’, </text:span>
+				<text:span text:style-name="T5">Journal of Legal History
+				</text:span>
+				<text:span text:style-name="T1">, 1 (1980), 111–64.</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P2">Peace</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Colman, R. V., ‘Domestic peace
+					and public order in Anglo-Saxon law’, in Woods, J. D., and
+					Pelteret, D. A. E. (eds.), </text:span>
+				<text:span text:style-name="T5">The Anglo-Saxons: Synthesis and
+					Achievement</text:span>
+				<text:span text:style-name="T1"> (</text:span>
+				<text:span text:style-name="T18">Waterloo</text:span>
+				<text:span text:style-name="T1">, 1985), pp. 49–61.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Fordham, M., ‘Peacekeeping and
+					order on the Anglo-Welsh frontier in the early tenth century’,
+				</text:span>
+				<text:span text:style-name="T5">Midland History</text:span>
+				<text:span text:style-name="T1">, 32 (2007), 1–18.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lund, N., ‘Peace and non-peace
+					in the Viking age: Ottar in Biarmaland, the Rus in Byzantium and
+					Danes and Norwegians in England’, in Knirk, J. E. (ed.),
+				</text:span>
+				<text:span text:style-name="T5">Proceedings of the Tenth Viking
+					Congress</text:span>
+				<text:span text:style-name="T1"> (Oslo, 1987), pp. 255–69.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">O’Brien, B., </text:span>
+				<text:span text:style-name="T5">God’s Peace and King’s Peace:
+					the Laws of Edward the Confessor</text:span>
+				<text:span text:style-name="T1"> (Philadelphia, PA, 1999).
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Ratcliffe, R., ‘Keeping the
+					peace’, </text:span>
+				<text:span text:style-name="T5">Ancestors</text:span>
+				<text:span text:style-name="T1">, 17 (2003).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Weber, J. K., ‘The king’s
+					peace: a comparative study’, </text:span>
+				<text:span text:style-name="T5">Journal of Legal History
+				</text:span>
+				<text:span text:style-name="T1">, 10 (1989), 135–60.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Wormald, P., ‘</text:span>
+				<text:span text:style-name="T5">Inter cetera bona</text:span>
+				<text:span text:style-name="T1"> – </text:span>
+				<text:span text:style-name="T5">genti suae</text:span>
+				<text:span text:style-name="T1">: law-making and peace-keeping
+					in the earliest English kingdoms’, </text:span>
+				<text:span text:style-name="T5">Settimane dello studio del
+					centro italiano di studi sull’alto medioevo</text:span>
+				<text:span text:style-name="T1">, 42 (1995), 963–93.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P3" />
+			<text:p text:style-name="P2">Succession and inheritance</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Beckerman, J. S., ‘Succession
+					in Normandy, 1087, and in England, 1066: the role of testamentary
+					custom’, </text:span>
+				<text:span text:style-name="T5">Speculum</text:span>
+				<text:span text:style-name="T1">, 47 (1972), 258–60.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T3">Drout, M. D.C., ‘Blood and
+					deeds: the inheritance systems in </text:span>
+				<text:span text:style-name="T9">Beowulf</text:span>
+				<text:span text:style-name="T4">’,</text:span>
+				<text:span text:style-name="T9">
+				</text:span>
+				<text:span text:style-name="T8">Studies in Philology
+				</text:span>
+				<text:span text:style-name="T3">, 104 (2007), 199–226.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hudson, J., ‘Life-grants and
+					the development of inheritance in Anglo-Norman England’,
+				</text:span>
+				<text:span text:style-name="T5">Anglo-Norman Studies
+				</text:span>
+				<text:span text:style-name="T1">, 12 (1989), 67–80.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Tabuteau, E. Z., ‘The role of
+					law in the succession to Normandy and England, 1087’, </text:span>
+				<text:span text:style-name="T5">Haskins Society Journal
+				</text:span>
+				<text:span text:style-name="T1">, 3 (1993 for 1991), 141–69.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Turner, R. V., ‘Exercise of the
+					king’s will in inheritance of baronies: the example of King John
+					and William Briwerre’, </text:span>
+				<text:span text:style-name="T5">Albion</text:span>
+				<text:span text:style-name="T1">, 22 (1990), 383–401.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Turner, R. V., ‘The Mandeville
+					inheritance, 1189–1236: its legal, political, and social context’,
+				</text:span>
+				<text:span text:style-name="T5">Haskins Society Journal
+				</text:span>
+				<text:span text:style-name="T1">, 1 (1989), 147–72.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Waugh, S. L., ‘Women’s
+					inheritance and the growth of bureaucratic monarchy in twelfth- and
+					thirteenth-century England’, </text:span>
+				<text:span text:style-name="T5">Nottingham Mediaeval Studies
+				</text:span>
+				<text:span text:style-name="T1">, 34 (1990), 71–92.</text:span>
+			</text:p>
+			<text:p text:style-name="P4">
+				<text:tab />
+			</text:p>
+			<text:p text:style-name="P2">Towns and trade</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Brooke, C. N. L., ‘Henry’s
+					Charter for the City of London’, </text:span>
+				<text:span text:style-name="T5">Journal of the Society of
+					Archivists</text:span>
+				<text:span text:style-name="T1">, 4 (1973), 558–78.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Haslam, J., ‘Market and
+					fortress in England in the reign of Offa’, </text:span>
+				<text:span text:style-name="T5">World Archaeology</text:span>
+				<text:span text:style-name="T1">, 19 (1987), 76–93.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lloyd, T. H., </text:span>
+				<text:span text:style-name="T5">Alien Merchants in England in
+					the High Middle Ages</text:span>
+				<text:span text:style-name="T1"> (Brighton, 1982). </text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Richardson, H. G., ‘Henry I’s
+					Charter to London’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 42 (1927), 80–7.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Russell, J. C., ‘The date of
+					Henry I’s Charter to London’, in Russell, J. C. (ed.), </text:span>
+				<text:span text:style-name="T6">Twelfth Century Studies
+				</text:span>
+				<text:span text:style-name="T1"> (New York, 1978), pp. 94–102.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P4" />
+			<text:p text:style-name="P1">
+				<text:span text:style-name="T17">Women and widows</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Alamichel, M.-F., </text:span>
+				<text:span text:style-name="T5">Widows in Anglo-Saxon and
+					Medieval Britain</text:span>
+				<text:span text:style-name="T1"> (Oxford, 2008).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Colman, R. V., ‘“Under her own
+					lock and key”: women’s position in early medieval law and society’,
+					in Birks, P. B. H. (ed.), </text:span>
+				<text:span text:style-name="T6">The Life of the Law:
+					Proceedings of the Tenth British Legal History Conference, Oxford,
+					1991</text:span>
+				<text:span text:style-name="T1"> (London, 1993), pp. 45–58.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Crick, J. C., ‘Men, women and
+					widows: widowhood in pre-Conquest England’, in Cavallo, S., and
+					Warner, L. (eds.), </text:span>
+				<text:span text:style-name="T6">Widowhood in Medieval and Early
+					Modern Europe</text:span>
+				<text:span text:style-name="T1"> (Harlow, 1999), pp. 24–36.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hollis, S., ‘“The protection of
+					God and the king”: Wulfstan’s legislation on widows’, in Townend,
+					M. (ed.), </text:span>
+				<text:span text:style-name="T5">Wulfstan, Archbishop of York:
+					the Proceedings of the Second Alcuin Conference</text:span>
+				<text:span text:style-name="T1"> (Studies in the Early Middle
+					Ages, 10, Turnhout, 2004), pp. 443–60.</text:span>
+			</text:p>
+			<text:p text:style-name="P5">
+				<text:span text:style-name="T1">Hough, C., ‘Women and the law
+					in seventh-century England’, </text:span>
+				<text:span text:style-name="T5">Nottingham Mediaeval Studies
+				</text:span>
+				<text:span text:style-name="T1">, 51 (2007), 207–30.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hough, C., ‘Two Kentish laws
+					concerning women: a new reading of Æthelberht 73 and 74’,
+				</text:span>
+				<text:span text:style-name="T5">Anglia: Zeitschrift für
+					englische Philologie</text:span>
+				<text:span text:style-name="T1">, 119 (2001), 554–78.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hough, C., ‘The early Kentish
+					“divorce laws”: a reconsideration of Æthelberht, chs. 79 and 80’,
+				</text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 23 (1994), 19–34.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Kittel, M. R., ‘Women under the
+					law in medieval England, 1066–1485’, in Kanner, B. (ed.),
+				</text:span>
+				<text:span text:style-name="T6">The Women of England from
+					Anglo-Saxon Times to the Present: Interpretive Bibliographical
+					Essays</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(</text:span>
+				<text:span text:style-name="T18">London</text:span>
+				<text:span text:style-name="T1">, 1980), pp. 124–37.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Klinck, A. L., ‘“To have and to
+					hold”: the bridewealth of wives and the </text:span>
+				<text:span text:style-name="T5">mund</text:span>
+				<text:span text:style-name="T1"> of widows in Anglo-Saxon
+					England’, </text:span>
+				<text:span text:style-name="T5">Nottingham Mediaeval Studies
+				</text:span>
+				<text:span text:style-name="T1">, 51 (2007), 231–45.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Klinck, A. L., ‘Anglo-Saxon
+					women and the law’, </text:span>
+				<text:span text:style-name="T5">Journal of Medieval History
+				</text:span>
+				<text:span text:style-name="T1">, 8 (1982), 107–21.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Loengard, J. S., ‘“Of the gift
+					of her husband”: English dower and its consequences in the year
+					1200’, in Kirshner, J., and Wemple, S. (eds.), </text:span>
+				<text:span text:style-name="T6">Women of the Medieval World:
+				</text:span>
+				<text:span text:style-name="T22">
+				</text:span>
+				<text:span text:style-name="T20">Essays in Honor of John H.
+					Mundy</text:span>
+				<text:span text:style-name="T1"> (Oxford, 1985), pp. 215–55.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Meyer, M. A., ‘Land charters
+					and the legal position of Anglo-Saxon women’, in Kanner, B. (ed.),
+				</text:span>
+				<text:span text:style-name="T6">The Women of England from
+					Anglo-Saxon Times to the Present: Interpretive Bibliographical
+					Essays</text:span>
+				<text:span text:style-name="T2">
+				</text:span>
+				<text:span text:style-name="T1">(</text:span>
+				<text:span text:style-name="T18">London</text:span>
+				<text:span text:style-name="T1">, 1980), pp. 57–82.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Richards, M. P., and Stanfield,
+					B. J., ‘Concepts of Anglo-Saxon women in the laws’, in Damico, H.,
+					and Olsen, A. H. (eds.), </text:span>
+				<text:span text:style-name="T5">New Readings on Women in Old
+					English Literature</text:span>
+				<text:span text:style-name="T1"> (</text:span>
+				<text:span text:style-name="T18">Bloomington, ID, 1990
+				</text:span>
+				<text:span text:style-name="T1">), pp. 89–99.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Rivers, T. J., ‘Adultery in
+					early Anglo-Saxon society: Æthelberht 31 in comparison with
+					continental Germanic law’, </text:span>
+				<text:span text:style-name="T5">Anglo-Saxon England</text:span>
+				<text:span text:style-name="T1">, 20 (1991), 19–25.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Rivers, T. J., ‘Widows’ rights
+					in Anglo-Saxon law’, </text:span>
+				<text:span text:style-name="T5">American Journal of Legal
+					History</text:span>
+				<text:span text:style-name="T1">, 19 (1975), 208–15.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Waugh, S. L., ‘Women’s
+					inheritance and the growth of bureaucratic monarchy in twelfth- and
+					thirteenth-century England’, </text:span>
+				<text:span text:style-name="T5">Nottingham Mediaeval Studies
+				</text:span>
+				<text:span text:style-name="T1">, 34 (1990), 71–92.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T10">Wolf, G., </text:span>
+				<text:span text:style-name="T10">‘Aethelfled von Mercia und
+					ottonische “dominae”: zun Rechtscharakter frühmittelalterlicher
+					Frauenherrschaft’, </text:span>
+				<text:span text:style-name="T12">Zeitschrift der
+					Savigny-Stiftung für Rechtsgeschichte. </text:span>
+				<text:span text:style-name="T5">Germanistische Abteilung
+				</text:span>
+				<text:span text:style-name="T1">, 111 (1994), 525–35.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="P3" />
+			<text:p text:style-name="P2">Wulfstan</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Cross, J. E., and Hamer, A.
+					(eds.), </text:span>
+				<text:span text:style-name="T5">Wulfstan’s Canon Law Collection
+				</text:span>
+				<text:span text:style-name="T1"> (Anglo-Saxon Texts, 1,
+					Woodbridge, 1999).</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Hollis, S., ‘“The protection of
+					God and the king”: Wulfstan’s legislation on widows’, in Townend,
+					M. (ed.), </text:span>
+				<text:span text:style-name="T5">Wulfstan, Archbishop of York:
+					the Proceedings of the Second Alcuin Conference</text:span>
+				<text:span text:style-name="T1"> (Studies in the Early Middle
+					Ages, 10, Turnhout, 2004), pp. 443–60.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Lawson, M. K., ‘Archbishop
+					Wulfstan and the homiletic element in the Laws of Æthelred II and
+					Cnut’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 107 (1992), 565–86.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:soft-page-break />
+				<text:span text:style-name="T1">Stanley, E. G., ‘Wulfstan and
+					Ælfric: “the true difference between the law and the gospel”’, in
+					Townend, M. (ed.), </text:span>
+				<text:span text:style-name="T5">Wulfstan, Archbishop of York:
+					the Proceedings of the Second Alcuin Conference</text:span>
+				<text:span text:style-name="T1"> (Studies in the Early Middle
+					Ages, 10, Turnhout, 2004), pp. 429–41.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Whitelock, D., ‘Wulfstan Cantor
+					and Anglo-Saxon law’, in Orrick, A. H. (ed.), </text:span>
+				<text:span text:style-name="T5">Nordica et Anglica: Studies in
+					Honor of Stefán Ginarsson</text:span>
+				<text:span text:style-name="T1"> (The Hague, 1968), pp. 83–92.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Whitelock, D., ‘Wulfstan’s
+					authorship of Cnut’s laws’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 70 (1955), 72–85.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Whitelock, D., ‘Wulfstan and
+					the Laws of Cnut’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 63 (1948), 433–52.
+				</text:span>
+			</text:p>
+			<text:p text:style-name="Standard">
+				<text:span text:style-name="T1">Whitelock, D., ‘Wulfstan and
+					the so-called Laws of Edward and Guthrum’, </text:span>
+				<text:span text:style-name="T5">English Historical Review
+				</text:span>
+				<text:span text:style-name="T1">, 56 (1941), 1–21.</text:span>
+			</text:p>
+			<text:p text:style-name="Standard" />
+		</office:text>
+	</office:body>
+</office:document-content>

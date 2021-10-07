@@ -1,0 +1,194 @@
+{% extends "website/eel_default.html" %}
+{% load i18n %}
+{% load tags_filters %}
+{% load tags_editions %}
+{% load cch_tags %}
+
+{% block head_title_block %}{{ version.version_name }} ({{ version.standard_abbreviation }}){% endblock %}
+{% block body_title_block %}{{ version.version_name }} ({{ version.standard_abbreviation }}){% endblock %}
+
+{% block extra_script %}
+<link rel="stylesheet" href="{{ custom_web_media_prefix }}textviewer/css/textviewer.css?r={{ unique_number }}" type="text/css" />
+<script type="text/javascript" src="{{ custom_web_media_prefix }}textviewer/js/textviewer.js?r={{ unique_number }}"></script>
+
+<link rel="stylesheet" href="{{ custom_web_media_prefix }}fancybox/jquery.fancybox-1.3.4.css" type="text/css" media="screen" />
+<script type="text/javascript" src="{{ custom_web_media_prefix }}fancybox/jquery.fancybox-1.3.4.pack.js"></script>
+<script type="text/javascript" src="{{ custom_web_media_prefix }}_a/j/jquery.tools.min.js"></script>
+
+<script type="text/javascript">
+
+var userid = {{ userid }};
+
+$(document).ready(function() {
+
+    // select the text types from the url fragment
+    var hash = location.hash;
+    var positions = Array();
+    if (hash) {
+        hash = hash.replace(/^#/, '');
+        var parts = hash.split('/');
+        var i = 0;
+        $('.text-type').each(function() {
+            if (i < parts.length) {
+                var subparts = parts[i].split('-');
+                $(this).val(subparts[0]);
+                subparts.shift();
+                positions.push(subparts.join('-'));
+            } else {
+                positions.push('');
+            }
+            i++;
+        });
+    }
+
+    var viewer = new TextViewer('{{ base_url }}');
+    //viewer.bindMainControls("#permalink input");
+    $(".viewer-panel").each(function() {
+            viewer.bindNewPanel($(this).find(".text-type"), $(this).find(".viewer-text-box"), $(this).find(".nav-chapter"), $(this).find(".nav-page"));
+        }
+    );
+    viewer.setLowerBoundaryElement('#footer');
+    viewer.ready();
+
+    // move to the positions
+    i = 0;
+    $('.nav-chapter').each(function() {
+        if (i < positions.length) {
+            var fragment = positions[i];
+            viewer.panels[i].scrollToShorthand(fragment);
+        }
+        i++;
+    });
+
+    $('#toggle-chapter, #toggle-apparatus, #toggle-commentary, #toggle-user-comments, #toggle-sync').click(function(event_data, init) {
+        var name = (this.id).replace(/toggle-/g, '');
+        var switched_on = init ? viewer.getSwitch(name) : viewer.toggleSwitch(name);
+        if (switched_on) {
+            $(this).parents('li').addClass('s1');
+        } else {
+            $(this).parents('li').removeClass('s1');
+        }
+        return false;
+    }).trigger('click', true);
+
+    $('.expand').click(function(event_data) {
+            var button = $(this);
+            button.toggleClass('expanded');
+            var expanded = button.hasClass('expanded');
+            var panel = button.parents('.viewer-panel');
+            panel.css('width', expanded ? '100%' : '50%');
+            panel.css('left', (!expanded && (panel.attr('id') == 'viewer-right-panel')) ? '50%': '0%');
+            $('.viewer-panel').each(function() {
+                $(this).toggle( !expanded || (panel[0] == this) );
+            });
+        }
+    );
+});
+
+</script>
+{% endblock %}
+
+{% block page_content %}
+
+<div id="user-comments-box">
+    <h3>User comments
+        <span class="cb-close" title="close">close</span>
+        <span class="cb-resize" title="expand/collapse">expand</span>
+    </h3>
+    <div class="user-comments-body">
+        <ul class="user-comments-box-tabs">
+            <li id="user-comments-tab-all">All comments</li>
+            <li>My comments</li>
+            <li id="user-comments-tab-post">Post a comment</li>
+        </ul>
+        <div class="panel">
+            <div id="user-comments-box-all">
+                [all comments]
+                <br/>[all comments]
+                <br/>[all comments]
+                <br/>[all comments]
+                <br/>[all comments]
+            </div>
+            <div id="user-comments-box-my">
+                [my comments]
+            </div>
+            <div id="user-comments-box-form">
+                <form>
+                    <p>
+                        <textarea id="user-comments-field-comment" name="comment-text"></textarea>
+                        <br/>
+                        <label for="user-comments-field-private">Private comment?</label>
+                        <input id="user-comments-field-private" type="checkbox" name="private" value="1" />
+                    </p>
+                </form>
+            </div>
+        </div>
+        <p class="user-comments-box-footer">
+            <img id="spinner-uc" src="{{ custom_web_media_prefix }}textviewer/img/ajax-loader-uc.gif" />
+            <span id="ajax-message-uc">.</span>
+            &nbsp;
+            <input type="submit" value="Close" name="close" class="user-comments-box-close" />
+            <input type="submit" name="post-comment" value="Post comment" class="user-comments-box-submit" />
+        </p>
+    </div>
+</div>
+
+<div id="text-viewer">
+
+    <div id="viewer-tool-bar">
+        <ul class="nvl">
+            <li class="s1 x1"><a id="toggle-sync" class="t9 m1" title="Toggle panel synchronisation" href="#">Synchronise</a></li>
+            <li><a id="toggle-apparatus" class="t9 m3" title="Toggle critical apparatus" href="#">Critical apparatus</a></li>
+            <li><a id="toggle-commentary" class="t9 m2" title="Toggle commentary" href="#">Commentary</a></li>
+            <li><a id="toggle-user-comments" class="t9 m5" title="Toggle user comments" href="#">user comments</a></li>
+            <li><a id="toggle-chapter" class="t9 m4" title="Toggle chapterisation" href="#">Chapterisation</a></li>
+            <li class="perm">
+                <a title="Back to introduction" href="../">Back to introduction</a>
+            </li>
+        </ul>
+    </div>
+
+    <div id="viewer-left-panel" class="viewer-panel">
+        <div class="panel-tool-bar">
+            <select class="text-type">
+                {% for document in documents %}
+                    <option value="{{document.key}}"
+                        {% ifequal document.key documents_selected.0 %}selected="selected"{% endifequal %}>
+                        {{ document.label }}
+                    </option>
+                {% endfor %}
+            </select>
+            <input type="text" name="nav-chapter" class="nav-chapter" value="" />
+            <input type="text" name="nav-page" class="nav-page" value="" />
+            <div class="expand expand-left" title="expand or collapse">expand</div>
+        </div>
+        <div id="viewer-left-box" class="viewer-text-box">
+        </div>
+    </div>
+    <div id="viewer-right-panel" class="viewer-panel">
+        <div class="panel-tool-bar">
+            <select class="text-type">
+                {% for document in documents %}
+                    <option value="{{document.key}}"
+                        {% ifequal document.key documents_selected.1 %}selected="selected"{% endifequal %}>
+                        {{ document.label }}
+                    </option>
+                {% endfor %}
+            </select>
+            <input type="text" name="nav-chapter" class="nav-chapter" value="" />
+            <input type="text" name="nav-page" class="nav-page" value="" />
+            <div class="expand expand-right" title="expand or collapse">expand</div>
+        </div>
+        <div id="viewer-right-box" class="viewer-text-box">
+        </div>
+    </div>
+</div>
+
+<div style="display: none; width: 100%;">
+    <div id="image-viewer">
+        <iframe id="image-viewer-iframe" scrolling="no" src="?zoom=1&amp;w=rl-image">
+        </iframe>
+    </div>
+</div>
+
+{% endblock %}

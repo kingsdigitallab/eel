@@ -1,0 +1,9 @@
+Thank you for registering with {{ gsettings.ugc.email_site }}. Please save this message for future reference.
+
+To confirm your email address and activate your account, click on the link below.
+
+http://{{ gsettings.general.hostname }}/user/activate/{{ activation_key }}/
+
+If your email software does not allow you to click the link, please copy and paste it into your web browser's location bar, if the link has been split over two lines, you will need to copy both parts to complete the link.
+
+If you have any further questions, please email {{ gsettings.ugc.help_email_address }}

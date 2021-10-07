@@ -1,0 +1,56 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %}
+
+{% block page_main_title %}Sign in{% endblock %}
+{% block page_title %}Sign in{% endblock %}
+
+{% block head_extra %}
+{{ block.super }}
+<style type="text/css">
+	form label {
+		display: 	block;
+	}
+	form input {
+		display: 	block;
+	}
+</style>
+{% endblock %}
+
+{% block page_content %}
+	<form method="post" action="" id="login-form" class="fms m2 django-form user-form">
+		{% if form.non_field_errors %}
+			<ul class="errorlist">
+				{% for error in form.non_field_errors %}
+					<li>{{ error }}</li>
+				{% endfor %}
+			</ul>
+		{% endif %}
+		{% if redirect %}<input type="hidden" value="{{ redirect }}" name="r"/>{% endif %}
+		<fieldset class="i1 m2">
+            <legend>Already a member?</legend>            
+            <ol>
+            	<li>
+					{{ form.login_name.errors }}
+					<label for="id_login_name" >Your email</label>
+					{{ form.login_name }}
+				</li>
+				<li>		
+					{{ form.password.errors }}
+					<label for="id_password" >Your password</label>
+					{{ form.password }}
+					<span class="field-legend-right"><a href="{{DJANGO_WEBPATH_PREFIX_MEMBERS}}reset-password/">Forgotten your password?</a></span>
+				</li>
+			</ol>
+		</fieldset>
+		<fieldset class="ix">
+			<input type="submit" value="Sign in" name="login" />
+		</fieldset>
+		<p><br/></p>
+		<fieldset class="i1 m2">
+            <legend>Not yet a member?</legend>
+            <p>
+				<a href="{{DJANGO_WEBPATH_PREFIX_MEMBERS}}register/">Create your account</a>.
+            </p>
+		</fieldset>
+	</form>
+{% endblock %}

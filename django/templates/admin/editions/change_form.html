@@ -1,0 +1,20 @@
+{% extends "admin/change_form.html" %}
+
+{% block extrahead %}
+	{{ block.super }}
+	{% if wysiwyg_fields or wysiwyg_fields_custom %}
+	<!--  script type="text/javascript" src="/db/include/js/tiny_mce/tiny_mce_src.js"></script -->
+	<script type="text/javascript" src="/media/admin/js/tiny_mce/tiny_mce_src.js?version=8"></script>
+	{% endif %}
+	<script type="text/javascript" src="/media/admin/js/txt_auto_complete.js?version=4"></script>
+	
+	<script type="text/javascript" src="/media/admin/js/dj_edit_fk.js"></script>
+
+	<link href="/media/admin/css/txt_auto_complete.css" type="text/css" media="all" rel="stylesheet" />
+
+{% endblock %}
+
+{% block footer %}
+	{{ block.super }}
+	{% include "admin/editions/wysiwyg.html" %}
+{% endblock %}

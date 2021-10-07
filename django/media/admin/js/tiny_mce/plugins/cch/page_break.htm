@@ -1,0 +1,48 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+	<title>Page break</title>
+	<script type="text/javascript" src="../../../jquery.js"></script>
+	<script type="text/javascript" src="../../tiny_mce_popup.js"></script>
+	<script type="text/javascript" src="js/page_break.js"></script>
+	<script type="text/javascript" src="../../../jquery.json.min.js"></script>
+	<style type="text/css">
+		.field-error { color:red; display: none; font-weight: bold; }
+		#reason-pid { display: none; }
+		.legend {color: #707070; font-size: smaller; }
+	</style>
+</head>
+<body>
+
+<form onsubmit="PageBreakDialog.insert();return false;" action="#">
+	<table>
+	<tr>
+		<td>Manuscript:</td>
+		<td>
+			<select name="witid" id="witidid">
+				<option value="character">No manuscript</option>
+			</select>
+		</td>
+	</tr>
+	<tr>
+		<td>Folio or page number:</td>
+		<td>
+			<select name="loc" id="locid">
+				<option value="character">No witness</option>
+			</select>
+		</td>
+	</tr>
+	</table>
+	<div class="mceActionPanel">
+		<input type="button" id="insert" name="insert" value="{#insert}" onclick="PageBreakDialog.insert();" />
+		&nbsp;
+		<input type="button" id="cancel" name="cancel" value="{#cancel}" onclick="tinyMCEPopup.close();" />
+		<br/><br/>
+	</div>
+	<p>
+		<span class="legend">If a manuscript does not appear in this list it is either missing from the database or its folio/page range has not been specified.</span>
+	</p>
+</form>
+
+</body>
+</html>

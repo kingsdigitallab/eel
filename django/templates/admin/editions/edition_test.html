@@ -1,0 +1,110 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}{{ edition.version.version_name }} ({{ edition.abbreviation }}) | Early English Law Database{% endblock %}
+
+{% block extrahead %}
+	{{ block.super }}
+	<script type="text/javascript" src="/media/admin/js/tiny_mce/tiny_mce_src.js?version=7"></script>
+	<script type="text/javascript" src="/media/admin/js/txt_auto_complete.js?version=4"></script>
+	<script type="text/javascript" src="/media/admin/js/jquery.json.min.js"></script>
+	<script src="{{custom_admin_media_prefix}}js/test_font.js" type="text/javascript"> </script>
+	
+	<link rel="stylesheet" href="{{ custom_web_media_prefix }}textviewer/css/textviewer.css?r={{ unique_number }}" type="text/css" />
+
+	<style type="text/css">
+		#main-content {
+			margin-top: 2em;
+		}
+		#panel-top {
+			display:none;
+		}
+		#panel-centre {
+			margin-left: 200px;		
+		}
+		#panel-left {
+			position:absolute; 
+			width:200px;		
+		}
+		#text-tree {
+			background-color: lightyellow;
+			border:1px solid lightgrey;
+		}
+		#text-tree ul {
+			padding-left: 1.5em;
+		}
+		.control-bar {
+			height: 25px;
+		}
+		.msg-error {
+			color: red;
+		}
+		#loading-div {
+			display: none;
+		}
+		.selected-div {
+			font-weight: bold;
+		}
+		#ca-table-div {
+			display: none;
+		}
+		#message-box {
+			border: 1px solid #F0C0C0; 
+			background-color: #FFEEEE; 
+			padding: 0.5em; 
+			margin: 1em; 
+			font-weight: normal;
+			display: none;
+		}
+		.notif-icon {
+			margin-right: 1em;
+			margin-left: 1em;
+		}
+		.div-com {
+			width: 10px;
+			height: 10px;
+			margin-left: 0.5em;
+		}
+		h1, h2, h4, h4 {
+			text-align: center;
+		}
+		
+		.viewer-text-box {
+			overflow: hidden;
+		}
+	</style>
+	
+{% endblock %}
+
+{% block breadcrumbs %}
+	<div class="breadcrumbs">
+		<a href="../../../../..">{% trans 'Home' %}</a> 
+		&rsaquo; 
+		<a href="../../../..">Editions</a> 
+		&rsaquo; 
+		<a href="../../..">Editions</a> 
+		&rsaquo; 
+		<a href="../..">{{ edition }}</a> 
+		&rsaquo; 
+		<a href="../text">Encoded text</a> 
+		&rsaquo;
+		Preview
+	</div>
+{% endblock %} 
+
+{% block content %}
+	{% block object-tools %}{% endblock %}
+	<h1>{{ edition.version.version_name }} ({{ edition.abbreviation }})</h1>
+	<div id="main-content">
+		<div id="message-box">message</div>
+		<div id="panel-top">Image</div>
+		<div id="viewer-right-box" class="viewer-text-box">
+			{{ text|safe }}
+		</div>
+	</div>
+{% endblock %}
+
+{% block footer %}
+	{{ block.super }}
+	{% include "admin/editions/wysiwyg.html" %}	
+{% endblock %}

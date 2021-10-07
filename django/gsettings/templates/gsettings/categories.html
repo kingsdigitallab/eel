@@ -1,0 +1,32 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% block extrastyle %}
+	{{ block.super }}
+	<style type="text/css">
+		ul.gsettings-categories li dfn {
+			margin-left: 5em;
+			display: block;
+		}
+	</style>
+{% endblock %}
+{% block breadcrumbs %}
+	<div class="breadcrumbs">
+		<a href="../..">{% trans 'Home' %}</a> 
+		&rsaquo; 
+		Global settings
+	</div>
+{% endblock %} 
+{% block content %}
+{% block object-tools %}{% endblock %}
+	<h1>Global settings - Categories</h1>
+	<ul class="gsettings-categories">
+		{% for category in categories %}
+			<li>
+				<a href="{{ category.id }}/"><h2>{{ category.name }}</h2></a>
+				{% if category.description %}
+					<dfn>{{ category.description }}</dfn>
+				{% endif %}
+			</li>
+		{% endfor %}
+	</ul>
+{% endblock %}

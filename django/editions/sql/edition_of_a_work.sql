@@ -1,0 +1,1 @@
+-- INSERT INTO `editions_edition_of_a_work` (`id`, `abbreviation`, `introduction`, `date_of_edition_to`, `date_of_edition_mod`, `date_of_edition`, `work_id`, `collection_of_editions_id`, `eel_edition_status_id`) VALUES (1,'GPKP','',NULL,0,NULL,1,2,2);

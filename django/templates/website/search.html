@@ -1,0 +1,101 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %} 
+{% load tags_filters cch_filters %}
+{% load tags_editions pagination_tags %}
+
+{% block extra_script %}
+	{{ block.super }}
+	<script type="text/javascript">
+		$(document).ready(function() {
+			$('#st').focus();
+			var val = $('#st').val();
+			$('#st').val(val+' ');
+			$('#st').val(val);
+		});
+	</script>
+{% endblock %}
+
+{% block head_title_block %}Search{% endblock %}
+{% block body_title_block %}
+	Found
+	{% if result_size %}
+		{{ result_size }}		 
+	{% else %} 
+		no
+	{% endif %}
+	{{ filter_text_type.get_selected_option.label|lower|plural:result_size }}
+{% endblock %}
+
+{% block sidenav %}
+	<div id="option-panel">
+		<form method="get" action="">
+			<input id="st" class="old-english" type="text" name="st" value="{{ st }}" />
+			<!-- img alt="help" src="{{custom_web_media_prefix}}_a/i/help.jpg" width="16px" height="16px"/ -->
+			<input class="button" type="submit" name="sm" value="Search" />
+			<!-- input class="button f-right" type="submit" name="srt" value="Reset" title="Reset the search parameters." / -->
+			<a class="button f-right" href="?" title="Reset the search parameters.">Reset</a>
+		
+			{% render_filter filter_text_type 'list_multi' %}
+			{% render_filter filter_language 'list_multi' %}
+			{% render_filter filter_king 'list_multi' %}
+			{% render_filter filter_category 'list_multi' %}
+		</form>
+	</div>	
+{% endblock %}
+
+{% block page_content %}
+
+{% if items %}
+
+	{% autopaginate items 10 %}
+		    	
+	{% comment %}<p>Found {{ result_size }} text{% if items.1 %}s{% endif %}.</p>{% endcomment %}
+
+	<ul id="search-results">
+	{% for item in items %}
+		<li>
+			{% ifequal item_type 'edition' %}
+				<h2><a href="/laws/texts/{{ item.version.slug }}/">{{ item.abbreviation }}, {{ item.version.version_name }}
+						({% for language in item.version.get_languages %}{% if not forloop.first %}, {% endif %}{{ language.name }}{% endfor %}{% for attribute in item.version.work.get_attributes %}, {{ attribute.name }}{% endfor %})
+					</a></h2>
+				<p class="sr-editors">Edited by 
+					{% for editor in item.get_editors %}{% if not forloop.first %}, {% endif %}{{ editor.first_name }} {{ editor.last_name }}{% endfor %}
+				</p> 
+			{% endifequal %} 
+			{% ifequal item_type 'witness' %}
+				<h2><a href="/laws/manuscripts/{{ item.manuscript.slug }}/">{{ item.manuscript.sigla }} &mdash; {{ item.manuscript.archive.name }} 
+						{{ item.manuscript.shelf_mark }}, 
+						{{ item.manuscript.archive.city }}
+						{% ifnotequal item.manuscript.archive.country 'England' %}, {{ item.manuscript.archive.country }}{% endifnotequal %}
+						({% for language in item.get_languages %}{% if not forloop.first %}, {% endif %}{{ language.name }}{% endfor %}{% for attribute in item.version.work.get_attributes %}, {{ attribute.name }}{% endfor %})
+					</a></h2>
+				{% comment %}
+				<p class="sr-editors">Edited by 
+					{% for editor in item.get_editors %}{% if not forloop.first %}, {% endif %}{{ editor.first_name }} {{ editor.last_name }}{% endfor %}
+				</p>
+				{% endcomment %} 
+				<p class="sr-sub-title">
+					{{ item.get_range_description }}
+					witness of <a href="/laws/texts/{{ item.get_versions.0.slug }}/">{{ item.get_versions.0.standard_abbreviation }}, {{ item.get_versions.0.version_name }}</a> 
+				</p>
+			{% endifequal %}
+			{% if item.is_public %}
+				<p class="sr-snippet old-english">{{ item.get_snippet|safe }}</p>
+			{% else %}
+				<p>This text is not online yet.</p>
+			{% endif %}
+		</li>
+	{% endfor %}
+	</ul>
+
+	<div class="itp m0">
+		{% paginate %}
+	</div>
+
+{% else %}
+
+	<p>No text matches your search criteria.</p>
+
+{% endif %}
+	
+{% endblock %}

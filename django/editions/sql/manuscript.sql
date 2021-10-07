@@ -1,0 +1,2 @@
+insert into editions_manuscript (id, shelf_mark, archive_id, sigla, sigla_provenance_id, description, date_mod) values ('1', '{unspecified}', '1', '{unspecified}', 2, 'Unspecified manuscript', 0);
+insert into editions_manuscript (id, shelf_mark, archive_id, sigla, sigla_provenance_id, description, date_mod) values ('2', '{unknown}', '1', '{unknown}', 2, 'Unknown manuscript', 0);

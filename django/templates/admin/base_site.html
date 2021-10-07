@@ -1,0 +1,55 @@
+{% extends "admin/base.html" %}
+{% load i18n %}
+
+{% block title %}{{ title }} | Early English Laws Database{% endblock %}
+{% block extrahead %}
+
+<script type="text/javascript" src="{{custom_admin_media_prefix}}js/jquery.js"></script>
+
+<style type="text/css">
+	#img-prv-div { 
+		border: 1px solid black;
+		position: fixed; 
+		display: none;
+	}
+	#img-prv-tmp {
+		display: none;
+	}
+</style>
+
+<script type="text/javascript" >
+
+function update_preview(event, ael, show) {
+	$("#img-prv-div").toggle(show);
+	if (show) {
+		$("#img-prv-div").css("top", "100px").css("left", event.clientX + 30);
+		var img_url = ael.attr("href") + "&amp;svc.scale=0,400";
+		$("#img-prv-div img").attr("src", "{{custom_admin_media_prefix}}img/ajax-loader-big.gif");
+		$("#img-prv-tmp").attr("src", img_url).load(function() { $("#img-prv-div img").attr("src", img_url); });
+	}
+}
+
+$(document).ready(function () {
+	// set up the image
+	$('body').append('<'+'div id="img-prv-div"><'+'img src=""/><'+'/div><'+'img id="img-prv-tmp"/>');
+	// events
+	$("a.img-prv").mouseenter( function(e) {update_preview(e, $(this), true);} );
+	$("a.img-prv").mouseleave( function(e) {update_preview(e, $(this), false);} );
+});
+</script>
+
+{% endblock %}
+
+{% block branding %}
+<h1 id="site-name">Early English Laws Database</h1>
+{% endblock %}
+
+{% block nav-global %}{% endblock %}
+
+{% block footer %}
+<!-- div id="footer" style="border-top: 1px solid #CCCCCC; font-size: smaller;" >
+	<a href="/db/admin/reports" >Reports</a> - 
+	<a href="https://confluence.cch.kcl.ac.uk/display/ootw/Database+Editing+Interface">Help and User Guide</a> - 
+	<a href="https://confluence.cch.kcl.ac.uk/display/ootw/Database+feedback">Issues and Questions</a>
+</div -->
+{% endblock %}

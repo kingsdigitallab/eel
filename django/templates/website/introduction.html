@@ -1,0 +1,102 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %}
+{% load tags_filters %}
+{% load tags_editions cch_filters %}
+
+{% block head_title_block %}{{ version.version_name }} ({{ version.standard_abbreviation }}){% endblock %}
+{% block body_title_block %}{{ version.version_name }} ({{ version.standard_abbreviation }}){% endblock %}
+
+{% block page_content %}
+	{% if version.synopsis %}
+		{{ version.synopsis|footnotes|safe }}
+	{% endif %}
+
+	<div class="toc">
+		<div class="t01">
+			<h3>Contents</h3>
+			<ul>
+				{% if edition.is_public %}
+					<li><a href="#digital-edition"><span>Digital edition</span></a></li>
+				{% endif %}
+				{% if version.print_editions %}
+					<li><a href="#print-editions"><span>Print editions</span></a></li>
+				{% endif %}
+				{% if witnesses %}
+					<li><a href="#manuscripts"><span>Manuscripts</span></a></li>
+				{% endif %}
+				{% if other_versions %}
+					<li><a href="#versions"><span>Other versions</span></a></li>
+				{% endif %}
+				{% if edition.is_public %}
+					{% if version.has_filiation %}
+						<li><a href="#filiations"><span>Text filiations</span></a></li>
+					{% endif %}
+				{% endif %}
+				{% if edition.introduction %}
+					<li><a href="#introduction"><span>Introduction</span></a></li>
+				{% endif %}
+			</ul>
+		</div>
+	</div>
+
+	{% if edition.is_public %}
+		<h2 id="digital-edition">Digital edition</h2>
+		<p><i>Edited by {% for editor in edition.editor.all %}{% if not forloop.first %}, {% endif %}{{ editor.first_name }} {{ editor.last_name }}{% endfor %}</i></p>
+		<ul>
+            <li><a href="/laws/texts/{{ version.slug }}/view/">Edition</a></li>
+            {% if edition.tei_corpus %}
+            <li><a href="tei/">TEI XML</a></li>
+            {% endif %}
+		</ul>
+	{% endif %}
+
+	{% if version.print_editions %}
+		<h2 id="print-editions">Print editions</h2>
+		{{ version.print_editions|link_to_standard_editions:version|safe }}
+	{% endif %}
+
+	{% if witnesses %}
+		<h2 id="manuscripts">Manuscripts</h2>
+		<ul>
+			{% for witness in witnesses %}
+				<li><b>{{ witness.manuscript.sigla }}</b>: {{ witness.manuscript.archive.city }}, {{ witness.manuscript.archive.name }}, {{ witness.manuscript.shelf_mark }}, {{ witness.get_range_description }}
+					<br/>
+					{% if witness.manuscript.checked_folios %}
+						<a href="/laws/manuscripts/{{ witness.manuscript.slug }}">description & facsimiles</a>
+					{% endif %}
+					{% if edition.is_public %}
+						{% if witness.manuscript.checked_folios %}
+							&ndash; <a href="/laws/texts/{{ version.slug }}/view/#{{ witness.manuscript.slug }}/{{ witness.manuscript.slug }}-image">transcription & facsimiles</a> &ndash;
+						{% endif %}
+						<a href="/laws/texts/{{ version.slug }}/view/#{{ witness.manuscript.slug }}/{{ witness.manuscript.slug }}-translation">transcription & translation</a>
+					{% endif %}
+				</li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+
+	{% if other_versions %}
+		<h2 id="versions">Other versions of this law</h2>
+		<ul>
+			{% for other_version in other_versions %}
+				<li><a href="/laws/texts/{{ other_version.slug }}/"><b>{{ other_version.standard_abbreviation }}</b>: {{ other_version.version_name }}</a></li>
+			{% endfor %}
+		</ul>
+	{% endif %}
+
+	{% if edition.is_public %}
+		{% if version.has_filiation %}
+			<h2 id="filiations">Text filiations</h2>
+			<ul>
+			<li><a href="relationships">See all filiations of this text.</a></li>
+			</ul>
+		{% endif %}
+	{% endif %}
+
+	{% if edition.introduction %}
+		<h2 id="introduction">Introduction</h2>
+		<p><i>by {% for editor in edition.editor.all %}{% if not forloop.first %}, {% endif %}{{ editor.first_name }} {{ editor.last_name }}{% endfor %}</i></p>
+		{{ edition.introduction|dblinks|footnotes|safe }}
+	{% endif %}
+
+{% endblock %}

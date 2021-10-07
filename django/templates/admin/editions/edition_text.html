@@ -1,0 +1,313 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+
+{% block title %}{{ text_title }} | Early English Law Database{% endblock %}
+
+{% block extrahead %}
+    {{ block.super }}
+    <script type="text/javascript" src="/media/admin/js/tiny_mce/tiny_mce_src.js?version=10"></script>
+    <script type="text/javascript" src="/media/admin/js/txt_auto_complete.js?version=4"></script>
+    <script type="text/javascript" src="/media/admin/js/jquery.json.min.js"></script>
+    <script src="{{custom_admin_media_prefix}}js/test_font.js" type="text/javascript"> </script>
+    
+    <link href="/media/admin/css/txt_auto_complete.css" type="text/css" media="all" rel="stylesheet" />
+    
+    <style type="text/css">
+        #main-content {
+            margin-top: 2em;
+        }
+        #panel-top {
+            display:none;
+        }
+        #panel-centre {
+            margin-left: 200px;
+        }
+        #panel-left {
+            position:absolute; 
+            width:200px;
+        }
+        #text-tree {
+            background-color: lightyellow;
+            border:1px solid lightgrey;
+        }
+        #text-tree ul {
+            padding-left: 1.5em;
+        }
+        .control-bar {
+            height: 25px;
+        }
+        .msg-error {
+            color: red;
+        }
+        #loading-div {
+            display: none;
+        }
+        .selected-div {
+            font-weight: bold;
+        }
+        #ca-table-div {
+            display: none;
+        }
+        #message-box {
+            border: 1px solid #F0C0C0; 
+            background-color: #FFEEEE; 
+            padding: 0.5em; 
+            margin: 1em; 
+            font-weight: normal;
+            display: none;
+        }
+        .notif-icon {
+            margin-right: 1em;
+            margin-left: 1em;
+        }
+        .div-com {
+            width: 10px;
+            height: 10px;
+            margin-left: 0.5em;
+        }
+        h1, h2, h4, h4 {
+            text-align: center;
+        }
+    </style>
+    
+    <script type="text/javascript">
+        var g_divid = '{{ selected_divid }}';
+        var g_text_boxid = 'text_boxid';
+
+        /**
+        * Returns the response as a javascript object
+        * Returns null if an error occured
+        */
+        function call_django(action, adata, post) {
+            var ret = null;
+            if (adata == null) adata = {};
+            adata['action'] = action;
+            $.ajax({
+                async: false,
+                type: post ? "POST" : "GET",
+                data: adata,
+                 //url: ".",
+                success: function(data) {
+                    if (data != null && typeof data == "string" && data.length > 2) { 
+                        ret = $.parseJSON(data.substring(1, data.length - 1));
+                        if (ret.error) {
+                            show_message('API ERROR: ' + ret.error);
+                        }
+                    } 
+                },
+                error: function(jqXHR, textStatus, errorThrown) {
+                    show_message('SERVER ERROR: ' + textStatus + ' ' + errorThrown);
+                }
+             });
+             return ret;
+        }
+
+        function change_div_number(span, divid, number) {
+            get_main_editor().execCommand('mceCCHDivNumber', true, {callback: function(new_number) {
+                // we sends the new number for this div
+                // the server returns the updated document structure
+                // so we refresh the structure panel with this new structure
+                display_structure(call_django('update_div_number', {divid: divid, number: new_number}));
+                // reload the text because it still contains the old numbers
+                // so if the user clicked 'save' it would ondo the changes in the numbering
+                load_text();
+            }, number: number });
+            return false;            
+        }
+
+        function get_html_from_tree(node, internal_call) {
+            var ret = '';
+            var node_label = node['type'];
+            if (node['id']) node_label = '<a onclick="return load_text(\''+node['id']+'\')" ' + (node['id'] == g_divid ? 'class="selected-div" ' : '') + ' href="?div=' + node['id'] + '">' + node_label + '</a>';
+            if (internal_call) {
+                node_label = node_label + '<a href="?noaction=1" onclick="return change_div_number(this,\''+node['id']+'\', \'' + node['n'] + '\');" style="padding-left: 1em;">' + ((node['n'] && (node['n'] != "0")) ? node['n'] : '--') + '</a>';
+            }
+            if (node['co']) {
+                node_label = node_label + '<img class="div-com" src="{{custom_admin_media_prefix}}img/note.png"/>';
+            }            
+            ret = ret + '\t<li ' + (node['id'] ? 'id = "r' + node['id'] + '" ' : '') + '>' + node_label;
+            if ('children' in node && node['children'].length) {
+                ret = ret + '<ul>';
+                for (i in node['children']) {
+                    ret = ret + get_html_from_tree(node['children'][i], true);
+                }
+                ret = ret + '</ul>\n';
+            }
+            ret = ret + '</li>\n';
+            if (internal_call == null) ret = '<ul>' + ret + '</ul>\n';
+            return ret;
+        }
+
+        function reload_structure() {
+            display_structure(call_django('get_structure'));
+        }
+
+        function display_structure(response) {
+            var tree_html = '<span class="msg-error">Document structure not available.</span>';
+            if (response !== null) {
+                tree_html = get_html_from_tree(response['tree']);
+            }
+            $('#text-tree').html(tree_html);            
+            update_commentary_label();
+        }
+
+        // call this to update the selected div 
+        function set_selected_divid(divid) {
+            // disable highlight in the div tree
+            $('#r'+g_divid+' a:first').toggleClass('selected-div', false);
+            g_divid = divid;
+            // enable highlight in the div tree            
+            $('#r'+g_divid+' a:first').toggleClass('selected-div', true);
+            update_commentary_label();
+        }
+
+        function update_commentary_label() {
+            // update the label for the commentary heading
+            var label = $('#r'+g_divid+' > a:first').html();
+            var number = $('#r'+g_divid+' > a:eq(1)').html();
+            if (number) label = label + ' ' + number; 
+            $('#com-label').html(label);        
+        }
+
+        function load_text(divid) {
+            if (divid === null) divid = g_divid;
+            var text = call_django('load_text', {'divid': divid});
+            set_selected_divid(divid)
+            if (text) {
+                // replace main text
+                get_main_editor().setContent(text.selected_div);
+                get_main_editor().set_content_is_saved(); 
+                
+                // replace commentary
+                get_commentary_editor().setContent(text.commentary);
+                get_commentary_editor().set_content_is_saved(); 
+            }
+            //reload_structure();
+            return false;
+        } 
+
+        function save_text(text_boxid) {
+            //document.body.style.cursor = 'wait';
+            if (is_editor_dirty()) {
+                var min_version = 50;
+                if ($.browser.mozilla && (($.browser.version * 1) >= min_version)) {
+                    var response = call_django('save_text', {'text': get_main_editor().getContent(), 'commentary': get_commentary_editor().getContent(), 'divid': g_divid}, true);
+                    if (response) {
+                        get_main_editor().set_content_is_saved();
+                        get_commentary_editor().set_content_is_saved();
+                        display_structure(response);
+                    }
+                } else {
+                    show_message('CHANGES NOT SAVED. Please use Mozzilla Firefox (' + min_version + ' or above) to edit the texts. Your web browser is either not Firefox or the version is too old (' + $.browser.version + ').');
+                }
+                // get_commentary_editor().focus();
+                //get_main_editor().focus();
+            }
+        }
+        
+        function is_editor_dirty() {
+            return (!get_main_editor().is_content_saved() || !get_commentary_editor().is_content_saved());
+        }
+
+        function get_main_editor() {
+            return tinyMCE.getInstanceById('text_boxid');
+        } 
+
+        function get_commentary_editor() {
+            return tinyMCE.getInstanceById('commentary-boxid');
+        } 
+
+        function show_message(message) {
+            $('#message-box').html('<img class="notif-icon" src="{{custom_admin_media_prefix}}img/attention_icon.gif"/>' + message);
+            $('#message-box').show();
+        }
+        
+        $(document).ready(function() {
+            // Ajax spinner 
+            //$('#loading-div').ajaxStart(function() {$(this).show();}).ajaxStop(function() {$(this).hide();});
+
+            // save on exit - note that it does OT work with IE
+            // $(window).bind('beforeunload', function() {save_text();});
+
+            // warning if Junicode not available
+            if (!testFont('Junicode')) {
+                show_message('Please <a target="_blank" href="http://sourceforge.net/projects/junicode/files/junicode/junicode-0-6-17/junicode-0-6-17.zip/download">install the Junicode font</a> to allow your browser to correctly display the special characters in the texts.');
+            }
+
+            // add the commentary text box
+            tinymce_config.elements = '';
+            //tinymce_config.theme = "advanced";
+            tinymce_config.plugins = "paste,cch";
+            tinymce_config.theme_advanced_buttons1 = "bold,italic,underline,bullist,separator,TEIlink,separator,undo,redo,separator,CCHclear,separator,code,separator";
+            tinymce_config.theme_advanced_buttons2 = "";
+            //theme_advanced_blockformats : "h2,h3,h4,blockquote",
+            tinyMCE.settings = tinymce_config;
+            tinyMCE.execCommand('mceAddControl', true, 'commentary-boxid');
+            console.log('READY COMMENTARY');
+
+            //
+            if (!{{ is_edition }}) {
+                $('#commendary-divid').hide();
+            }
+
+            $('#text-tree-refresh').click(reload_structure);
+            $('#text-tree').mouseenter(function() { save_text(); });
+            reload_structure();
+        });
+    </script>
+
+    <script type="text/javascript">
+        var g_page_break_witnesses = {{ page_break_info|safe }};
+        var g_witnesses_list = {{ witnesses_list|safe }};
+        var g_versions_list = {{ versions_list|safe }};
+    </script>
+
+{% endblock %}
+
+{% block breadcrumbs %}
+    <div class="breadcrumbs">
+        <a href="../../../..">{% trans 'Home' %}</a> 
+        &rsaquo; 
+        <a href="../../..">Editions</a> 
+        &rsaquo; 
+        <a href="../..">Editions</a> 
+        &rsaquo; 
+        <a href="..">{{ text_label }}</a> 
+        &rsaquo; 
+        {{ doc_type }}
+    </div>
+{% endblock %} 
+
+{% block content %}
+    {% block object-tools %}{% endblock %}
+    <ul class="object-tools">
+        <li>
+        <a href="preview" class="previewlink">Preview</a>
+        </li>
+    </ul>
+    <h1>{{ text_title }}</h1>
+    <div id="main-content">
+        <div id="message-box">message</div>
+        <div id="panel-top">Image</div>
+        <div id="panel-left">
+            <div id="text-tree"></div>
+        </div>
+        <div id="panel-centre">
+            <textarea style="width:100%;height:300px" id="text_boxid">{{selected_div}}</textarea>
+            <div id="commendary-divid">
+                <h2>Commentary (<span id="com-label">.</span>)</h2>
+                <textarea style="width:100%;height:300px" id="commentary-boxid">{{commentary}}</textarea>
+            </div>
+        </div>
+    </div>
+    
+    <div id="ca-table-div">
+        {{ ca_table_html|safe }}
+    </div>
+
+{% endblock %}
+
+{% block footer %}
+    {{ block.super }}
+    {% include "admin/editions/wysiwyg.html" %}    
+{% endblock %}

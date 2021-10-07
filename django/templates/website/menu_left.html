@@ -1,0 +1,29 @@
+{% load cms_tags cache %}
+{# due to possible bug in cms menu, we receive all the top level items and their children #}
+{% for top_item in children %}
+    {% if top_item.ancestor or top_item.selected %}
+        {% if top_item.children %}
+            <div class="nv1">
+                <h5>{{ top_item.get_menu_title }}</h5>
+                <ul>
+                    {% for child in top_item.children %}
+                        <li class="{% if child.selected or child.ancestor %}s04{% else %}s03{% endif %}" >
+                            <a href="{{ child.get_absolute_url }}" {% if child.selected or child.ancestor %}class="s1"{% endif %} >{{ child.get_menu_title }}</a>
+                            
+                            {% if child.children %}
+                                <ul>
+                                    {% for child2 in child.children %}
+                                        <li class="{% if child2.selected %}s04{% else %}s03{% endif %}" >
+                                            <a href="{{ child2.get_absolute_url }}" {% if child2.selected or child2.ancestor.selected %}class="s1"{% endif %} >{{ child2.get_menu_title }}</a>
+                                        </li>
+                                    {% endfor %}
+                                </ul>
+                            {% endif %}
+                            
+                        </li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+    {% endif %}
+{% endfor %}

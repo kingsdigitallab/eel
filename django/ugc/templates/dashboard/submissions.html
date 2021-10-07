@@ -1,0 +1,52 @@
+{% extends "dashboard/dashboard_template.html" %}
+{% load i18n %}
+{% load tags %}
+
+{% block page_main_title %}Dashboard - My submissions{% endblock %}
+{% block page_title %}Dashboard - My submissions{% endblock %}
+
+{% block tab_contents %}
+
+<div class="tsb">
+	<div id="bookmarks">
+		{% if records.count %}
+			<ul class="m0">
+				{% for record in records %}
+					{% if not record.isSpanishText %}
+						<li>
+							{% ifequal record.getSubmissionTypeName 'Text' %}
+								<a href="{{ DJANGO_WEBPATH_PREFIX }}play/{{ record.user_record.work.slug }}/translations#tr{{ record.user_record.id }}">{{ record.user_record.published_title|clean_id }}{{ record.user_record.working_title|clean_id }}</a> ({{ record.user_record.date_published|fuzzy_date_short }})
+							{% endifequal %}
+							{% ifequal record.getSubmissionTypeName 'Work' %}
+								<a href="{{ DJANGO_WEBPATH_PREFIX }}play/{{ record.user_record.slug }}">{{ record.user_record.title|clean_id }}</a> ({{ record.user_record.getTitleDate|fuzzy_date_short }}){% for author in record.user_record.getAuthors %}, by <a href="{{ DJANGO_WEBPATH_PREFIX }}author/{{ author.slug }}" title="More about {{ author.first_name }} {{ author.last_name }}.">{{ author.first_name }} {{ author.last_name|clean_id }}</a>{% endfor %}
+							{% endifequal %}
+							{% ifequal record.getSubmissionTypeName 'Author' %}
+								<a href="{{ DJANGO_WEBPATH_PREFIX }}author/{{ record.user_record.slug }}">{{ record.user_record.first_name }} {{ record.user_record.last_name|clean_id }}</a>
+							{% endifequal %}
+							
+							[{{ record.getStatusCodeDisplay }}]
+							
+							<span class="bookmark-control">
+								{{ record.creation_date|date:"j F Y" }}
+								{% if False %}
+								<a class="t9 m0" href="?rbm={{ record.id }}" title="Remove this bookmark">Remove</a>
+								{% endif %}
+							</span>
+							{% if record.review_message %}
+							<ul class="m0">
+								<li>Review message:
+								{{ record.review_message }}
+								</li>
+							</ul>
+							{% endif %}
+						</li>
+					{% endif %}
+				{% endfor %}
+			</ul>
+		{% else %}
+			<p>You have not yet <a href="/db/submit">submitted any author or play to the database</a>.</p>
+		{% endif %}
+	</div>
+</div>
+
+{% endblock %}

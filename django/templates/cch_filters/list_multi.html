@@ -1,0 +1,17 @@
+{% if filter.has_multiple_options %}
+<div class="side-panel-div">
+
+	<h3>{{ filter.label }}</h3>
+	
+	<ul>
+		{% for option in filter.options %}
+			<li	{% if option.selected %} class="s1" {% endif %}>
+				<a title="{{option.label}}" class="t1" href="{{option.query_string}}">{{option.label}}</a>
+			</li>
+		{% endfor %}
+	</ul>
+	
+	<input type="hidden" name="{{filter.varname}}" value="{{filter.get_value}}" />
+
+</div>
+{% endif %}

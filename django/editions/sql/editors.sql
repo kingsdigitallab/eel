@@ -1,0 +1,1 @@
+-- INSERT INTO `editions_editor` (`id`, `name`) VALUES (1,'Bruce O\'Brien');

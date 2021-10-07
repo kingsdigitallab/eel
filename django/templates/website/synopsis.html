@@ -1,0 +1,19 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %} 
+{% load tags_filters %}
+{% load tags_editions %}
+
+{% block head_title_block %}{{ version.version_name }} ({{ version.standard_abbreviation }}){% endblock %}
+{% block body_title_block %}{{ version.version_name }} ({{ version.standard_abbreviation }}){% endblock %}
+
+{% block page_content %}
+	{{ version.synopsis|safe }}
+	{% if version.synopsis_manuscripts %}
+		<h3>Manuscripts included in Early English Laws</h3>
+		{{ version.synopsis_manuscripts|safe }}
+	{% endif %}
+	{% if version.print_editions %}
+		<h3>Print editions</h3>
+		{{ version.print_editions|safe }}
+	{% endif %}
+{% endblock %}

@@ -1,0 +1,22 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %} 
+{% load tags_filters %}
+{% load tags_editions %}
+
+{% block head_title_block %}Error 404: Not found{% endblock %}
+{% block body_title_block %}Error 404 - Page not found{% endblock %}  
+
+{% block page_content %}
+
+<p>
+This might be because:
+</p>
+<div class="unorderedList">
+	<div class="t01">
+		<ul>
+		    <li>You have typed the web address incorrectly, or</li>
+		    <li>the page you were looking for may have been moved, updated or deleted.</li>
+		</ul>
+	</div>
+</div>
+{% endblock %}

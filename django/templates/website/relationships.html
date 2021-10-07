@@ -1,0 +1,57 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %} 
+{% load tags_filters %}
+{% load tags_editions %}
+
+{% block head_title_block %}{{ version.standard_abbreviation }} - Relationships among the texts{% endblock %}
+{% block body_title_block %}{{ version.standard_abbreviation }} - Relationships among the texts{% endblock %} 
+
+{% block extra_script %}
+	<script src="{{custom_web_media_prefix}}_a/j/raphael-min.js" type="text/javascript"> </script>	
+	<script src="{{custom_web_media_prefix}}_a/j/textgraph.js" type="text/javascript"> </script>
+	
+	<script type="text/javascript">
+		$(document).ready( function () {
+			$('#rel-tooltip').remove().appendTo('body');
+
+			var graph_data = {{ rel_data|safe }};
+			show_links(graph_data);			
+		});
+	</script>	
+{% endblock %}
+
+{% block page_content %}
+
+{% if version.has_filiation %}
+
+<div id="rel-tooltip">
+	<p>test</p>
+</div>
+
+<div id="canvas" style="border: 1px solid lightgrey; width:{{ image_width }}px; height:{{ image_height }}px">
+</div>
+<p>
+	<a href="/laws/texts/{{ version.slug }}">Read the Introduction to {{ version.standard_abbreviation }}.</a>
+</p>
+<h2>Keys to the diagram</h2>
+<ul>
+{% for language in languages.values %}
+	{% if language.color %}
+		<li class="graph-key-language" ><span style="color:white; background-color:#{{ language.color }};">{{ language.name }}</span></li>
+	{% endif %}
+{% endfor %}
+</ul>
+
+{% else %}
+
+<p>
+	No relationship diagram can be displayed as our database does not have any information about the relationships between {{ version.standard_abbreviation }} and other texts.  
+</p>
+<p>
+	<a href="/laws/texts/{{ version.slug }}">Read the Introduction to {{ version.standard_abbreviation }}.</a>
+</p>
+
+{% endif %}
+	
+{% endblock %}
+ 

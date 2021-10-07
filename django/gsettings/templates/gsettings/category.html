@@ -1,0 +1,86 @@
+{% extends "admin/base_site.html" %}
+{% load i18n %}
+{% load i18n admin_modify adminmedia %}
+
+{% block extrastyle %}
+	{{ block.super }}
+	<link rel="stylesheet" type="text/css" href="{% admin_media_prefix %}css/forms.css" />
+{% endblock %}
+
+{% block breadcrumbs %}
+	<div class="breadcrumbs">
+		<a href="../..">{% trans 'Home' %}</a> 
+		&rsaquo; 
+		<a href="..">Global settings</a>
+		&rsaquo; 
+		{{ category.name }}
+	</div>
+{% endblock %} 
+
+{% block content %}
+	{% block object-tools %}{% endblock %}
+	<h1>Global settings - {{ category.name }}</h1>
+	{% if submitted %}
+		{% if errors %}
+			<p class="errornote">Some of the fields below could not be saved. Please correct the error below.</p>
+		{% else %}
+			<ul class="messagelist">
+				<li class="success-message">The field were changed successfully. You may edit them again below.</li>
+			</ul>
+		{% endif %}
+	{% endif %}
+	<form method="post" action="" >
+			<fieldset class="module aligned">
+			{% for var in vars %}
+				<div class="form-row {% if var.error_message %}errors{% endif %}">
+					{% if var.error_message %}
+					<ul class="errorlist">
+						<li>{{ var.error_message }}</li>
+					</ul>
+					{% endif %}
+					<div>
+						<label class="required">
+							{% if var.label %}
+								{{ var.label }}:
+							{% else %}
+								{{ var.name }}:
+							{% endif %}
+						</label>
+						{% ifequal var.global_var_type.id 1 %}
+							<textarea name="v{{ var.id }}" rows="5" cols="80" >{{ var.value }}</textarea>
+							<span class="var-format">(format: text)</span>
+						{% endifequal %}
+						{% ifequal var.global_var_type.id 2 %}
+							<input type="text" name="v{{ var.id }}" value="{{ var.value }}" />
+							{% if var.unit %}
+								in {{ var.unit }}
+							{% endif %}
+							<span class="var-format">(format: number)</span>
+						{% endifequal %}
+						{% ifequal var.global_var_type.id 3 %}
+							<input type="text" name="v{{ var.id }}" value="{{ var.value }}" />
+							{% if var.unit %}
+								in {{ var.unit }}
+							{% endif %}
+							<span class="var-format">(format: number with decimal)</span>
+						{% endifequal %}
+						{% ifequal var.global_var_type.id 4 %}
+							<input type="text" name="v{{ var.id }}" value="{{ var.value }}" />
+							<span class="var-format">(format: yyyy-mm-dd hh:mm:ss)</span>
+						{% endifequal %}
+						{% ifequal var.global_var_type.id 5 %}
+							<input type="text" name="v{ var.id }}" value="{{ var.value }}" />
+							<span class="var-format">(format: yyyy-mm-dd)</span>
+						{% endifequal %}
+						{% if var.description %}
+							<p class="help">{{ var.description }}</p>
+						{% endif %}
+					</div>
+				</div>
+			{% endfor %}
+		</fieldset>
+		<div class="submit-row">
+			<input type="submit" name="_save" class="default" value="Save">
+		</div>
+	</form>
+{% endblock %}

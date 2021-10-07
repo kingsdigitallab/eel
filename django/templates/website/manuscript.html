@@ -1,0 +1,398 @@
+{% extends "website/eel_default.html" %}
+{% load tags_filters %}
+{% load cch_tags %}
+{% load tags_editions %}
+
+{% block head_title_block %}{% if not manuscript.standard_edition %}Manuscript {% endif %}{{ manuscript.sigla }}{% if manuscript.standard_edition %} edition{% endif %}{% endblock %}
+{% block body_title_block %}{% if not manuscript.standard_edition %}Manuscript {% endif %}{{ manuscript.sigla }}{% if manuscript.standard_edition %} edition{% endif %}{% endblock %}
+
+{% block extra_script %}
+    <style type="text/css">
+        #loading-div {display:none;}
+    </style>
+
+    <script type="text/javascript">
+        var image_loading_count = 0;
+        var max_zoom_level = 2;
+        var zoom_level_pixel = 50;
+        var default_image_height = 400;
+
+        function set_cookie(c_name, value, exdays) {
+            var exdate = new Date();
+            exdate.setDate(exdate.getDate() + exdays);
+            var c_value = escape(value) + ((exdays==null) ? "" : "; expires="+exdate.toUTCString());
+            document.cookie = c_name + "=" + c_value;
+        }
+
+        function get_cookie(c_name, default_value) {
+            if (default_value == null) default_value = '';
+            ret = default_value;
+             var i, x, y, ARRcookies = document.cookie.split(";");
+             for (i = 0; i < ARRcookies.length;i++) {
+                x = ARRcookies[i].substr(0,ARRcookies[i].indexOf("="));
+                y = ARRcookies[i].substr(ARRcookies[i].indexOf("=")+1);
+                   x = x.replace(/^\s+|\s+$/g,"");
+                   if (x==c_name) {
+                       ret = unescape(y);
+                       break;
+                   }
+            }
+             return ret;
+        }
+
+        /**
+        * Returns the response as a javascript object
+        * Returns null if an error occured
+        */
+        function call_django(action, adata, post) {
+            var ret = null;
+            if (adata == null) adata = {};
+            adata['action'] = action;
+            $.ajax({
+                async: false,
+                type: post ? "POST" : "GET",
+                data: adata,
+                 //url: ".",
+                success: function(data) {
+                    if (data != null && typeof data == "string" && data.length > 2) {
+                        ret = $.parseJSON(data.substring(1, data.length - 1));
+                    }
+                }
+             });
+             return ret;
+        }
+
+        function set_image_loading_count(diff) {
+            image_loading_count += diff;
+            if (diff == 0 || image_loading_count < 0) image_loading_count = 0;
+            $('#loading-div').toggle((image_loading_count > 0));
+        }
+
+        function change_image_size(zoom_in) {
+             var current_zoom_level = parseInt(get_cookie('zl', 0));
+             current_zoom_level += (zoom_in ? 1 : -1);
+             if (current_zoom_level < -max_zoom_level) current_zoom_level = -max_zoom_level;
+             if (current_zoom_level > max_zoom_level) current_zoom_level = max_zoom_level;
+             set_cookie('zl', current_zoom_level, 1);
+             // change the width in the inline styles
+             $('.no-image-double').css('height', get_image_height());
+             $('.no-image-double').css('width', get_image_height() * 220.0 / 300.0);
+             // reload the images with the new width
+             onFolioSelection();
+        }
+
+        function get_image_height() {
+            return default_image_height + parseInt(get_cookie('zl', 0)) * zoom_level_pixel;
+        }
+
+        function on_change_viewer_nav_options(select_box) {
+            // save state in a cookie
+            set_cookie('vnv', $(select_box).val());
+            // reload the viewr frame
+            var viewer_frame = $('#zoom-frameid');
+            var url = viewer_frame.attr('src');
+            url = url.replace(/\brid=\d+/, '');
+            url = url + '&rid=' + (new Date()).getTime();
+            viewer_frame.attr('src', url);
+        }
+
+        function onFolioSelection() {
+            if (0) {
+                // form submition
+                $('#ms-formid').submit();
+            } else {
+                set_image_loading_count(0);
+                set_image_loading_count(1);
+                var data = call_django('nav', {nb: $('#nav-nb').val(), tp: 'ob'});
+                if (data) {
+                    // update the laws
+                    $('#ms-double-pages-tocid').toggle((data['laws'].length > 0));
+                    var lis = '';
+                    var i = 0;
+                    for (i = 0; i < data['laws'].length; i++) {
+                        lis = lis + "<li>" + data['laws'][i] + "</li>";
+                    }
+                    $('#ms-double-pages-tocid').html(lis);
+
+                    var changed = false;
+                    // update the images
+                    for (i = 0; i < 2; i++) {
+                        var image = data['images'][i];
+                        var hasImage = (data['images'][i]['url'].length > 0)
+                        $('#im'+i+'0').toggle({{ single_sheet }} ? false : !hasImage);
+                        $('#im'+i+'1').toggle(hasImage);
+                        if (hasImage) {
+                            set_image_loading_count(1);
+                            var close_up_link = '?tp=s&nb='+data['images'][i]['id'];
+                            $('#im'+i+'1').attr('href', close_up_link);
+                            //$('#im'+i+'1 img').attr('src', '{{image_server_url}}?url_ver=Z39.88-2004&rft_id='+data['images'][i]['url']+'&svc_id=info:lanl-repo/svc/getRegion&svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&svc.format=image/jpeg&svc.scale=0,{{ folio_size.height }}').load(function () {set_image_loading_count(-1);});
+                            $('#im'+i+'1 img').attr('src', '{{image_server_url}}/'+data['images'][i]['url']+'/full/,'+get_image_height()+'/0/default.jpg').load(function () {set_image_loading_count(-1);});
+
+                            // if user clicks on "close-up" tab take them to the currently selected folio image
+                            if (!changed) {
+                                $('div.options ul li ul li:last a').attr('href', close_up_link);
+                                changed = true;
+                            }
+                        }
+                    }
+
+                    // update the refs in the nav buttons
+                    for (i = 0; i < 2; i++) {
+                        $('#nav'+i+'id').attr('href', '?tp=ob&nb='+data['buttons'][i]);
+                    }
+                }
+                set_image_loading_count(-1);
+            }
+        }
+
+        $(document).ready(function() {
+            // hide the go button
+            $('#goid').hide();
+            // refresh whenever the drop down is updated
+            $('#nav-nb').change(onFolioSelection);
+            // select item in the drop down whenever a nav button is pressed
+            $('.nav-button').click(function() {
+                    // extract the number from the href attribute
+                    var nb = $(this).attr('href').replace(/^.*nb=([^&]+).*$/, '\$1')
+                    // select the item in the drop down. The item value is nb
+                    if (nb == -1) {
+                        $('#nav-nb option:last').attr('selected', 'selected')
+                    } else {
+                        $('#nav-nb').val(nb);
+                    }
+                    $('#nav-nb').trigger('change');
+                    return false;
+                }
+            );
+            // Ajax spinner
+            //$('#loading-div').ajaxStart(function() {$(this).show();}).ajaxStop(function() {$(this).hide();});
+
+            $('#zoom-in-button').click(function() {change_image_size(1); return false;});
+            $('#zoom-out-button').click(function() {change_image_size(0); return false;});
+
+
+            $('#viewer-nav-options').change(function() {on_change_viewer_nav_options(this); return false;});
+
+            // tool-tip box with instructions about the image viewer
+            $('#instructions-div').detach().appendTo('body');
+            var inst = $('#zoom-frameid');
+            if (inst.length) {
+                $('#instructions-div').css('left', inst.offset().left);
+                $('#instructions-div').css('top', inst.offset().top);
+                $('#instructions-div').css('width', $('#zoom-frameid').width());
+
+                $('#instructions').mouseover(function() {
+                    $('#instructions-div').show();
+                    return false;
+                });
+                $('#instructions').mouseout(function() { $('#instructions-div').hide(); return false; });
+            }
+
+            // load the approriate page when an item is selected in the version dropdown
+            // note that the drop down is not always present
+            $('#version-selector').change(function() { location.href = '?nb='+$(this).val()+'&tp=ob';  } );
+        });
+    </script>
+
+{% endblock %}
+
+{% block option-panel %}
+{% if manuscript.checked_folios %}
+    {% if manuscript.standard_edition or not manuscript.hide_from_listings%}
+    <div id="option-panel">
+        <div class="ms-toc-ms">
+            <p>In this {{ manuscript.get_type_label }}</p>
+            {% if witnesses.5 %}
+                <select id="version-selector">
+                    {% for witness in witnesses %}
+                        <option value="{{ witness.first_image.id }}" {% if witness.on_screen %}selected="selected"{% endif %} >
+                            {% for version in witness.get_versions %}
+                                {{ version.standard_abbreviation }}
+                            {% endfor %}
+                            (
+                            {{ witness.range_start }}
+                            {% ifnotequal witness.range_start witness.range_end %}
+                                &nbsp;-&nbsp;{{ witness.range_end }}
+                            {% endifnotequal %}
+                            )
+                        </option>
+                    {% endfor %}
+                </select>
+            {% else %}
+                <ul>
+                    {% for witness in witnesses %}
+                        <li>
+                            {% for version in witness.get_versions %}
+                                <a href="?nb={{ witness.first_image.id }}&tp=ob">
+                                {{ version.standard_abbreviation }}
+                                </a>
+                            {% endfor %}:
+                            <br/>
+                            {% if witness.first_image %}<a href="?nb={{ witness.first_image.id }}&tp=ob">{% endif %}
+                                {{ witness.range_start }}{% ifnotequal witness.range_start witness.range_end %} - {{ witness.range_end }}{% endifnotequal %}
+                            {% if witness.first_image %}</a>{% endif %}
+                        </li>
+                    {% endfor %}
+                </ul>
+            {% endif %}
+        </div>
+
+        <div class="ms-toc-on-page">
+            {% ifnotequal manuscript_views.get_value 'd' %}
+                <p>Laws on this page</p>
+                <ul class="ms-double-pages-toc" id="ms-double-pages-tocid">
+                    {% for witness in witnesses %}
+                        {% if witness.on_screen %}
+                            {% for version in witness.get_versions %}
+                                <li>
+                                    <a href="/laws/texts/{{ version.slug }}/">
+                                        {{ version.standard_abbreviation }}
+                                    </a>
+                                </li>
+                            {% endfor %}
+                        {% endif %}
+                    {% endfor %}
+                </ul>
+            {% endifnotequal %}
+        </div>
+    </div>
+    {% endif %}
+{% endif %}
+{% endblock %}
+
+
+{% block page_content %}
+
+<form method="get" class="ms-form" id="ms-formid">
+
+<div class="options">
+    <div class="t03">
+        <ul>
+            <li>{% if False %} <label>{{ manuscript.get_type_label|capfirst }}:</label>{% endif %}
+                <ul>
+                    {% filter_interface manuscript_views 'a' 's1' 1 %}
+                </ul>
+            </li>
+        </ul>
+    </div>
+</div>
+
+<div class="ms-main-panel">
+
+    {% if manuscript.hide_from_listings and not manuscript.standard_edition %}
+        <div class="ms-desc">
+            <p>No further information about this {{ manuscript.get_type_label }}</p>
+        </div>
+    {% else %}
+        <div class="ms-desc">
+            {% if not manuscript.standard_edition %}
+                <dl>
+                    <dt>Archive:</dt>
+                    <dd>{{ manuscript.archive.name }}, {{ manuscript.archive.city }}, {{ manuscript.archive.country }}</dd>
+                    <dt>Shelfmark:</dt>
+                    <dd>{{ manuscript.shelf_mark }}</dd>
+                    {% ifequal manuscript_views.get_value 's' %}
+                        <dt>Location:</dt>
+                        <dt>
+                            {{ current_pair.selected.get_display_location }}
+                        </dt>
+                    {% endifequal %}
+                </dl>
+            {% endif %}
+
+            {% ifequal manuscript_views.get_value 'd' %}
+                <div class="ms-description">
+                    {{ manuscript.description|safe }}
+                </div>
+            {% endifequal %}
+
+        </div>
+    {% endif %}
+
+    {% ifequal manuscript_views.get_value 'ob' %}
+        <div class="ms-controls">
+            <a class="nav-button nav-first" href="{% updated_query_string request 'nb' %}"><span>&lt;|</span></a>
+            <a id="nav0id" class="nav-button nav-prev" href="{% updated_query_string request 'nb' current_pair.previousid %}"><span>&lt;</span></a>
+            <a id="nav1id" class="nav-button nav-next" href="{% updated_query_string request 'nb' current_pair.nextid %}"><span>&gt;</span></a>
+            <a class="nav-button nav-last" href="{% updated_query_string request 'nb' -1 %}"><span>|&gt;</span></a>
+            <!--  input type="text" name="page_number"/ -->
+            <select id="nav-nb" name="nb">
+                {% for pair in manuscript.get_double_pages %}
+                    <option value="{{ pair.id }}" {% ifequal current_pair.id pair.id %}selected="selected"{% endifequal %}>
+                        {% folio_pair_location pair manuscript.is_single_sheet %}
+                    </option>
+                {% endfor %}
+            </select>
+            <a id="zoom-in-button" class="nav-button nav-in" href="#zoom-in-button"><span>+</span></a>
+            <a id="zoom-out-button" class="nav-button nav-out" href="#zoom-out-button"><span>-</span></a>
+            <input type="submit" value="go" name="go" id="goid" />
+            <span id="loading-div"><img src="{{ custom_web_media_prefix }}_a/i/ajax-loader-ms.gif"/></span>
+        </div>
+    {% endifequal %}
+
+    {% ifequal manuscript_views.get_value 'ob' %}
+        <div class="ms-double-pages" style="height:{{ folio_size.height }}px;">
+            <div class="ms-double-pages-image-left">
+                <p id="im00" class="no-image-double" style="{% if current_pair.0 or single_sheet %}display:none;{% endif %}height:{{ folio_size.height }}px;width:{{ folio_size.width }}px;line-height:{{ folio_size.height }}px">No image</p>
+                <a id="im01" href="?tp=s&nb={{current_pair.0.id}}" title="Close up view of this image" {% if not current_pair.0 %}style="display:none;"{% endif %}>
+                    <!-- img src="{{image_server_url}}?url_ver=Z39.88-2004&rft_id={{ current_pair.0.get_image_url|djatoka_encode }}&svc_id=info:lanl-repo/svc/getRegion&svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&svc.format=image/jpeg&svc.scale=0,{{ folio_size.height }}" alt="Facsimile" / -->
+                    <img src="{{image_server_url}}/{{ current_pair.0.get_image_url }}/full/,{{ folio_size.height }}/0/default.jpg" alt="Facsimile" />
+                </a>
+            </div>
+            <div class="ms-double-pages-image-right">
+                <p id="im10" class="no-image-double" style="{% if current_pair.1 or single_sheet %}display:none;{% endif %}height:{{ folio_size.height }}px;width:{{ folio_size.width }}px;line-height:{{ folio_size.height }}px">No image</p>
+                <a id="im11" href="?tp=s&nb={{current_pair.1.id}}" title="Close up view of this image" {% if not current_pair.1 %}style="display:none;"{% endif %}>
+                    <!-- img src="{{image_server_url}}?url_ver=Z39.88-2004&rft_id={{ current_pair.1.get_image_url|djatoka_encode }}&svc_id=info:lanl-repo/svc/getRegion&svc_val_fmt=info:ofi/fmt:kev:mtx:jpeg2000&svc.format=image/jpeg&svc.scale=0,{{ folio_size.height }}" alt="Facsimile" / -->
+                    <img src="{{image_server_url}}/{{ current_pair.1.get_image_url }}/full/,{{ folio_size.height }}/0/default.jpg" alt="Facsimile" />
+                </a>
+            </div>
+        </div>
+    {% endifequal %}
+
+    {% ifequal manuscript_views.get_value 's' %}
+        <div id="instructions-div" style="position:absolute; left:10px; top:10px; z-index: 10; opacity:0.8; background-color: grey; max-width: 400px; color: white; padding: 0.5em; font-size: smaller; display: none;">
+            <p>The image thumbnail in the top right corner appears only when the mouse pointer is positioned
+            over the image. The red rectangle within the thumbnail represents which region of the
+            image is currently visible.</p>
+            <p>To drag the image:</p>
+            <ul>
+                <li>left-click the image and keep the mouse button down while moving the mouse in the desired direction.</li>
+            </ul>
+            <p>To zoom-in, you can either:</p>
+            <ul>
+                <li>scroll up / pinch out</li>
+                <li>click the image</li>
+                <li>click the '+' button</li>
+                <li>press the '+' key</li>
+            </ul>
+            <p>To zoom-out, you can either:</p>
+            <ul>
+                <li>scroll down / pinch in</li>
+                <li>click the '-' button</li>
+                <li>press the '-' key</li>
+            </ul>
+        </div>
+        <div class="viewer-div">
+            <p class="viewer-help">
+                <span class="viewer-help-help">
+                    <a id="instructions" hreaf="#instructions">How to use the viewer?</a>
+                </span>
+                <span class="viewer-help-thumbnail" style="display:none;">
+                    Image thumbnail is
+                    <select id="viewer-nav-options" name="viewer-nav-options">
+                        <option value="auto">hidden when the mouse pointer is outside the image</option>
+                        <option value="hide">always hidden</option>
+                        <option value="show">always visible</option>
+                    </select>
+                </span>
+            </p>
+            <iframe scrolling="no" src="{% updated_query_string request 'zoom' 1 %}" id="zoom-frameid" >
+            </iframe>
+        </div>
+    {% endifequal %}
+
+</div>
+
+</form>
+
+{% endblock %}

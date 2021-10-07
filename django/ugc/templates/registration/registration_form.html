@@ -1,0 +1,84 @@
+{% extends "website/eel_default.html" %} 
+{% load i18n %}
+
+{% block page_main_title %}Create an account{% endblock %}
+{% block page_title %}Create an account{% endblock %}
+
+{% block head_extra %}
+{{ block.super }}
+<style type="text/css">
+	form label {
+		display: 	block;
+	}
+	form input {
+		display: 	block;
+	}
+	#id_captcha {
+	    left: 17em;
+	    position: relative;
+	    top: -2em;	
+    }
+	.django-form fieldset.m2 span.field-legend {
+	    clear: both;
+	    color: darkgrey;
+	    display: block;
+	    margin: -1.2em 0 0.2em 17em;
+	    width: 35em;
+	}
+	#id_antispam_li {
+		display: none;
+	}
+</style>
+{% endblock %}
+
+{% block page_content %}
+	<form method="post" action="" id="registration-form" class="fms m2 django-form user-form">
+		<fieldset class="i1 m2">
+            <legend>Your details</legend>            
+            <ol>
+            	<li>
+					{{ form.email.errors }}
+					<label for="id_email" >Email Address</label>
+					{{ form.email }}
+            	</li>
+            	<li>
+					{{ form.password1.errors }}
+					<label for="id_password1" >Password</label>
+					{{ form.password1 }}
+            	</li>
+            	<li>
+					{{ form.password2.errors }}
+					<label for="id_password2" >Retype password</label>
+					{{ form.password2 }}
+            	</li>
+            	<li>
+					{{ form.username.errors }}
+					<label for="id_username" >Display name</label>
+					{{ form.username }}
+            	</li>
+            	<li id="id_antispam_li">
+					{{ form.antispam.errors }}
+					{{ form.terms_fake.errors }}
+					<label for="id_antispam" >Anti-spam field</label>
+					{{ form.antispam }}	{{ form.terms_fake }}
+					<span class="field-legend">Please leave this field empty.</span>
+            	</li>
+            </ol>
+		</fieldset>
+  		<fieldset class="i1 m2">
+            <legend>Terms and conditions</legend>            
+            <ol>
+            	<li>
+					{{ form.terms.errors }}
+					<label >Terms and conditions</label>
+					{{ form.terms }}
+					<label for="id_terms" style="width:auto;">I agree with <a style="float:none;"  href="{{DJANGO_WEBPATH_PREFIX_MEMBERS}}terms">Early English Laws terms and conditions</a>.</label>
+            	</li>
+            </ol>
+        </fieldset>
+		<fieldset class="ix">
+			<input type="submit" value="Create my account" name="create" />
+		</fieldset>
+	</form>
+
+{% endblock %}
