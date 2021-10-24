@@ -13,6 +13,8 @@ This repository contains a copy of the legacy code of the Early English Laws web
 
 ## Repository
 
+### /django
+
 The /django folder contains the code of the django project and custom-built django apps / packages.
 
 * settings: the settings for the django project
@@ -30,3 +32,12 @@ Less edition-specific:
 * registration: manage public user sign up, log ins and profiles
 * simplejson: third-party package to handle json data structure
 * uml2django: UML to django models conversion tool
+
+### /doc
+
+The /doc folder contains supporting documentation and sample content
+
+* eel-liv-schema-20211022-psql.sql: a dump of the database schema
+
+Early logical diagram of the schema:
+![diag](https://github.com/kingsdigitallab/eel/raw/main/django/models/editions-logical.png)
