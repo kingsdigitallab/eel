@@ -59,6 +59,11 @@ Re-index the search engine:
 
 `docker-compose -f build/compose.yaml exec django python manage.py txtidx`
 
+Reset the django admin user password:
+
+`dc -f build/compose.yaml exec django python manage.py changepassword admin`
+
 Visit the site at http://localhost:9083/ 
-Backend admin interface at /admin (user admin, password on request)
+
+Backend admin interface at /admin
 
