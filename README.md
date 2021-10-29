@@ -53,7 +53,7 @@ Early logical diagram of the schema:
 
 Make sure Docker is installed on the machine.
 
-Unzip the database
+Unzip the sample database (encryption password on request):
 
 `unzip build/rdbms/dbs/eel-liv-sample.psql.sql.zip -d build/rdbms`
 
