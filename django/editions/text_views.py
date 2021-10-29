@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# Authors: Geoffroy Noel, King's College London, 2009-2020
+#
 from models import *
 import re
 from django import http, template

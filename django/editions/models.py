@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# Authors: Geoffroy Noel, King's College London, 2009-2020
+#
 # auto generated from an XMI file
 from django.db import models
 # from models_generic import *

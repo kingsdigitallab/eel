@@ -1,3 +1,5 @@
+# Authors: Geoffroy Noel, King's College London, 2009-2020
+#
 import random
 import math
 from copy import deepcopy

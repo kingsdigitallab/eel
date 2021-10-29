@@ -1,3 +1,5 @@
+# Authors: Geoffroy Noel, King's College London, 2009-2020
+#
 import re
 from django.conf import settings
 from cch.views.utils import get_template, get_json_response

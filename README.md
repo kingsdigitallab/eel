@@ -1,6 +1,12 @@
 # Early English Laws (EEL)
 
-This repository contains a copy of the legacy code of the Early English Laws web application, developed by G. Noel at DDH (2009-2012), King's College London.
+This repository contains a copy of the legacy code of the Early English Laws web application, 
+developed by Geoffroy Noël at the department of Digital Humanities (DDH), King's College London 
+(KCL) between 2009 and 2012.
+
+Currently hosted at: https://earlyenglishlaws.ac.uk/
+
+Work funded by the [AHRC grant AH/F019394/1](https://gtr.ukri.org/projects?ref=AH%2FF019394%2F1)
 
 ## Stack
 

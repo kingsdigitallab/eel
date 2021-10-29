@@ -1,3 +1,5 @@
+# Authors: Geoffroy Noel, King's College London, 2009-2020
+#
 # auto generated from an XMI file
 # this file can be edit,
 # make sure it is renamed into "admin_custom.py" (without the underscore

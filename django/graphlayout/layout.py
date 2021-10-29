@@ -1,3 +1,5 @@
+# Authors: Geoffroy Noel, King's College London, 2009-2020
+#
 from graph import Graph
 import random
 

@@ -1,4 +1,6 @@
 # -*- coding: utf-8 -*-
+# Authors: Geoffroy Noel, King's College London, 2009-2020
+#
 from django.core.management.base import BaseCommand
 from optparse import make_option
 # from editions.models import *
