@@ -67,3 +67,6 @@ Visit the site at http://localhost:9083/
 
 Backend admin interface at /admin
 
+To render the public html of the texts after edition:
+
+`dc -f build/compose.yaml exec django python manage.py rendertexts`
