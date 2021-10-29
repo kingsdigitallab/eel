@@ -41,3 +41,24 @@ The /doc folder contains supporting documentation and sample content
 
 Early logical diagram of the schema:
 ![diag](https://github.com/kingsdigitallab/eel/raw/main/django/models/editions-logical.png)
+
+
+## Running the web application
+
+Make sure Docker is installed on the machine.
+
+Unzip the database
+
+`unzip build/rdbms/dbs/eel-liv-sample.psql.sql.zip -d build/rdbms`
+
+Run the following command from the terminal:
+
+`docker-compose -f build/compose.yaml up`
+
+Re-index the search engine:
+
+`docker-compose -f build/compose.yaml exec django python manage.py txtidx`
+
+Visit the site at http://localhost:9083/ 
+Backend admin interface at /admin (user admin, password on request)
+
