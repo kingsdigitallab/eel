@@ -188,3 +188,34 @@
    WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
    See the License for the specific language governing permissions and
    limitations under the License.
+
+============================================================================
+   Early English Laws (EEL) SUBCOMPONENTS:
+
+   The EEL project contains subcomponents with separate copyright
+   notices and license terms. Your use of the source code for the these
+   subcomponents is subject to the terms and conditions of the following
+   licenses.
+
+Third-party subcomponents:
+
+eel/django/simplejson: dual license, see https://github.com/simplejson/simplejson/blob/master/LICENSE.txt
+eel/django/httplib2/iri2uri.py: MIT 1.0, Copyright 2006, Joe Gregorio
+eel/django/httpproxy: Django HTTP Proxy (patched by KDL), MIT license, Copyright Yuri van der Meer
+eel/django/pagination: django-pagination, BSD-3-Clause license, Copyright (c) 2008, Eric Florenzano
+eel/django/registration: dango-registration, BSD-3-Clause license, Copyright (c) 2007-2022, James Bennett
+eel/django/media/: variety of front-end libraries, check the file headers and the LICENSE files
+  /website/textviewer/js & /website/textviewer/css is KDL Copyright
+  /website/fancybox: jquery-fancybox, MIT and GPL licenses, Copyright (c) 2012 Janis Skarnelis
+  /wesbite/openseadragon: OpenSeaDragon, New BSD license, http://openseadragon.github.io/license/
+  /website/zoomer: MooTools 1.2, iipmooviewer 1.1
+  /cms/wymeditor: WYMeditor, Copyright (c) 2005 - 2015 Jean-Francois Hovinne, Dual MIT and GPL licenses
+  /cms/jstree: jsTree 0.9.5, Copyright (c) 2008 Ivan Bozhanov, Dual MIT and GPL licenses
+  /admin/js/jquery.js:  jQuery JavaScript Library v1.4.4, Copyright 2010, John Resig, MIT or GPL Version 2 licenses
+
+  
+  
+  
+  
+
+
